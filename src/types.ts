@@ -239,6 +239,12 @@ export interface GetGlobalLeaderboardParams {
   filterValue?: string;
 }
 
+export interface GetCountryLeaderboardParams {
+  page: number;
+  max: number;
+  countryCode: string;
+}
+
 export interface GetUserActivityParams {
   username: string;
 }
@@ -263,6 +269,70 @@ export interface GetUserScenarioParams {
 export interface LoginCredentials {
   username: string;
   password: string;
+}
+
+export interface PlaylistResponse {
+  page: number;
+  max: number;
+  total: number;
+  data: Array<{
+    playlistName: string;
+    subscribers: number;
+    scenarioList: Array<{
+      author: string;
+      aimType: string;
+      playCount: number;
+      scenarioName: string;
+      webappUsername: string;
+      steamAccountName: string;
+    }>;
+    playlistCode: string;
+    playlistId: number;
+    published: string;
+    steamId: string;
+    steamAccountName: string;
+    webappUsername: string;
+    description: string;
+    aimType: string;
+    playlistDuration: number;
+  }>;
+}
+
+export interface GetPlaylistsParams {
+  page: number;
+  max: number;
+  search?: string;
+}
+
+export interface GlobalLeaderboardSearchResponse {
+  steamId: string;
+  rank: number;
+  rankChange: number;
+  username: string | null;
+  steamAccountName: string;
+  steamAccountAvatar: string;
+  country: string | null;
+  kovaaksPlusActive: boolean;
+}
+
+export interface GetGlobalLeaderboardSearchParams {
+  username: string;
+}
+
+export interface ScenarioDetailsResponse {
+  scenarioName: string;
+  aimType: string;
+  playCount: number;
+  steamId: string;
+  steamAccountName: string;
+  webappUsername: string;
+  description: string;
+  tags: string[];
+  created: string;
+}
+
+export interface GetScenarioDetailsParams {
+  leaderboardId: number;
 }
 
 // Error types

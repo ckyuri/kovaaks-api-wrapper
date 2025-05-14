@@ -43,6 +43,25 @@ async function main() {
     
     console.log('Global leaderboard top 5:');
     leaderboard.data.forEach((entry, index) => {
+      if ('webappUsername' in entry) {
+        // This is a GlobalLeaderboardResponse entry
+        console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.points} points`);
+      } else {
+        // This is a GroupedLeaderboardResponse entry
+        console.log(`${index + 1}. ${entry.group} - ${entry.points} points`);
+      }
+    });
+    
+    // Example of fetching country-specific leaderboard
+    console.log('\nFetching Belarus leaderboard...');
+    const belarusLeaderboard = await client.getCountryLeaderboard({
+      page: 0,
+      max: 5,
+      countryCode: 'BY'
+    });
+    
+    console.log('Belarus leaderboard top 5:');
+    belarusLeaderboard.data.forEach((entry, index) => {
       console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.points} points`);
     });
     

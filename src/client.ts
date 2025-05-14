@@ -17,7 +17,14 @@ import {
   GetPopularScenariosParams,
   GetUserProfileByUsernameParams,
   GetUserScenarioParams,
-  LoginCredentials
+  LoginCredentials,
+  GetCountryLeaderboardParams,
+  PlaylistResponse,
+  GetPlaylistsParams,
+  GlobalLeaderboardSearchResponse,
+  GetGlobalLeaderboardSearchParams,
+  ScenarioDetailsResponse,
+  GetScenarioDetailsParams
 } from './types';
 
 export class KovaaksApiError extends Error {
@@ -231,6 +238,60 @@ export class KovaaksApiClient {
   }
 
   /**
+   * Get global leaderboard scores filtered by country
+   * @param params Parameters for the request
+   * @returns Global leaderboard data for the specified country
+   * @throws {KovaaksApiError} If not authenticated or not a supporter
+   */
+  public async getCountryLeaderboard(params: GetCountryLeaderboardParams): Promise<GlobalLeaderboardResponse> {
+    // Check if user is authenticated
+    if (!this.authToken) {
+      throw new KovaaksApiError(
+        'Authentication required for country leaderboard access',
+        401
+      );
+    }
+
+    // Verify token and check supporter status
+    try {
+      const isValid = await this.verifyToken();
+      if (!isValid) {
+        throw new KovaaksApiError(
+          'Invalid authentication token',
+          401
+        );
+      }
+
+      // Get user profile to check supporter status
+      const profile = await this.getUserProfile();
+      if (!profile.kovaaksPlusActive) {
+        throw new KovaaksApiError(
+          'Kovaaks+ subscription required for country leaderboard access',
+          403
+        );
+      }
+
+      return this.request<GlobalLeaderboardResponse>({
+        method: 'GET',
+        url: this.buildUrl('/webapp-backend/leaderboard/global/scores', {
+          page: params.page,
+          max: params.max,
+          filterType: 'country',
+          filterValue: params.countryCode
+        })
+      });
+    } catch (error) {
+      if (error instanceof KovaaksApiError) {
+        throw error;
+      }
+      throw new KovaaksApiError(
+        'Failed to verify authentication or supporter status',
+        500
+      );
+    }
+  }
+
+  /**
    * Get monthly player count
    * @returns Monthly player count data
    */
@@ -341,6 +402,50 @@ export class KovaaksApiClient {
     return this.request<TrendingScenario[]>({
       method: 'GET',
       url: '/webapp-backend/scenario/trending'
+    });
+  }
+
+  /**
+   * Get playlists with optional search
+   * @param params Parameters for the request
+   * @returns Playlist data
+   */
+  public async getPlaylists(params: GetPlaylistsParams): Promise<PlaylistResponse> {
+    return this.request<PlaylistResponse>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/playlist/playlists', {
+        page: params.page,
+        max: params.max,
+        search: params.search
+      })
+    });
+  }
+
+  /**
+   * Search global leaderboard by username
+   * @param params Parameters for the request
+   * @returns Array of matching leaderboard entries
+   */
+  public async searchGlobalLeaderboard(params: GetGlobalLeaderboardSearchParams): Promise<GlobalLeaderboardSearchResponse[]> {
+    return this.request<GlobalLeaderboardSearchResponse[]>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/leaderboard/global/search/account-names', {
+        username: params.username
+      })
+    });
+  }
+
+  /**
+   * Get scenario details by leaderboard ID
+   * @param params Parameters for the request
+   * @returns Scenario details
+   */
+  public async getScenarioDetails(params: GetScenarioDetailsParams): Promise<ScenarioDetailsResponse> {
+    return this.request<ScenarioDetailsResponse>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/scenario/details', {
+        leaderboardId: params.leaderboardId
+      })
     });
   }
 } 
