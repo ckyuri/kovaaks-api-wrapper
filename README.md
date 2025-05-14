@@ -1,17 +1,27 @@
-# Kovaaks API Wrapper
+# Kovaaks API Client
 
-A TypeScript wrapper for the Kovaaks API that provides easy access to leaderboards, user profiles, scenarios, and more.
+A TypeScript client for the Kovaaks API that provides easy access to leaderboards, user profiles, scenarios, and more.
+
+## Features
+
+- 🔐 Authentication and user management
+- 📊 Global and country-specific leaderboards
+- 🎯 Scenario details and popular scenarios
+- 📋 Playlist management
+- 📈 Benchmark progress tracking
+- 👤 User profiles and activity
+- 🎮 Game settings and statistics
 
 ## Installation
 
 ```bash
-npm install kovaaks-api-wrapper
+npm install kovaaks-api-client
 ```
 
-## Usage
+## Quick Start
 
 ```typescript
-import { KovaaksApiClient } from 'kovaaks-api-wrapper';
+import { KovaaksApiClient } from 'kovaaks-api-client';
 
 // Create a new client instance
 const client = new KovaaksApiClient();
@@ -34,69 +44,6 @@ const globalLeaderboard = await client.getGlobalLeaderboard({
   page: 0,
   max: 20
 });
-
-// Example: Get country leaderboard (requires auth and Kovaaks+)
-const countryLeaderboard = await client.getCountryLeaderboard({
-  page: 0,
-  max: 20,
-  countryCode: 'US'
-});
-
-// Example: Search global leaderboard
-const searchResults = await client.searchGlobalLeaderboard({
-  username: 'firefly'
-});
-
-// Example: Get playlists
-const playlists = await client.getPlaylists({
-  page: 0,
-  max: 20,
-  search: 'aim training'
-});
-
-// Example: Get scenario details
-const scenarioDetails = await client.getScenarioDetails({
-  leaderboardId: 8680
-});
-
-// Example: Get popular scenarios
-const popularScenarios = await client.getPopularScenarios({
-  page: 0,
-  max: 20,
-  scenarioNameSearch: 'vt bounce'
-});
-
-// Example: Get trending scenarios
-const trendingScenarios = await client.getTrendingScenarios();
-
-// Example: Get user profile
-const userProfile = await client.getUserProfileByUsername({
-  username: 'firefly'
-});
-
-// Example: Get user activity
-const userActivity = await client.getUserActivity({
-  username: 'firefly'
-});
-
-// Example: Get user scenarios
-const userScenarios = await client.getUserScenarios({
-  username: 'firefly',
-  page: 0,
-  max: 20
-});
-
-// Example: Get benchmark progress
-const benchmarkProgress = await client.getBenchmarkProgress({
-  benchmarkId: 'benchmark-id',
-  steamId: 'steam-id'
-});
-
-// Example: Get monthly players
-const monthlyPlayers = await client.getMonthlyPlayers();
-
-// Example: Get game settings
-const gameSettings = await client.getGameSettings();
 ```
 
 ## Authentication
@@ -108,17 +55,22 @@ const loginResponse = await client.login({
   password: 'your-password'
 });
 
-// The auth token is automatically set for future requests
+// Response includes:
+// - JWT token
+// - Refresh token
+// - User profile
+// - Firebase JWT
 ```
 
-### Verify Token
+### Token Management
 ```typescript
-const isValid = await client.verifyToken();
-```
-
-### Set/Clear Auth Token
-```typescript
+// Set auth token manually
 client.setAuthToken('your-token');
+
+// Verify token validity
+const isValid = await client.verifyToken();
+
+// Clear auth token
 client.clearAuthToken();
 ```
 
@@ -135,16 +87,24 @@ const leaderboard = await client.getGlobalLeaderboard({
   filterType?: 'region' | 'country',
   filterValue?: string
 });
+
+// Response includes:
+// - Array of leaderboard entries with rank, username, points
+// - Total number of entries
 ```
 
 #### Get Country Leaderboard
 ```typescript
-// Requires authentication and supporter status
+// Requires authentication and Kovaaks+ subscription
 const countryLeaderboard = await client.getCountryLeaderboard({
   page: 0,
   max: 20,
   countryCode: 'US' // ISO country code
 });
+
+// Response includes:
+// - Array of country-specific leaderboard entries
+// - Total number of entries
 ```
 
 > **Note**: Access to country-specific leaderboards requires:
@@ -158,6 +118,64 @@ const countryLeaderboard = await client.getCountryLeaderboard({
 const searchResults = await client.searchGlobalLeaderboard({
   username: 'firefly'
 });
+
+// Response includes:
+// - Array of matching users with rank and stats
+```
+
+### Scenarios
+
+#### Get Scenario Details
+```typescript
+const details = await client.getScenarioDetails({
+  leaderboardId: 8680
+});
+
+// Response includes:
+// - Scenario name and type
+// - Play count
+// - Creator information
+// - Description and tags
+// - Creation date
+```
+
+#### Get Popular Scenarios
+```typescript
+const popular = await client.getPopularScenarios({
+  page: 0,
+  max: 20,
+  scenarioNameSearch?: string
+});
+
+// Response includes:
+// - Array of popular scenarios
+// - Pagination info (page, max, total)
+// - Scenario details and stats
+```
+
+#### Get Trending Scenarios
+```typescript
+const trending = await client.getTrendingScenarios();
+
+// Response includes:
+// - Array of trending scenarios
+// - Scenario details and stats
+```
+
+### Playlists
+
+#### Get Playlists
+```typescript
+const playlists = await client.getPlaylists({
+  page: 0,
+  max: 20,
+  search?: string
+});
+
+// Response includes:
+// - Array of playlists
+// - Pagination info (page, max, total)
+// - Playlist details and scenarios
 ```
 
 ### User Data
@@ -166,6 +184,12 @@ const searchResults = await client.searchGlobalLeaderboard({
 ```typescript
 // Requires authentication
 const profile = await client.getUserProfile();
+
+// Response includes:
+// - User details
+// - Game settings
+// - Social media links
+// - Kovaaks+ status
 ```
 
 #### Get User Profile by Username
@@ -173,6 +197,12 @@ const profile = await client.getUserProfile();
 const profile = await client.getUserProfileByUsername({
   username: 'username'
 });
+
+// Response includes:
+// - User details
+// - Game settings
+// - Social media links
+// - Kovaaks+ status
 ```
 
 #### Get User Activity
@@ -180,6 +210,10 @@ const profile = await client.getUserProfileByUsername({
 const activity = await client.getUserActivity({
   username: 'username'
 });
+
+// Response includes:
+// - Array of recent activities
+// - Activity details and timestamps
 ```
 
 #### Get User Scenarios
@@ -190,6 +224,11 @@ const scenarios = await client.getUserScenarios({
   max: 20,
   sortParam?: string
 });
+
+// Response includes:
+// - Array of user's scenarios
+// - Pagination info
+// - Scenario details and stats
 ```
 
 ### Benchmarks
@@ -202,6 +241,12 @@ const progress = await client.getBenchmarkProgress({
   page?: 0,
   max?: 100
 });
+
+// Response includes:
+// - Overall progress
+// - Category progress
+// - Scenario scores
+// - Rank information
 ```
 
 #### Get Benchmarks for User
@@ -211,40 +256,11 @@ const benchmarks = await client.getBenchmarksForUser({
   page: 0,
   max: 20
 });
-```
 
-### Scenarios
-
-#### Get Trending Scenarios
-```typescript
-const trending = await client.getTrendingScenarios();
-```
-
-#### Get Popular Scenarios
-```typescript
-const popular = await client.getPopularScenarios({
-  page: 0,
-  max: 20,
-  scenarioNameSearch?: string
-});
-```
-
-#### Get Scenario Details
-```typescript
-const details = await client.getScenarioDetails({
-  leaderboardId: 8680
-});
-```
-
-### Playlists
-
-#### Get Playlists
-```typescript
-const playlists = await client.getPlaylists({
-  page: 0,
-  max: 20,
-  search?: string
-});
+// Response includes:
+// - Array of benchmarks
+// - Pagination info
+// - Benchmark details
 ```
 
 ### Game Data
@@ -252,11 +268,17 @@ const playlists = await client.getPlaylists({
 #### Get Monthly Players
 ```typescript
 const monthlyPlayers = await client.getMonthlyPlayers();
+
+// Response includes:
+// - Monthly player count
 ```
 
 #### Get Game Settings
 ```typescript
 const settings = await client.getGameSettings();
+
+// Response includes:
+// - Game settings and configurations
 ```
 
 ## Error Handling
@@ -278,26 +300,92 @@ try {
 }
 ```
 
+Common error scenarios:
+- 401: Authentication required or invalid token
+- 403: Insufficient permissions (e.g., Kovaaks+ required)
+- 404: Resource not found
+- 429: Rate limit exceeded
+- 500: Server error
+
 ## Types
 
-The package exports all necessary TypeScript types. Here are some of the main ones:
-
-- `KovaaksApiClientOptions`
-- `LoginCredentials`
-- `UserProfile`
-- `GlobalLeaderboardResponse`
-- `GroupedLeaderboardResponse`
-- `BenchmarkProgress`
-- `ScenarioPopularResponse`
-- `UserScenarioResponse`
-- `TrendingScenario`
-
-## API Reference
-
-#### Types
+The package exports all necessary TypeScript types. Here are the main interfaces:
 
 ```typescript
-// Playlist Types
+// Authentication
+interface LoginResponse {
+  auth: {
+    firebaseJWT: string;
+    jwt: string;
+    refreshToken: string;
+    exp: number;
+    emailVerified: boolean;
+  };
+  profile: UserProfile;
+}
+
+// User Profile
+interface UserProfile {
+  playerId: number;
+  steamAccountName: string;
+  steamAccountAvatar: string;
+  webapp: {
+    username: string;
+    roles: {
+      admin: boolean;
+      coach: boolean;
+      staff: boolean;
+    };
+    socialMedia: {
+      tiktok: string | null;
+      twitch: string | null;
+      discord: string | null;
+      twitter: string | null;
+      youtube: string | null;
+    };
+    gameSettings: {
+      dpi: number | null;
+      fov: number | null;
+      cm360: number | null;
+      rawInput: string;
+      sensitivity: number | null;
+    };
+  };
+  country: string;
+  kovaaksPlusActive: boolean;
+}
+
+// Leaderboard
+interface GlobalLeaderboardResponse {
+  data: Array<{
+    rank: number;
+    rankChange: number;
+    steamId: string;
+    webappUsername: string | null;
+    steamAccountName: string;
+    points: string;
+    scenariosCount: string;
+    completionsCount: number;
+    kovaaksPlusActive: boolean;
+    country: string;
+  }>;
+  total: string;
+}
+
+// Scenario
+interface ScenarioDetailsResponse {
+  scenarioName: string;
+  aimType: string;
+  playCount: number;
+  steamId: string;
+  steamAccountName: string;
+  webappUsername: string;
+  description: string;
+  tags: string[];
+  created: string;
+}
+
+// Playlist
 interface PlaylistResponse {
   page: number;
   max: number;
@@ -323,45 +411,6 @@ interface PlaylistResponse {
     aimType: string;
     playlistDuration: number;
   }>;
-}
-
-interface GetPlaylistsParams {
-  page: number;
-  max: number;
-  search?: string;
-}
-
-// Scenario Types
-interface ScenarioDetailsResponse {
-  scenarioName: string;
-  aimType: string;
-  playCount: number;
-  steamId: string;
-  steamAccountName: string;
-  webappUsername: string;
-  description: string;
-  tags: string[];
-  created: string;
-}
-
-interface GetScenarioDetailsParams {
-  leaderboardId: number;
-}
-
-// Leaderboard Search Types
-interface GlobalLeaderboardSearchResponse {
-  steamId: string;
-  rank: number;
-  rankChange: number;
-  username: string | null;
-  steamAccountName: string;
-  steamAccountAvatar: string;
-  country: string | null;
-  kovaaksPlusActive: boolean;
-}
-
-interface GetGlobalLeaderboardSearchParams {
-  username: string;
 }
 ```
 
