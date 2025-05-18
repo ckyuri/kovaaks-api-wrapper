@@ -346,7 +346,7 @@ export interface ValidationError {
   msg: string;
   param: string;
   location: string;
-}
+} 
 
 // User search types
 export interface UserSearchResponse {
