@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "8bfda31a-c7c3-45b1-9d12-f86673adf1e3",
+		"name": "kovaaks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34112144",
+		"_collection_link": "https://www.postman.com/orbital-module-geoscientist-2240778/fsdf/collection/r1l5gm7/kovaaks?action=share&source=collection_link&creator=34112144"
+	},
+	"item": [
+		{
+			"name": "Benchmark Progress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank-benchmark?benchmarkId=2&steamId=76561198409458631&page=0&max=100",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"benchmarks",
+						"player-progress-rank-benchmark"
+					],
+					"query": [
+						{
+							"key": "benchmarkId",
+							"value": "2"
+						},
+						{
+							"key": "steamId",
+							"value": "76561198409458631"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "100"
+						}
+					]
+				},
+				"description": "Returns:\n\n{  \n\"benchmark_progress\": 95088.2,  \n\"overall_rank\": 15,  \n\"categories\": {  \n\"Static Clicking\": {  \n\"benchmark_progress\": 16337.47,  \n\"category_rank\": 15,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Clicking Static 5\": {  \n\"score\": 9168600,  \n\"leaderboard_rank\": 10761,  \n\"scenario_rank\": 15,  \n\"rank_maxes\": \\[  \n54390,  \n59829,  \n62937,  \n65268,  \n67599,  \n69930,  \n71484,  \n73815,  \n75369,  \n76923,  \n79254,  \n80808,  \n83139,  \n84693,  \n87024,  \n94250,  \n98951,  \n104584,  \n112277  \n\\]  \n},  \n\"Clicking 3 Wide\": {  \n\"score\": 10256400,  \n\"leaderboard_rank\": 11557,  \n\"scenario_rank\": 15,  \n\"rank_maxes\": \\[  \n61383,  \n67599,  \n71484,  \n74592,  \n77700,  \n80031,  \n82362,  \n84693,  \n86247,  \n88578,  \n90132,  \n92463,  \n94794,  \n97125,  \n99456,  \n107304,  \n112315,  \n118259,  \n127117  \n\\]  \n}  \n}  \n},  \n\"Reactivity Tracking\": {  \n\"benchmark_progress\": 16432.44,  \n\"category_rank\": 15,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Ground Tracking\": {  \n\"score\": 10181812,  \n\"leaderboard_rank\": 5652,  \n\"scenario_rank\": 16,  \n\"rank_maxes\": \\[  \n46812,  \n53848,  \n58178,  \n60215,  \n63662,  \n66782,  \n69739,  \n72364,  \n72793,  \n75687,  \n78755,  \n82011,  \n85239,  \n87296,  \n89233,  \n98299,  \n104640,  \n110371,  \n121506  \n\\]  \n},  \n\"Air Tracking 180\": {  \n\"score\": 7807400,  \n\"leaderboard_rank\": 12758,  \n\"scenario_rank\": 14,  \n\"rank_maxes\": \\[  \n51469,  \n56872,  \n59462,  \n61534,  \n63347,  \n64901,  \n66455,  \n68009,  \n69563,  \n70858,  \n72412,  \n73966,  \n74725,  \n77038,  \n78592,  \n84649,  \n88985,  \n94021,  \n99406  \n\\]  \n}  \n}  \n},  \n\"Dynamic Clicking\": {  \n\"benchmark_progress\": 15927.76,  \n\"category_rank\": 15,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Clicking Bounce\": {  \n\"score\": 10075200,  \n\"leaderboard_rank\": 14965,  \n\"scenario_rank\": 14,  \n\"rank_maxes\": \\[  \n49410,  \n56696,  \n62410,  \n66876,  \n70528,  \n73870,  \n77050,  \n79938,  \n83112,  \n86174,  \n89056,  \n92162,  \n95286,  \n98938,  \n102820,  \n115297,  \n123867,  \n133554,  \n149357  \n\\]  \n},  \n\"Clicking Dodgy\": {  \n\"score\": 8500000,  \n\"leaderboard_rank\": 8617,  \n\"scenario_rank\": 15,  \n\"rank_maxes\": \\[  \n32000,  \n39000,  \n43000,  \n47000,  \n51000,  \n54000,  \n57000,  \n59000,  \n62000,  \n64000,  \n67000,  \n69000,  \n72000,  \n75000,  \n78000,  \n86800,  \n92600,  \n98800,  \n109000  \n\\]  \n}  \n}  \n},  \n\"Smooth Tracking\": {  \n\"benchmark_progress\": 12655.9,  \n\"category_rank\": 12,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Smooth Vertical Tracking\": {  \n\"score\": 7284994,  \n\"leaderboard_rank\": 24066,  \n\"scenario_rank\": 8,  \n\"rank_maxes\": \\[  \n46686,  \n53407,  \n57821,  \n59445,  \n62793,  \n65819,  \n68448,  \n70705,  \n72850,  \n72850,  \n74561,  \n76843,  \n79174,  \n81580,  \n84135,  \n91181,  \n93380,  \n98878,  \n107863  \n\\]  \n},  \n\"Smooth Tracking\": {  \n\"score\": 10669115,  \n\"leaderboard_rank\": 12439,  \n\"scenario_rank\": 15,  \n\"rank_maxes\": \\[  \n99913,  \n101616,  \n102454,  \n103009,  \n103489,  \n103907,  \n104251,  \n104571,  \n104901,  \n105211,  \n105511,  \n105797,  \n106080,  \n106369,  \n106666,  \n107210,  \n107612,  \n108039,  \n108587  \n\\]  \n}  \n}  \n},  \n\"Switching\": {  \n\"benchmark_progress\": 17117.98,  \n\"category_rank\": 16,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Switching Humanoid\": {  \n\"score\": 11729938,  \n\"leaderboard_rank\": 7081,  \n\"scenario_rank\": 16,  \n\"rank_maxes\": \\[  \n67135,  \n73555,  \n77995,  \n81053,  \n83807,  \n86114,  \n88399,  \n90848,  \n92992,  \n95288,  \n97280,  \n99412,  \n101556,  \n103853,  \n106758,  \n115143,  \n120890,  \n127709,  \n137981  \n\\]  \n},  \n\"Switching Spheres\": {  \n\"score\": 790000,  \n\"leaderboard_rank\": 6024,  \n\"scenario_rank\": 16,  \n\"rank_maxes\": \\[  \n4100,  \n4600,  \n4800,  \n5100,  \n5200,  \n5400,  \n5600,  \n5700,  \n5900,  \n6100,  \n6300,  \n6500,  \n6600,  \n6900,  \n7100,  \n7830,  \n8300,  \n8900,  \n9740  \n\\]  \n}  \n}  \n},  \n\"Movement\": {  \n\"benchmark_progress\": 16616.66,  \n\"category_rank\": 15,  \n\"rank_maxes\": \\[  \n1052.63,  \n2105.26,  \n3157.89,  \n4210.53,  \n5263.16,  \n6315.79,  \n7368.42,  \n8421.05,  \n9473.68,  \n10526.32,  \n11578.95,  \n12631.58,  \n13684.21,  \n14736.84,  \n15789.47,  \n16842.11,  \n17894.74,  \n18947.37,  \n20000  \n\\],  \n\"scenarios\": {  \n\"Movement Tracking\": {  \n\"score\": 1266854,  \n\"leaderboard_rank\": 8805,  \n\"scenario_rank\": 16,  \n\"rank_maxes\": \\[  \n5782,  \n6426,  \n6858,  \n7308,  \n7596,  \n7956,  \n8352,  \n8766,  \n9270,  \n9860,  \n10382,  \n10814,  \n11174,  \n11549,  \n11868,  \n12596,  \n13058,  \n13600,  \n14301  \n\\]  \n},  \n\"Movement Clicking Bounce\": {  \n\"score\": 67000,  \n\"leaderboard_rank\": 12559,  \n\"scenario_rank\": 15,  \n\"rank_maxes\": \\[  \n220,  \n280,  \n320,  \n350,  \n380,  \n409,  \n433,  \n455,  \n478,  \n500,  \n520,  \n550,  \n573,  \n602,  \n636,  \n718,  \n785,  \n852,  \n975  \n\\]  \n}  \n}  \n}  \n},  \n\"ranks\": \\[  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_None.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_None.svg),  \n\"name\": \"No Rank\",  \n\"color\": \" \",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_None.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_None.svg),  \n\"description\": \"This is No rank!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_00_NoRank.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_00_NoRank.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_00_NoRank.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_00_NoRank.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_1.svg),  \n\"name\": \"Bronze I\",  \n\"color\": \"#dc9e4c\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_1.svg),  \n\"description\": \"This is Bronze I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_01_Bronze_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_01_Bronze_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_2.svg),  \n\"name\": \"Bronze II\",  \n\"color\": \"#dc9e4c\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_2.svg),  \n\"description\": \"This is Bronze II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_02_Bronze_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_02_Bronze_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_3.svg),  \n\"name\": \"Bronze III\",  \n\"color\": \"#dc9e4c\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_3.svg),  \n\"description\": \"This is Bronze III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_03_Bronze_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_03_Bronze_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_1.svg),  \n\"name\": \"Silver I\",  \n\"color\": \"#d8d8d8\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_1.svg),  \n\"description\": \"This is Silver I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_04_Silver_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_04_Silver_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_2.svg),  \n\"name\": \"Silver II\",  \n\"color\": \"#d8d8d8\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_2.svg),  \n\"description\": \"This is Silver II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_05_Silver_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_05_Silver_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_3.svg),  \n\"name\": \"Silver III\",  \n\"color\": \"#d8d8d8\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_3.svg),  \n\"description\": \"This is Silver III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_06_Silver_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_06_Silver_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_1.svg),  \n\"name\": \"Gold I\",  \n\"color\": \"#fbc550\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_1.svg),  \n\"description\": \"This is Gold I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_07_Gold_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_07_Gold_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_2.svg),  \n\"name\": \"Gold II\",  \n\"color\": \"#fbc550\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_2.svg),  \n\"description\": \"This is Gold II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_08_Gold_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_08_Gold_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_3.svg),  \n\"name\": \"Gold III\",  \n\"color\": \"#fbc550\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_3.svg),  \n\"description\": \"This is Gold III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_09_Gold_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_09_Gold_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_1.svg),  \n\"name\": \"Plat I\",  \n\"color\": \"#85ceba\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_1.svg),  \n\"description\": \"This is Plat I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_10_Platinum_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_10_Platinum_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_2.svg),  \n\"name\": \"Plat II\",  \n\"color\": \"#85ceba\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_2.svg),  \n\"description\": \"This is Plat II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_11_Platinum_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_11_Platinum_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_3.svg),  \n\"name\": \"Plat III\",  \n\"color\": \"#85ceba\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_3.svg),  \n\"description\": \"This is Plat III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_12_Platinum_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_12_Platinum_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_1.svg),  \n\"name\": \"Diamond I\",  \n\"color\": \"#74e4e4\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_1.svg),  \n\"description\": \"This is Diamond I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_13_Diamond_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_13_Diamond_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_2.svg),  \n\"name\": \"Diamond II\",  \n\"color\": \"#74e4e4\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_2.svg),  \n\"description\": \"This is Diamond II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_14_Diamond_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_14_Diamond_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_3.svg),  \n\"name\": \"Diamond III\",  \n\"color\": \"#74e4e4\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_3.svg),  \n\"description\": \"This is Diamond III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_15_Diamond_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_15_Diamond_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_1.svg),  \n\"name\": \"Master I\",  \n\"color\": \"#ffaaaa\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_1.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_1.svg),  \n\"description\": \"This is Master I!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_16_Master_01.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_16_Master_01.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_2.svg),  \n\"name\": \"Master II\",  \n\"color\": \"#ffaaaa\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_2.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_2.svg),  \n\"description\": \"This is Master II!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_17_Master_02.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_17_Master_02.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_3.svg),  \n\"name\": \"Master III\",  \n\"color\": \"#ffaaaa\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_3.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_3.svg),  \n\"description\": \"This is Master III!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_18_Master_03.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_18_Master_03.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png)  \n},  \n{  \n\"icon\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_GrandMaster.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_GrandMaster.svg),  \n\"name\": \"Grandmaster\",  \n\"color\": \"#ed4800\",  \n\"frame\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_GrandMaster.svg\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_GrandMaster.svg),  \n\"description\": \"This is Grandmaster!\",  \n\"playercard_large\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_19_Grandmaster.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_19_Grandmaster.png),  \n\"playercard_small\": \"[https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_07_Grandmaster.png\"](https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_07_Grandmaster.png)  \n}  \n\\]  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Benchmark Search for user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank?username=xrageblaze@gmail.com&page=1&max=10",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"benchmarks",
+						"player-progress-rank"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xrageblaze@gmail.com"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "max",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Response:\n\n\n{\n  \"page\": 1,\n  \"max\": 10,\n  \"total\": 52,\n  \"data\": [\n    {\n      \"benchmarkName\": \"Temeski tracking V2\",\n      \"benchmarkId\": 71,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"Temeski\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": false,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"AIMERZ+ EASY S1\",\n      \"benchmarkId\": 84,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_14.svg\",\n      \"benchmarkAuthor\": \"wa11p1per the creator\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"e1se Tracking\",\n      \"benchmarkId\": 85,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"DrUninstall\",\n      \"type\": \"workout\",\n      \"tintRanks\": false,\n      \"rankName\": \"0/5\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#FF912F\"\n    },\n    {\n      \"benchmarkName\": \"AIMERZ+ HARD S1\",\n      \"benchmarkId\": 90,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_16.svg\",\n      \"benchmarkAuthor\": \"wa11p1per the creator\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"Mariflax ....\",\n      \"benchmarkId\": 138,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"MariFlax\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": false,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"Temeski Movement Tracking 4\",\n      \"benchmarkId\": 150,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_16.svg\",\n      \"benchmarkAuthor\": \"Temeski\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": false,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"Simple Tracking\",\n      \"benchmarkId\": 164,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"星川みつき\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"Shimmy Static Benchmarks\",\n      \"benchmarkId\": 194,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_09.svg\",\n      \"benchmarkAuthor\": \"shimmy\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"TSK Benchmarks\",\n      \"benchmarkId\": 227,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"tsk\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#424242\"\n    },\n    {\n      \"benchmarkName\": \"Voltaic Benchmarks INT S4\",\n      \"benchmarkId\": 235,\n      \"benchmarkIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg\",\n      \"benchmarkAuthor\": \"Shishigami\",\n      \"type\": \"benchmark\",\n      \"tintRanks\": true,\n      \"rankName\": \"No Rank\",\n      \"rankIcon\": \"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\n      \"rankColor\": \"#ffffff\"\n    }\n  ]\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaderboard Country Global Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/leaderboard/global/scores?page=0&max=20&group=country",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"leaderboard",
+						"global",
+						"scores"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "20"
+						},
+						{
+							"key": "group",
+							"value": "country"
+						}
+					]
+				},
+				"description": "returns: \n\n\n{\n  \"data\": [\n    {\n      \"group\": \"US\",\n      \"points\": \"172843666095\",\n      \"scenarios_count\": \"4311257\",\n      \"completions_count\": \"59721843\",\n      \"rank\": 1\n    },\n    {\n      \"group\": \"CN\",\n      \"points\": \"67111807805\",\n      \"scenarios_count\": \"1133852\",\n      \"completions_count\": \"28122216\",\n      \"rank\": 2\n    },\n    {\n      \"group\": \"JP\",\n      \"points\": \"51396265606\",\n      \"scenarios_count\": \"936832\",\n      \"completions_count\": \"20986821\",\n      \"rank\": 3\n    },\n    {\n      \"group\": \"CA\",\n      \"points\": \"30389192077\",\n      \"scenarios_count\": \"701087\",\n      \"completions_count\": \"10120590\",\n      \"rank\": 4\n    },\n    {\n      \"group\": \"GB\",\n      \"points\": \"29371191622\",\n      \"scenarios_count\": \"746921\",\n      \"completions_count\": \"9883917\",\n      \"rank\": 5\n    },\n    {\n      \"group\": \"RU\",\n      \"points\": \"27800756054\",\n      \"scenarios_count\": \"682347\",\n      \"completions_count\": \"10754285\",\n      \"rank\": 6\n    },\n    {\n      \"group\": \"DE\",\n      \"points\": \"26440064667\",\n      \"scenarios_count\": \"642162\",\n      \"completions_count\": \"9076924\",\n      \"rank\": 7\n    },\n    {\n      \"group\": \"BR\",\n      \"points\": \"24706048625\",\n      \"scenarios_count\": \"713268\",\n      \"completions_count\": \"9251265\",\n      \"rank\": 8\n    },\n    {\n      \"group\": \"FR\",\n      \"points\": \"20386315819\",\n      \"scenarios_count\": \"440667\",\n      \"completions_count\": \"6503953\",\n      \"rank\": 9\n    },\n    {\n      \"group\": \"AU\",\n      \"points\": \"19024611438\",\n      \"scenarios_count\": \"455630\",\n      \"completions_count\": \"5911391\",\n      \"rank\": 10\n    },\n    {\n      \"group\": \"KR\",\n      \"points\": \"13320137346\",\n      \"scenarios_count\": \"260427\",\n      \"completions_count\": \"4727722\",\n      \"rank\": 11\n    },\n    {\n      \"group\": \"PL\",\n      \"points\": \"11734973436\",\n      \"scenarios_count\": \"275516\",\n      \"completions_count\": \"3822748\",\n      \"rank\": 12\n    },\n    {\n      \"group\": \"IT\",\n      \"points\": \"9083201351\",\n      \"scenarios_count\": \"215700\",\n      \"completions_count\": \"3032298\",\n      \"rank\": 13\n    },\n    {\n      \"group\": \"SE\",\n      \"points\": \"7871671990\",\n      \"scenarios_count\": \"195675\",\n      \"completions_count\": \"2725101\",\n      \"rank\": 14\n    },\n    {\n      \"group\": \"TR\",\n      \"points\": \"7533500885\",\n      \"scenarios_count\": \"153586\",\n      \"completions_count\": \"2093870\",\n      \"rank\": 15\n    },\n    {\n      \"group\": \"MX\",\n      \"points\": \"6909023510\",\n      \"scenarios_count\": \"166554\",\n      \"completions_count\": \"2534975\",\n      \"rank\": 16\n    },\n    {\n      \"group\": \"FI\",\n      \"points\": \"6461027619\",\n      \"scenarios_count\": \"164581\",\n      \"completions_count\": \"2431242\",\n      \"rank\": 17\n    },\n    {\n      \"group\": \"ES\",\n      \"points\": \"5965102967\",\n      \"scenarios_count\": \"144469\",\n      \"completions_count\": \"1939925\",\n      \"rank\": 18\n    },\n    {\n      \"group\": \"AR\",\n      \"points\": \"5856154159\",\n      \"scenarios_count\": \"144882\",\n      \"completions_count\": \"2147511\",\n      \"rank\": 19\n    },\n    {\n      \"group\": \"IN\",\n      \"points\": \"5510511747\",\n      \"scenarios_count\": \"148252\",\n      \"completions_count\": \"2074706\",\n      \"rank\": 20\n    }\n  ],\n  \"total\": \"257\"\n}\n\n\n\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaderboard Global Scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/leaderboard/global/scores?page=0&max=20",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"leaderboard",
+						"global",
+						"scores"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "20"
+						}
+					]
+				},
+				"description": "Returns :\n\n{\n  \"data\": [\n    {\n      \"rank\": 1,\n      \"rankChange\": 0,\n      \"steamId\": \"76561199247873110\",\n      \"webappUsername\": \"rinobowzer\",\n      \"steamAccountName\": \"Prismatix\",\n      \"points\": \"42788553\",\n      \"scenariosCount\": \"3700\",\n      \"completionsCount\": 34528,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"JP\"\n    },\n    {\n      \"rank\": 2,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198390284214\",\n      \"webappUsername\": \"WorthlessGod\",\n      \"steamAccountName\": \"𝘽⁧⁧ 𝙇𝙊𝙊𝘿\",\n      \"points\": \"42431633\",\n      \"scenariosCount\": \"3536\",\n      \"completionsCount\": 15355,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 3,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198083805976\",\n      \"webappUsername\": \"Kryzion\",\n      \"steamAccountName\": \"fuA Kryzion\",\n      \"points\": \"40916428\",\n      \"scenariosCount\": \"2790\",\n      \"completionsCount\": 9186,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"DE\"\n    },\n    {\n      \"rank\": 4,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198395171678\",\n      \"webappUsername\": \"Syaoh\",\n      \"steamAccountName\": \"Верный\",\n      \"points\": \"40294804\",\n      \"scenariosCount\": \"1901\",\n      \"completionsCount\": 29140,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"JP\"\n    },\n    {\n      \"rank\": 5,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198218488124\",\n      \"webappUsername\": \"Evil\",\n      \"steamAccountName\": \"rA EviL\",\n      \"points\": \"39527896\",\n      \"scenariosCount\": \"2259\",\n      \"completionsCount\": 27870,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"GB\"\n    },\n    {\n      \"rank\": 6,\n      \"rankChange\": 0,\n      \"steamId\": \"76561199089427208\",\n      \"webappUsername\": \"slapped\",\n      \"steamAccountName\": \"rA slapped\",\n      \"points\": \"39333531\",\n      \"scenariosCount\": \"4780\",\n      \"completionsCount\": 73274,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"GB\"\n    },\n    {\n      \"rank\": 7,\n      \"rankChange\": 0,\n      \"steamId\": \"76561199162046534\",\n      \"webappUsername\": \"tika+\",\n      \"steamAccountName\": \"ごめんなさい\",\n      \"points\": \"38896941\",\n      \"scenariosCount\": \"1917\",\n      \"completionsCount\": 49235,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"JP\"\n    },\n    {\n      \"rank\": 8,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198828944918\",\n      \"webappUsername\": \"ilovescarlett\",\n      \"steamAccountName\": \"#yeah\",\n      \"points\": \"38881766\",\n      \"scenariosCount\": \"1986\",\n      \"completionsCount\": 23936,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"CA\"\n    },\n    {\n      \"rank\": 9,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198367538821\",\n      \"webappUsername\": \"hibiVerniy\",\n      \"steamAccountName\": \"not @hibiVerniy\",\n      \"points\": \"38561737\",\n      \"scenariosCount\": \"3235\",\n      \"completionsCount\": 21995,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"AU\"\n    },\n    {\n      \"rank\": 10,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198081278986\",\n      \"webappUsername\": \"SwerveMove\",\n      \"steamAccountName\": \"SwerveMove\",\n      \"points\": \"38392438\",\n      \"scenariosCount\": \"2122\",\n      \"completionsCount\": 25397,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 11,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198367763496\",\n      \"webappUsername\": \"TriHard7\",\n      \"steamAccountName\": \"BloodSport\",\n      \"points\": \"38377936\",\n      \"scenariosCount\": \"1616\",\n      \"completionsCount\": 20037,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"GB-SCT\"\n    },\n    {\n      \"rank\": 12,\n      \"rankChange\": 0,\n      \"steamId\": \"76561197991851380\",\n      \"webappUsername\": \"jerry\",\n      \"steamAccountName\": \"jerry\",\n      \"points\": \"38195999\",\n      \"scenariosCount\": \"2905\",\n      \"completionsCount\": 18687,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 13,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198217736125\",\n      \"webappUsername\": \"Doink\",\n      \"steamAccountName\": \"Doink\",\n      \"points\": \"37579228\",\n      \"scenariosCount\": \"1307\",\n      \"completionsCount\": 3783,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 14,\n      \"rankChange\": 0,\n      \"steamId\": \"76561197983102874\",\n      \"webappUsername\": \"MehKore\",\n      \"steamAccountName\": \"MehKore\",\n      \"points\": \"37520769\",\n      \"scenariosCount\": \"1856\",\n      \"completionsCount\": 17480,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"CH\"\n    },\n    {\n      \"rank\": 15,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198348389726\",\n      \"webappUsername\": \"KsiRz\",\n      \"steamAccountName\": \"KsiRz\",\n      \"points\": \"37285685\",\n      \"scenariosCount\": \"999\",\n      \"completionsCount\": 16564,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 16,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198146065367\",\n      \"webappUsername\": \"Tayden\",\n      \"steamAccountName\": \"Joesph\",\n      \"points\": \"37230420\",\n      \"scenariosCount\": \"2035\",\n      \"completionsCount\": 30219,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    },\n    {\n      \"rank\": 17,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198273873729\",\n      \"webappUsername\": null,\n      \"steamAccountName\": \"♞TroN\",\n      \"points\": \"36840192\",\n      \"scenariosCount\": \"1258\",\n      \"completionsCount\": 20753,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"EE\"\n    },\n    {\n      \"rank\": 18,\n      \"rankChange\": 0,\n      \"steamId\": \"76561199025798490\",\n      \"webappUsername\": \"ness\",\n      \"steamAccountName\": \"eilish\",\n      \"points\": \"36772216\",\n      \"scenariosCount\": \"2079\",\n      \"completionsCount\": 18954,\n      \"kovaaksPlusActive\": true,\n      \"country\": \"GB\"\n    },\n    {\n      \"rank\": 19,\n      \"rankChange\": 0,\n      \"steamId\": \"76561199013778498\",\n      \"webappUsername\": \"rxnown\",\n      \"steamAccountName\": \"󠀡󠀡⁧⁧ rx\",\n      \"points\": \"36494590\",\n      \"scenariosCount\": \"3018\",\n      \"completionsCount\": 38944,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"SE\"\n    },\n    {\n      \"rank\": 20,\n      \"rankChange\": 0,\n      \"steamId\": \"76561198218657867\",\n      \"webappUsername\": \"FlabbyTurtle\",\n      \"steamAccountName\": \"FlabbyTurtle\",\n      \"points\": \"36313651\",\n      \"scenariosCount\": \"1123\",\n      \"completionsCount\": 5505,\n      \"kovaaksPlusActive\": false,\n      \"country\": \"US\"\n    }\n  ],\n  \"total\": \"1475018\"\n}\n\n\n\n\n\n\n\n\n\nNo auth required"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaderboard Region Global Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/leaderboard/global/scores?page=0&max=20&group=region",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"leaderboard",
+						"global",
+						"scores"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "20"
+						},
+						{
+							"key": "group",
+							"value": "region"
+						}
+					]
+				},
+				"description": "returns: \n\n\n{\n  \"data\": [\n    {\n      \"group\": \"AS\",\n      \"points\": \"219846639647\",\n      \"scenarios_count\": \"4388502\",\n      \"completions_count\": \"84369919\",\n      \"rank\": 1\n    },\n    {\n      \"group\": \"NA\",\n      \"points\": \"217276953934\",\n      \"scenarios_count\": \"5352825\",\n      \"completions_count\": \"74634832\",\n      \"rank\": 2\n    },\n    {\n      \"group\": \"EU\",\n      \"points\": \"177009542889\",\n      \"scenarios_count\": \"4274171\",\n      \"completions_count\": \"60074217\",\n      \"rank\": 3\n    },\n    {\n      \"group\": \"SA\",\n      \"points\": \"40262108497\",\n      \"scenarios_count\": \"1099248\",\n      \"completions_count\": \"14776727\",\n      \"rank\": 4\n    },\n    {\n      \"group\": \"OC\",\n      \"points\": \"26384618827\",\n      \"scenarios_count\": \"618074\",\n      \"completions_count\": \"8237920\",\n      \"rank\": 5\n    },\n    {\n      \"group\": \"AF\",\n      \"points\": \"14691818152\",\n      \"scenarios_count\": \"330239\",\n      \"completions_count\": \"4312568\",\n      \"rank\": 6\n    },\n    {\n      \"group\": \"AN\",\n      \"points\": \"3032243407\",\n      \"scenarios_count\": \"69691\",\n      \"completions_count\": \"952415\",\n      \"rank\": 7\n    }\n  ],\n  \"total\": 7\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{vault:authorization-password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "xrageblaze@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/auth/webapp/login",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"auth",
+						"webapp",
+						"login"
+					]
+				},
+				"description": "Returns data object as such :\n\n{\n  \"auth\": {\n    \"firebaseJWT\": \"{{vault:json-web-token}}\",\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDM2Nzc2ODEsInBsYXllcklkIjo4ODEwMzMsInVzZXJuYW1lIjoieHJhZ2VibGF6ZUBnbWFpbC5jb20iLCJjcmVhdGVkIjoiMjAyMS0wNy0yNFQyMjo1ODozMC45MTVaIiwic3RlYW1JZCI6Ijc2NTYxMTk4NDA5NDU4NjMxIiwiY2xpZW50QnVpbGRWZXJzaW9uIjoiMy43LjYuMjAyNS0wMy0xMy0xMy0xOC00Mi1hMGQ3YmM3Y2QyZTgiLCJsYXN0QWNjZXNzIjoiMjAyNS0wMy0yNFQxNzozNDozMi45ODZaIiwid2ViYXBwIjp7InJvbGVzIjp7ImFkbWluIjpmYWxzZSwiY29hY2giOmZhbHNlLCJzdGFmZiI6ZmFsc2V9LCJ2aWRlb3MiOltdLCJ1c2VybmFtZSI6InhyYWdlYmxhemVAZ21haWwuY29tIiwic29jaWFsTWVkaWEiOnsidGlrdG9rIjpudWxsLCJ0d2l0Y2giOm51bGwsImRpc2NvcmQiOm51bGwsInR3aXR0ZXIiOm51bGwsInlvdXR1YmUiOm51bGx9LCJnYW1lU2V0dGluZ3MiOnsiZHBpIjpudWxsLCJmb3YiOm51bGwsImNtMzYwIjpudWxsLCJyYXdJbnB1dCI6InRydWUiLCJzZW5zaXRpdml0eSI6bnVsbH0sInByb2ZpbGVJbWFnZSI6bnVsbCwicHJvZmlsZVZpZXdzIjoyNSwiaGFzU3Vic2NyaWJlZCI6ZmFsc2UsImdhbWluZ1BlcmlwaGVyYWxzIjp7Im1vdXNlIjoiUHVsc2FyIFgyIFYzIiwiaGVhZHNldCI6bnVsbCwibW9uaXRvciI6bnVsbCwia2V5Ym9hcmQiOm51bGwsIm1vdXNlUGFkIjoiQXF1YSBDb250cm9sIDIifX0sImNvdW50cnkiOiJnYiIsImxvd2VyV2ViYXBwVXNlcm5hbWUiOiJ4cmFnZWJsYXplQGdtYWlsLmNvbSIsInNlYXJjaFZlY3RvciI6IidreXVyaSc6MiAneHJhZ2VibGF6ZUBnbWFpbC5jb20nOjEiLCJzdGVhbUFjY291bnROYW1lIjoia3l1cmkiLCJzdGVhbUFjY291bnRBdmF0YXIiOiJodHRwczovL2F2YXRhcnMuc3RlYW1zdGF0aWMuY29tL2Q0YjI0NWJmNTBhYzE0MTkwOTcwYjJiOWNhY2Y3ZTg3NjJhNzA2MzVfZnVsbC5qcGciLCJpYXQiOjE3NDI5ODY0ODF9.oe1KofO89hnM_AIneVj4R44hRO7BOt-YE_i_hV6lUxU\",\n    \"refreshToken\": \"686366f5-4ae5-41d0-8338-b385bbae7579\",\n    \"exp\": 1743677681,\n    \"emailVerified\": true,\n    \"steamAccountNameIds\": {\n      \"kyuri\": \"76561198409458631\"\n    }\n  },\n  \"profile\": {\n    \"playerId\": 881033,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"created\": \"2021-07-24T22:58:30.915Z\",\n    \"steamId\": \"76561198409458631\",\n    \"clientBuildVersion\": \"3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8\",\n    \"lastAccess\": \"2025-03-24T17:34:32.986Z\",\n    \"webapp\": {\n      \"roles\": {\n        \"admin\": false,\n        \"coach\": false,\n        \"staff\": false\n      },\n      \"videos\": [],\n      \"username\": \"xrageblaze@gmail.com\",\n      \"socialMedia\": {\n        \"tiktok\": null,\n        \"twitch\": null,\n        \"discord\": null,\n        \"twitter\": null,\n        \"youtube\": null\n      },\n      \"gameSettings\": {\n        \"dpi\": null,\n        \"fov\": null,\n        \"cm360\": null,\n        \"rawInput\": \"true\",\n        \"sensitivity\": null\n      },\n      \"profileImage\": null,\n      \"profileViews\": 25,\n      \"hasSubscribed\": false,\n      \"gamingPeripherals\": {\n        \"mouse\": \"Pulsar X2 V3\",\n        \"headset\": null,\n        \"monitor\": null,\n        \"keyboard\": null,\n        \"mousePad\": \"Aqua Control 2\"\n      }\n    },\n    \"country\": \"gb\",\n    \"lowerWebappUsername\": \"xrageblaze@gmail.com\",\n    \"searchVector\": \"'kyuri':2 'xrageblaze@gmail.com':1\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg\"\n  },\n  \"redirect\": false\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Monthly Players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/user/monthly-players",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"user",
+						"monthly-players"
+					]
+				},
+				"description": "Returns :\n\n{\n  \"count\": 320866\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Mouse Sensitvity convert",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/game-settings",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"game-settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "undefined",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/user/profile",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"user",
+						"profile"
+					]
+				},
+				"description": "Returns:\n\n{\n  \"playerId\": 881033,\n  \"steamAccountName\": \"kyuri\",\n  \"steamAccountAvatar\": \"https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg\",\n  \"created\": \"2021-07-24T22:58:30.915Z\",\n  \"steamId\": \"76561198409458631\",\n  \"clientBuildVersion\": \"3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8\",\n  \"lastAccess\": \"2025-03-24T17:34:32.986Z\",\n  \"webapp\": {\n    \"roles\": {\n      \"admin\": false,\n      \"coach\": false,\n      \"staff\": false\n    },\n    \"videos\": [],\n    \"username\": \"xrageblaze@gmail.com\",\n    \"socialMedia\": {\n      \"tiktok\": null,\n      \"twitch\": null,\n      \"discord\": \"ckyurii\",\n      \"twitter\": null,\n      \"youtube\": null,\n      \"discord_id\": \"934987217456209951\"\n    },\n    \"gameSettings\": {\n      \"dpi\": null,\n      \"fov\": null,\n      \"cm360\": null,\n      \"rawInput\": \"true\",\n      \"sensitivity\": null\n    },\n    \"profileImage\": null,\n    \"profileViews\": 25,\n    \"hasSubscribed\": false,\n    \"gamingPeripherals\": {\n      \"mouse\": \"Pulsar X2 V3\",\n      \"headset\": null,\n      \"monitor\": null,\n      \"keyboard\": null,\n      \"mousePad\": \"Aqua Control 2\"\n    }\n  },\n  \"country\": \"gb\",\n  \"kovaaksPlusActive\": false,\n  \"discord_id\": \"934987217456209951\",\n  \"discord_username\": \"ckyurii\",\n  \"hideDiscord\": false,\n  \"badges\": [],\n  \"followCounts\": {\n    \"following\": 0,\n    \"followers\": 0\n  },\n  \"kovaaksPlus\": {\n    \"active\": false,\n    \"expiration\": null\n  },\n  \"scenariosPlayed\": \"2616\",\n  \"features\": {\n    \"global_leaderboards\": true\n  }\n}\n\n\nrequires jwt from login\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Recent Activity User Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/user/activity/recent?username=xrageblaze@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"user",
+						"activity",
+						"recent"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xrageblaze@gmail.com"
+						}
+					]
+				},
+				"description": "Response:\n\n\n[\n  {\n    \"timestamp\": \"2025-03-24T17:43:23.724Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Aether Intermediate S5\",\n    \"score\": 2429,\n    \"leaderboardId\": 101369,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-21T21:37:46.350Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Air Long Strafes Far Intermediate\",\n    \"score\": 6204,\n    \"leaderboardId\": 110834,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-21T20:46:35.220Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Controlsphere Intermediate S5\",\n    \"score\": 3164,\n    \"leaderboardId\": 103353,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-21T19:14:36.636Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"Controlsphere Blink Intermediate\",\n    \"score\": 5718,\n    \"leaderboardId\": 110207,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-21T19:09:21.914Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"FuglaaXYZ Voltaic No Blinks Intermediate\",\n    \"score\": 12880,\n    \"leaderboardId\": 113051,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-21T19:07:16.127Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"PreciseSphere Intermediate\",\n    \"score\": 7737,\n    \"leaderboardId\": 111340,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-20T19:53:06.349Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"Prediction Cancelling - Midrange I\",\n    \"score\": 2552,\n    \"leaderboardId\": 34489,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-20T19:50:49.754Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Closerange Long Strafes Intermediate\",\n    \"score\": 7860,\n    \"leaderboardId\": 109718,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-20T19:44:38.685Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Midrange Short Strafes Intermediate\",\n    \"score\": 4536,\n    \"leaderboardId\": 110831,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  },\n  {\n    \"timestamp\": \"2025-03-20T19:39:33.030Z\",\n    \"type\": \"HIGH_SCORE\",\n    \"scenarioName\": \"VT Midrange Long Strafes Intermediate\",\n    \"score\": 8391,\n    \"leaderboardId\": 109712,\n    \"username\": \"xrageblaze@gmail.com\",\n    \"webappUsername\": \"xrageblaze@gmail.com\",\n    \"steamId\": \"76561198409458631\",\n    \"steamAccountName\": \"kyuri\",\n    \"steamAccountAvatar\": \"https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg\",\n    \"country\": \"gb\",\n    \"kovaaksPlus\": false\n  }\n]"
+			},
+			"response": []
+		},
+		{
+			"name": "Scenario Name Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/scenario/popular?page=0&max=20&scenarioNameSearch=Eddie",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"scenario",
+						"popular"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "20"
+						},
+						{
+							"key": "scenarioNameSearch",
+							"value": "Eddie"
+						}
+					]
+				},
+				"description": "E.g\n\n\n{\n  \"page\": 0,\n  \"max\": 20,\n  \"total\": 60,\n  \"data\": [\n    {\n      \"rank\": 1,\n      \"leaderboardId\": 104835,\n      \"scenarioName\": \"VT EddieTS Novice S5\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with four flying targets infront of the player. Each target takes 20 hits to eliminate with a TTK of ~0.24 seconds, and is worth a total of 10 points.\"\n      },\n      \"counts\": {\n        \"plays\": 119000,\n        \"entries\": 22012\n      },\n      \"topScore\": {\n        \"score\": 1490\n      }\n    },\n    {\n      \"rank\": 2,\n      \"leaderboardId\": 105176,\n      \"scenarioName\": \"VT EddieTS Intermediate S5\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with four flying targets infront of the player. Each target takes 20 hits to eliminate with a TTK of ~0.24 seconds, and is worth a total of 10 points.\"\n      },\n      \"counts\": {\n        \"plays\": 198947,\n        \"entries\": 17604\n      },\n      \"topScore\": {\n        \"score\": 1390\n      }\n    },\n    {\n      \"rank\": 3,\n      \"leaderboardId\": 104864,\n      \"scenarioName\": \"VT EddieTS Advanced S5\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with four flying targets infront of the player. Each target takes 20 hits to eliminate with a TTK of ~0.24 seconds, and is worth a total of 10 points.\"\n      },\n      \"counts\": {\n        \"plays\": 47395,\n        \"entries\": 3307\n      },\n      \"topScore\": {\n        \"score\": 1360\n      }\n    },\n    {\n      \"rank\": 4,\n      \"leaderboardId\": 105254,\n      \"scenarioName\": \"VT EddieTS Intermediate S5 Speed\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant is intended to challenge the players ability to move at a faster pace and seamlessly transitioning between each target\\r\\n\\r\\nSpeed: 50% larger, -25% TTK \"\n      },\n      \"counts\": {\n        \"plays\": 11906,\n        \"entries\": 2433\n      },\n      \"topScore\": {\n        \"score\": 1804\n      }\n    },\n    {\n      \"rank\": 5,\n      \"leaderboardId\": 105056,\n      \"scenarioName\": \"VT EddieTS Intermediate S5 Static\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Static version of the scenario to practice flicking directly onto each target\\r\\n\\r\\nChanges: 20% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 10233,\n        \"entries\": 2276\n      },\n      \"topScore\": {\n        \"score\": 1580\n      }\n    },\n    {\n      \"rank\": 6,\n      \"leaderboardId\": 105261,\n      \"scenarioName\": \"VT EddieTS Intermediate S5 Hard\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"A harder version of the scenario that can serve as an intermediary between each difficulty. It encourages players to establish good technique and be able to apply it to something slightly harder\\r\\n\\r\\nHard: 12.5% smaller, 10% faster \"\n      },\n      \"counts\": {\n        \"plays\": 12806,\n        \"entries\": 2254\n      },\n      \"topScore\": {\n        \"score\": 1223\n      }\n    },\n    {\n      \"rank\": 7,\n      \"leaderboardId\": 105257,\n      \"scenarioName\": \"VT EddieTS Intermediate S5 Regen\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant forces players to have good tracking on the bot, since the bot will regenerate all of its health when it is not taking damage\\r\\n\\r\\nChanges: Fast Regen, 10% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 10406,\n        \"entries\": 2232\n      },\n      \"topScore\": {\n        \"score\": 1000\n      }\n    },\n    {\n      \"rank\": 8,\n      \"leaderboardId\": 106702,\n      \"scenarioName\": \"VT EddieTS Novice S5 Static\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Static version of the scenario to practice flicking directly onto each target\\r\\n\\r\\nChanges: 20% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 2727,\n        \"entries\": 837\n      },\n      \"topScore\": {\n        \"score\": 1580\n      }\n    },\n    {\n      \"rank\": 9,\n      \"leaderboardId\": 106768,\n      \"scenarioName\": \"VT EddieTS Novice S5 Hard\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"A harder version of the scenario that can serve as an intermediary between each difficulty. It encourages players to establish good technique and be able to apply it to something slightly harder\\r\\n\\r\\nHard: 12.5% smaller, 10% faster \"\n      },\n      \"counts\": {\n        \"plays\": 3134,\n        \"entries\": 809\n      },\n      \"topScore\": {\n        \"score\": 1346\n      }\n    },\n    {\n      \"rank\": 10,\n      \"leaderboardId\": 107386,\n      \"scenarioName\": \"VT EddieTS Novice S5 Speed\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant is intended to challenge the players ability to move at a faster pace and seamlessly transitioning between each target\\r\\n\\r\\nSpeed: 32.5% larger, -25% TTK \"\n      },\n      \"counts\": {\n        \"plays\": 2417,\n        \"entries\": 771\n      },\n      \"topScore\": {\n        \"score\": 1812\n      }\n    },\n    {\n      \"rank\": 11,\n      \"leaderboardId\": 107794,\n      \"scenarioName\": \"VT EddieTS Novice S5 Regen Small\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant forces players to have good tracking on the bot, since the bot will regenerate all of its health when it is not taking damage\\r\\n\\r\\nChanges: Fast Regen, 10% smaller\\r\\nSmall: 10% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 2054,\n        \"entries\": 675\n      },\n      \"topScore\": {\n        \"score\": 970\n      }\n    },\n    {\n      \"rank\": 12,\n      \"leaderboardId\": 104860,\n      \"scenarioName\": \"VT EddieTS Entry S5 Speed\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant is intended to challenge the players ability to move at a faster pace and seamlessly transitioning between each target\\r\\n\\r\\nSpeed: 25% larger, -25% TTK\\r\\nEntry: 15% larger, 15% slower \"\n      },\n      \"counts\": {\n        \"plays\": 2153,\n        \"entries\": 438\n      },\n      \"topScore\": {\n        \"score\": 1947\n      }\n    },\n    {\n      \"rank\": 13,\n      \"leaderboardId\": 106008,\n      \"scenarioName\": \"VT EddieTS Advanced S5 Speed\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant is intended to challenge the players ability to move at a faster pace and seamlessly transitioning between each target\\r\\n\\r\\nSpeed: 50% larger, -25% TTK \"\n      },\n      \"counts\": {\n        \"plays\": 1615,\n        \"entries\": 368\n      },\n      \"topScore\": {\n        \"score\": 1697\n      }\n    },\n    {\n      \"rank\": 14,\n      \"leaderboardId\": 105055,\n      \"scenarioName\": \"VT EddieTS Entry S5 Static\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Static version of the scenario to practice flicking directly onto each target\\r\\n\\r\\nChanges: 20% smaller\\r\\nEntry: 15% larger \"\n      },\n      \"counts\": {\n        \"plays\": 1164,\n        \"entries\": 349\n      },\n      \"topScore\": {\n        \"score\": 1626\n      }\n    },\n    {\n      \"rank\": 15,\n      \"leaderboardId\": 106769,\n      \"scenarioName\": \"VT EddieTS Novice S5 Regen\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant forces players to have good tracking on the bot, since the bot will regenerate all of its health when it is not taking damage\\r\\n\\r\\nChanges: Fast Regen, 10% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 1063,\n        \"entries\": 333\n      },\n      \"topScore\": {\n        \"score\": 1140\n      }\n    },\n    {\n      \"rank\": 16,\n      \"leaderboardId\": 107023,\n      \"scenarioName\": \"VT EddieTS Novice S5 Small\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Smaller version of the scenario\\r\\n\\r\\nSmall: 10% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 1198,\n        \"entries\": 327\n      },\n      \"topScore\": {\n        \"score\": 1459\n      }\n    },\n    {\n      \"rank\": 17,\n      \"leaderboardId\": 104964,\n      \"scenarioName\": \"VT EddieTS Advanced S5 Hard\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"A harder version of the scenario that can serve as an intermediary between each difficulty. It encourages players to establish good technique and be able to apply it to something slightly harder\\r\\n\\r\\nHard: 12.5% smaller, 10% faster\"\n      },\n      \"counts\": {\n        \"plays\": 1547,\n        \"entries\": 318\n      },\n      \"topScore\": {\n        \"score\": 1092\n      }\n    },\n    {\n      \"rank\": 18,\n      \"leaderboardId\": 105050,\n      \"scenarioName\": \"VT EddieTS Advanced S5 Regen\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"This variant forces players to have good tracking on the bot, since the bot will regenerate all of its health when it is not taking damage\\r\\n\\r\\nChanges: Fast Regen, 10% smaller \"\n      },\n      \"counts\": {\n        \"plays\": 1267,\n        \"entries\": 314\n      },\n      \"topScore\": {\n        \"score\": 890\n      }\n    },\n    {\n      \"rank\": 19,\n      \"leaderboardId\": 105052,\n      \"scenarioName\": \"VT EddieTS Advanced S5 Static\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Static version of the scenario to practice flicking directly onto each target\\r\\n\\r\\nChanges: 20% smaller\"\n      },\n      \"counts\": {\n        \"plays\": 1237,\n        \"entries\": 312\n      },\n      \"topScore\": {\n        \"score\": 1509\n      }\n    },\n    {\n      \"rank\": 20,\n      \"leaderboardId\": 104858,\n      \"scenarioName\": \"VT EddieTS Elite S5\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"For those looking for a real challenge, intended for those who are Astra and above\"\n      },\n      \"counts\": {\n        \"plays\": 378,\n        \"entries\": 86\n      },\n      \"topScore\": {\n        \"score\": 1058\n      }\n    }\n  ]\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Scenario popular search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/scenario/popular?page=6&max=20",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"scenario",
+						"popular"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "6"
+						},
+						{
+							"key": "max",
+							"value": "20"
+						}
+					]
+				},
+				"description": "Returns:\n\n\n{\n  \"page\": 6,\n  \"max\": 20,\n  \"total\": 44314,\n  \"data\": [\n    {\n      \"rank\": 121,\n      \"leaderboardId\": 32950,\n      \"scenarioName\": \"Clicking Static 5\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"DrUninstall\",\n          \"NFNT\"\n        ],\n        \"description\": \"Practice your clicking on 5 static targets placed in front of a wall. They all spawn at different distances from the player, to stimulate a better practice environment.\"\n      },\n      \"counts\": {\n        \"plays\": 1184497,\n        \"entries\": 113614\n      },\n      \"topScore\": {\n        \"score\": 269619\n      }\n    },\n    {\n      \"rank\": 122,\n      \"leaderboardId\": 122,\n      \"scenarioName\": \"Bounce 180 Tracking\",\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"Huddled\"\n        ],\n        \"description\": \"To help vertical tracking on small bouncing balls\"\n      },\n      \"counts\": {\n        \"plays\": 1916260,\n        \"entries\": 113059\n      },\n      \"topScore\": {\n        \"score\": 134\n      }\n    },\n    {\n      \"rank\": 123,\n      \"leaderboardId\": 11391,\n      \"scenarioName\": \"Fountain Track Fortnite\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"NFNT\",\n          \"DrUninstall\"\n        ],\n        \"description\": \"Tracking a target that springs up like a fountain. Third person. No accuracy scoring.\"\n      },\n      \"counts\": {\n        \"plays\": 1313270,\n        \"entries\": 112371\n      },\n      \"topScore\": {\n        \"score\": 1620\n      }\n    },\n    {\n      \"rank\": 124,\n      \"leaderboardId\": 2545,\n      \"scenarioName\": \"MrSavage patTS Shotgun FN\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"psalm\",\n          \"Whisper\",\n          \"DrUninstall\"\n        ],\n        \"description\": \"Shotgun target-switch practice FN\"\n      },\n      \"counts\": {\n        \"plays\": 1327907,\n        \"entries\": 112283\n      },\n      \"topScore\": {\n        \"score\": 16449\n      }\n    },\n    {\n      \"rank\": 125,\n      \"leaderboardId\": 116,\n      \"scenarioName\": \"patTargetSwitch\",\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"patys\"\n        ],\n        \"description\": \"Target switching scenarios (flick + track)\"\n      },\n      \"counts\": {\n        \"plays\": 1537404,\n        \"entries\": 111975\n      },\n      \"topScore\": {\n        \"score\": 9640\n      }\n    },\n    {\n      \"rank\": 126,\n      \"leaderboardId\": 94,\n      \"scenarioName\": \"5 Sphere Hipfire Extra Small\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"MattyBuj\",\n          \"creator\",\n          \"code\",\n          \"elo\"\n        ],\n        \"description\": \"Practice snapping to smaller than normal targets.\"\n      },\n      \"counts\": {\n        \"plays\": 3210701,\n        \"entries\": 111858\n      },\n      \"topScore\": {\n        \"score\": 2132\n      }\n    },\n    {\n      \"rank\": 127,\n      \"leaderboardId\": 26,\n      \"scenarioName\": \"voxTS Voltaic\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"voxel\",\n          \"fallen\",\n          \"Whisper\"\n        ],\n        \"description\": \"vox voltaic, 1 less bot, 10% larger, far away bots slightly closer.\"\n      },\n      \"counts\": {\n        \"plays\": 1831257,\n        \"entries\": 111500\n      },\n      \"topScore\": {\n        \"score\": 159\n      }\n    },\n    {\n      \"rank\": 128,\n      \"leaderboardId\": 756,\n      \"scenarioName\": \"KindaClose Fast Strafes Robot\",\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"KovaaK\",\n          \"Tammas\",\n          \"DrUninstall\"\n        ],\n        \"description\": \"Kindaclose but its fast\"\n      },\n      \"counts\": {\n        \"plays\": 948688,\n        \"entries\": 111324\n      },\n      \"topScore\": {\n        \"score\": 21060\n      }\n    },\n    {\n      \"rank\": 129,\n      \"leaderboardId\": 12389,\n      \"scenarioName\": \"Fireworks Flick Easy\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"NFNT\",\n          \"DrUninstall\"\n        ],\n        \"description\": \"Kill targets that spread like fireworks. Easier Version\"\n      },\n      \"counts\": {\n        \"plays\": 694956,\n        \"entries\": 111306\n      },\n      \"topScore\": {\n        \"score\": 7848\n      }\n    },\n    {\n      \"rank\": 130,\n      \"leaderboardId\": 185,\n      \"scenarioName\": \"SYW (Smooth Your Wrist)\",\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"DevinDTV\"\n        ],\n        \"description\": \"A pure test of smoothness. The glass on the sides give you time to react to bot strafes. ADS no longer required, FoV locked to 103 on challenge mode.\"\n      },\n      \"counts\": {\n        \"plays\": 2098876,\n        \"entries\": 110266\n      },\n      \"topScore\": {\n        \"score\": 1032\n      }\n    },\n    {\n      \"rank\": 131,\n      \"leaderboardId\": 764,\n      \"scenarioName\": \"Bounce 180 Sparky Jumbo\",\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"Whisper\"\n        ],\n        \"description\": \"To help vertical tracking while clicking. Reload mechanism with no acc penalty on scoring, and the balls actually bounce.\"\n      },\n      \"counts\": {\n        \"plays\": 695803,\n        \"entries\": 107523\n      },\n      \"topScore\": {\n        \"score\": 161\n      }\n    },\n    {\n      \"rank\": 132,\n      \"leaderboardId\": 121,\n      \"scenarioName\": \"Thin Aiming Long Invincible\",\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"Ku\"\n        ],\n        \"description\": \"Track a very thin INVINCIBLE target that makes long strafes.\"\n      },\n      \"counts\": {\n        \"plays\": 2629598,\n        \"entries\": 106529\n      },\n      \"topScore\": {\n        \"score\": 4726\n      }\n    },\n    {\n      \"rank\": 133,\n      \"leaderboardId\": 118,\n      \"scenarioName\": \"voxTargetSwitch\",\n      \"scenario\": {\n        \"aimType\": \"Target Switching\",\n        \"authors\": [\n          \"voxel\"\n        ],\n        \"description\": \"Inspiration from BF4 test range, go as fast as you can.\"\n      },\n      \"counts\": {\n        \"plays\": 2297320,\n        \"entries\": 104292\n      },\n      \"topScore\": {\n        \"score\": 148\n      }\n    },\n    {\n      \"rank\": 134,\n      \"leaderboardId\": 13,\n      \"scenarioName\": \"Thin Gauntlet\",\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"PPV\"\n        ],\n        \"description\": \"Track very thin targets that make long strafes, progressively getting harder. Challenge mode takes up to 2-3 minutes.\"\n      },\n      \"counts\": {\n        \"plays\": 1536901,\n        \"entries\": 104072\n      },\n      \"topScore\": {\n        \"score\": 915\n      }\n    },\n    {\n      \"rank\": 135,\n      \"leaderboardId\": 5350,\n      \"scenarioName\": \"Smoothbot Click CRIT\",\n      \"scenario\": {\n        \"aimType\": \"Other\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Dynamic click scenario based on \\\"Smoothbot Click\\\" by Pauer. CRIT variant. Check out the creators on Twitter @guwop808 - @d1vlrt -\"\n      },\n      \"counts\": {\n        \"plays\": 622767,\n        \"entries\": 103721\n      },\n      \"topScore\": {\n        \"score\": 24200\n      }\n    },\n    {\n      \"rank\": 136,\n      \"leaderboardId\": 11406,\n      \"scenarioName\": \"Tall Wall 6 (Distance)\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"kidded\"\n        ],\n        \"description\": \"Same as Tall Wall 6, just re-named for practice separation.\"\n      },\n      \"counts\": {\n        \"plays\": 608684,\n        \"entries\": 103567\n      },\n      \"topScore\": {\n        \"score\": 177\n      }\n    },\n    {\n      \"rank\": 137,\n      \"leaderboardId\": 819,\n      \"scenarioName\": \"1wall2targets TE\",\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"Ku\"\n        ],\n        \"description\": \"6 targets spawn on a wall.  Great practice for flicking to many targets quickly.  Challenge mode has accuracy-based scoring.\"\n      },\n      \"counts\": {\n        \"plays\": 1178994,\n        \"entries\": 102760\n      },\n      \"topScore\": {\n        \"score\": 990\n      }\n    },\n    {\n      \"rank\": 138,\n      \"leaderboardId\": 370,\n      \"scenarioName\": \"Smoothbot Voltaic Easy\",\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"Xytaglyph\",\n          \"Sackboy_Clank5\",\n          \"Tammas\",\n          \"Pauer\"\n        ],\n        \"description\": \"Smoothbot Voltaic, but the bot now spawns at crosshair height, the bot now jumps within 1 second of being on the ground and speed is capped to reduce previous inconsistencies.\"\n      },\n      \"counts\": {\n        \"plays\": 2386080,\n        \"entries\": 102150\n      },\n      \"topScore\": {\n        \"score\": 4903\n      }\n    },\n    {\n      \"rank\": 139,\n      \"leaderboardId\": 305,\n      \"scenarioName\": \"Revolving Tracking\",\n      \"scenario\": {\n        \"aimType\": \"\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"Improve tracking while revolving like a heli gunner.\"\n      },\n      \"counts\": {\n        \"plays\": 968142,\n        \"entries\": 102041\n      },\n      \"topScore\": {\n        \"score\": 10160\n      }\n    },\n    {\n      \"rank\": 140,\n      \"leaderboardId\": 11088,\n      \"scenarioName\": \"Humanoid Strafe\",\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"NFNT\"\n        ],\n        \"description\": \"15 seconds added per bot kill.Target's strafe gradually become harder to aim (there are 10 levels). With Humanoid bots.\"\n      },\n      \"counts\": {\n        \"plays\": 466726,\n        \"entries\": 99135\n      },\n      \"topScore\": {\n        \"score\": 99\n      }\n    }\n  ]\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Search profile by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/user/profile/by-username?username=xrageblaze@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"user",
+						"profile",
+						"by-username"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xrageblaze@gmail.com"
+						}
+					]
+				},
+				"description": "returns :\n\n\n{\n  \"playerId\": 881033,\n  \"steamAccountName\": \"kyuri\",\n  \"steamAccountAvatar\": \"https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg\",\n  \"created\": \"2021-07-24T22:58:30.915Z\",\n  \"steamId\": \"76561198409458631\",\n  \"clientBuildVersion\": \"3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8\",\n  \"lastAccess\": \"2025-03-24T17:34:32.986Z\",\n  \"webapp\": {\n    \"roles\": {\n      \"admin\": false,\n      \"coach\": false,\n      \"staff\": false\n    },\n    \"videos\": [],\n    \"username\": \"xrageblaze@gmail.com\",\n    \"socialMedia\": {\n      \"tiktok\": null,\n      \"twitch\": null,\n      \"discord\": \"ckyurii\",\n      \"twitter\": null,\n      \"youtube\": null,\n      \"discord_id\": \"934987217456209951\"\n    },\n    \"gameSettings\": {\n      \"dpi\": null,\n      \"fov\": null,\n      \"cm360\": null,\n      \"rawInput\": \"true\",\n      \"sensitivity\": null\n    },\n    \"profileImage\": null,\n    \"profileViews\": 25,\n    \"hasSubscribed\": false,\n    \"gamingPeripherals\": {\n      \"mouse\": \"Pulsar X2 V3\",\n      \"headset\": null,\n      \"monitor\": null,\n      \"keyboard\": null,\n      \"mousePad\": \"Aqua Control 2\"\n    }\n  },\n  \"country\": \"gb\",\n  \"kovaaksPlusActive\": false,\n  \"badges\": [],\n  \"followCounts\": {\n    \"following\": 0,\n    \"followers\": 0\n  },\n  \"kovaaksPlus\": {\n    \"active\": false,\n    \"expiration\": null\n  },\n  \"scenariosPlayed\": \"2616\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Search User Scenario Leaderboard scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/user/scenario/total-play?username=xrageblaze@gmail.com&page=2&max=10&sort_param[]=count",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"user",
+						"scenario",
+						"total-play"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xrageblaze@gmail.com"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "max",
+							"value": "10"
+						},
+						{
+							"key": "sort_param[]",
+							"value": "count"
+						}
+					]
+				},
+				"description": "Response:\n\n\n{\n  \"page\": 2,\n  \"max\": 10,\n  \"total\": 378,\n  \"data\": [\n    {\n      \"leaderboardId\": \"5203\",\n      \"scenarioName\": \"patTS Voltaic 360 Easy\",\n      \"counts\": {\n        \"plays\": 27\n      },\n      \"rank\": 512,\n      \"score\": 6240,\n      \"attributes\": {\n        \"resolution\": \"1920x1080\",\n        \"avg_fps\": 642.893310546875,\n        \"avg_ttk\": 0.76885986328125,\n        \"sens_scale\": \"Overwatch\",\n        \"horiz_sens\": 5,\n        \"vert_sens\": 5,\n        \"fov\": 103,\n        \"challenge_start\": \"13:59:57.744\",\n        \"score\": 6240,\n        \"kills\": 78,\n        \"hash\": \"4f85d2315f0c36702399c7b89f81dd31\",\n        \"fov_scale\": \"Overwatch\",\n        \"sens_randomizer\": null,\n        \"accuracy_damage\": 57777,\n        \"scenario_version\": \"4f85d2315f0c36702399c7b89f81dd31\",\n        \"cm360\": 34.6363639831543,\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\",\n        \"epoch\": 1740060055626\n      },\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"patys\",\n          \"voxel\",\n          \"sini\",\n          \"huekk\",\n          \"ethanoch\",\n          \"Empyrean\",\n          \"\"\n        ],\n        \"description\": \"PatTargetSwitch with no bodies, no reload and minimum FOV range 103-160 ow. A classic reinvented using patented bounding box tech. Truely an innovation in target switching. Credit to huekk for fixing the map!\"\n      }\n    },\n    {\n      \"leaderboardId\": \"524\",\n      \"scenarioName\": \"Tile Frenzy 180 Strafing\",\n      \"counts\": {\n        \"plays\": 25\n      },\n      \"rank\": 6157,\n      \"score\": 132.75,\n      \"attributes\": {\n        \"fOV\": 75.5999984741211,\n        \"hash\": \"d5054bd4121210d7e9d042b050469fea\",\n        \"cm360\": 0,\n        \"epoch\": 1712920900341,\n        \"kills\": 148,\n        \"score\": 132.7515106201172,\n        \"avg_fps\": 595.6149291992188,\n        \"avg_ttk\": 0.0016787817003205419,\n        \"fov_scale\": \"Clamped Horizontal\",\n        \"vert_sens\": 6.822999954223633,\n        \"horiz_sens\": 6.822999954223633,\n        \"resolution\": \"1920x1080\",\n        \"sens_scale\": \"Quake/Source\",\n        \"accuracy_damage\": 89696,\n        \"challenge_start\": \"12:20:38.828\",\n        \"scenario_version\": \"d5054bd4121210d7e9d042b050469fea\",\n        \"client_build_version\": \"3.5.0.2024-04-11-10-45-24-fea8e4e051\"\n      },\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"kroader\"\n        ],\n        \"description\": \"tile frenzy 180\"\n      }\n    },\n    {\n      \"leaderboardId\": \"10466\",\n      \"scenarioName\": \"Popcorn Voltaic Intermediate\",\n      \"counts\": {\n        \"plays\": 25\n      },\n      \"rank\": 7978,\n      \"score\": 170,\n      \"attributes\": {\n        \"resolution\": \"1920x1080\",\n        \"avg_fps\": 602.9414672851562,\n        \"avg_ttk\": 3.528193473815918,\n        \"sens_scale\": \"Overwatch\",\n        \"horiz_sens\": 5,\n        \"vert_sens\": 5,\n        \"fov\": 103,\n        \"challenge_start\": \"21:22:40.806\",\n        \"score\": 170,\n        \"kills\": 17,\n        \"hash\": \"0cd2b6cc28ddd63ca2a1a1cb0d930856\",\n        \"fov_scale\": \"Overwatch\",\n        \"sens_randomizer\": null,\n        \"accuracy_damage\": 45945,\n        \"scenario_version\": \"0cd2b6cc28ddd63ca2a1a1cb0d930856\",\n        \"cm360\": 34.6363639831543,\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\",\n        \"epoch\": 1740086619078\n      },\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"kindred\",\n          \"gli\",\n          \"sini\",\n          \"Fallen\",\n          \"Tammas\"\n        ],\n        \"description\": \"the bots cycle jump heights on kill so you can't farm one, the arena is also circular so the bots don't get stuck in the corners.\"\n      }\n    },\n    {\n      \"leaderboardId\": \"120\",\n      \"scenarioName\": \"LG Pin Practice 360\",\n      \"counts\": {\n        \"plays\": 24\n      },\n      \"rank\": 14337,\n      \"score\": 2652,\n      \"attributes\": {\n        \"fov\": 103,\n        \"hash\": \"1bd8936343724d18465795b9d93c8ac1\",\n        \"cm360\": 129.8863525390625,\n        \"epoch\": 1652637815842,\n        \"kills\": 26,\n        \"score\": 2652,\n        \"avg_fps\": 308.5386962890625,\n        \"avg_ttk\": 0.003235196229070425,\n        \"fov_scale\": \"Splitgate\",\n        \"vert_sens\": 0.4000000059604645,\n        \"horiz_sens\": 0.4000000059604645,\n        \"resolution\": \"1920x1080\",\n        \"sens_scale\": \"Valorant\",\n        \"accuracy_damage\": 44244,\n        \"challenge_start\": \"H:M:S.s\",\n        \"scenario_version\": \"1bd8936343724d18465795b9d93c8ac1\",\n        \"client_build_version\": \"3.0.3.2022-05-10-16-41-55-3a28d653f0\"\n      },\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"KovaaK\",\n          \"Huddled\"\n        ],\n        \"description\": \"Using the Air map LG Pin Practice is now a 360 degree challenge because you are stuck in the middle\"\n      }\n    },\n    {\n      \"leaderboardId\": \"467\",\n      \"scenarioName\": \"Thin Gauntlet V2\",\n      \"counts\": {\n        \"plays\": 24\n      },\n      \"rank\": 12849,\n      \"score\": 869.62,\n      \"attributes\": {\n        \"fov\": 103,\n        \"hash\": \"679366e2e8063204fbd7e1bd150bf106\",\n        \"cm360\": 34.6363639831543,\n        \"epoch\": 1740313239875,\n        \"kills\": 8,\n        \"score\": 869.6285400390625,\n        \"avg_fps\": 693.8640747070312,\n        \"avg_ttk\": 16.29389762878418,\n        \"fov_scale\": \"Overwatch\",\n        \"vert_sens\": 5,\n        \"horiz_sens\": 5,\n        \"resolution\": \"1920x1080\",\n        \"sens_scale\": \"Overwatch\",\n        \"accuracy_damage\": 49969,\n        \"challenge_start\": \"12:12:45.442\",\n        \"sens_randomizer\": null,\n        \"scenario_version\": \"679366e2e8063204fbd7e1bd150bf106\",\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\"\n      },\n      \"scenario\": {\n        \"aimType\": \"Tracking\",\n        \"authors\": [\n          \"PPV\"\n        ],\n        \"description\": \"Track very thin targets that make long strafes, progressively getting harder. Challenge mode takes up to 2-3 minutes.\"\n      }\n    },\n    {\n      \"leaderboardId\": \"987\",\n      \"scenarioName\": \"Pokeball Frenzy Auto Wide Wall 4 Targets Extra Small\",\n      \"counts\": {\n        \"plays\": 24\n      },\n      \"rank\": 3009,\n      \"score\": 67,\n      \"attributes\": {\n        \"resolution\": \"1920x1080\",\n        \"avg_fps\": 654.8184204101562,\n        \"avg_ttk\": 0.8951780796051025,\n        \"sens_scale\": \"Overwatch\",\n        \"horiz_sens\": 5,\n        \"vert_sens\": 5,\n        \"fov\": 103,\n        \"challenge_start\": \"21:39:19.481\",\n        \"score\": 67,\n        \"kills\": 67,\n        \"hash\": \"7e2c7f1f9a1f6a76f850d7a209cf8a20\",\n        \"fov_scale\": \"Overwatch\",\n        \"sens_randomizer\": null,\n        \"accuracy_damage\": 12958,\n        \"scenario_version\": \"7e2c7f1f9a1f6a76f850d7a209cf8a20\",\n        \"cm360\": 34.6363639831543,\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\",\n        \"epoch\": 1740087617801\n      },\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"voxel\",\n          \"huekk\",\n          \"Sackboy_Clank5\"\n        ],\n        \"description\": \"no accuracy multipliers & extended 1wall map\"\n      }\n    },\n    {\n      \"leaderboardId\": \"98330\",\n      \"scenarioName\": \"VT Pasu Intermediate S5\",\n      \"counts\": {\n        \"plays\": 24\n      },\n      \"rank\": 2913,\n      \"score\": 870.98,\n      \"attributes\": {\n        \"fov\": 103,\n        \"hash\": \"830238e82c367ad2ba40df1da9968131\",\n        \"cm360\": 35,\n        \"epoch\": 1741723190080,\n        \"kills\": 106,\n        \"score\": 870.9815673828125,\n        \"avg_fps\": 554.84130859375,\n        \"avg_ttk\": 0.5657915472984314,\n        \"fov_scale\": \"Overwatch\",\n        \"vert_sens\": 35,\n        \"horiz_sens\": 35,\n        \"resolution\": \"1600x900\",\n        \"sens_scale\": \"cm/360\",\n        \"accuracy_damage\": 67515,\n        \"challenge_start\": \"19:58:17.922\",\n        \"sens_randomizer\": null,\n        \"scenario_version\": \"830238e82c367ad2ba40df1da9968131\",\n        \"client_build_version\": \"3.7.5.2025-03-06-15-08-38-060b83f6309b\"\n      },\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"\"\n        ],\n        \"description\": \"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nSemi auto click timing with four targets jumping and floating around on a wall infront of the player, while being repelled away from the edges. Each target takes 1 hit to eliminate and is worth 10 points. Sqrt Acc scoring applies.\"\n      }\n    },\n    {\n      \"leaderboardId\": \"24957\",\n      \"scenarioName\": \"VT Multiclick 120 Intermediate\",\n      \"counts\": {\n        \"plays\": 23\n      },\n      \"rank\": 20008,\n      \"score\": 1390,\n      \"attributes\": {\n        \"resolution\": \"1920x1080\",\n        \"avg_fps\": 597.0787963867188,\n        \"avg_ttk\": 0.4314892590045929,\n        \"sens_scale\": \"Overwatch\",\n        \"horiz_sens\": 5,\n        \"vert_sens\": 5,\n        \"fov\": 103,\n        \"challenge_start\": \"19:50:23.147\",\n        \"score\": 1390,\n        \"kills\": 139,\n        \"hash\": \"f98dfd4942f49d17ab440317418d5dba\",\n        \"fov_scale\": \"Overwatch\",\n        \"sens_randomizer\": null,\n        \"accuracy_damage\": 89677,\n        \"scenario_version\": \"f98dfd4942f49d17ab440317418d5dba\",\n        \"cm360\": 34.6363639831543,\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\",\n        \"epoch\": 1740513077676\n      },\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"Raspberry/Vodkards\"\n        ],\n        \"description\": \"Medium sized bots spawn on the inner three walls within a rectangular prism, with every single click elimination reloading the player's three round magazine.\"\n      }\n    },\n    {\n      \"leaderboardId\": \"24955\",\n      \"scenarioName\": \"VT Bounceshot Intermediate\",\n      \"counts\": {\n        \"plays\": 21\n      },\n      \"rank\": 13582,\n      \"score\": 690,\n      \"attributes\": {\n        \"fov\": 103,\n        \"hash\": \"8a238e56c5372398b70c77ed3a133d01\",\n        \"cm360\": 34.6363639831543,\n        \"epoch\": 1740424226644,\n        \"kills\": 69,\n        \"score\": 690,\n        \"avg_fps\": 613.2023315429688,\n        \"avg_ttk\": 0.8692310452461243,\n        \"fov_scale\": \"Overwatch\",\n        \"vert_sens\": 5,\n        \"horiz_sens\": 5,\n        \"resolution\": \"1920x1080\",\n        \"sens_scale\": \"Overwatch\",\n        \"accuracy_damage\": 71134,\n        \"challenge_start\": \"19:09:29.573\",\n        \"sens_randomizer\": null,\n        \"scenario_version\": \"8a238e56c5372398b70c77ed3a133d01\",\n        \"client_build_version\": \"3.7.4.2025-02-04-15-00-13-4123b712a0\"\n      },\n      \"scenario\": {\n        \"aimType\": \"Clicking\",\n        \"authors\": [\n          \"Raspberry/Vodkards\",\n          \"Whisper\"\n        ],\n        \"description\": \"Four single-click bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. The player's weapon has three shots and empty magazines recover in their entirety upon each elimination.\"\n      }\n    },\n    {\n      \"leaderboardId\": \"653\",\n      \"scenarioName\": \"voxTargetSwitch Click\",\n      \"counts\": {\n        \"plays\": 20\n      },\n      \"rank\": 10384,\n      \"score\": 83,\n      \"attributes\": {\n        \"fOV\": 103,\n        \"hash\": \"279398278b4f2bfff3bba6ff0d14e921\",\n        \"cm360\": 0,\n        \"epoch\": 1713812667579,\n        \"kills\": 83,\n        \"score\": 83,\n        \"avg_fps\": 733.7463989257812,\n        \"avg_ttk\": 0.0013628232991322875,\n        \"fov_scale\": \"Overwatch\",\n        \"vert_sens\": 35,\n        \"horiz_sens\": 35,\n        \"resolution\": \"1920x1080\",\n        \"sens_scale\": \"Quake/Source\",\n        \"accuracy_damage\": 72807,\n        \"challenge_start\": \"20:03:29.016\",\n        \"scenario_version\": \"279398278b4f2bfff3bba6ff0d14e921\",\n        \"client_build_version\": \"3.5.1.2024-04-12-19-14-14-ce4569d1be\"\n      },\n      \"scenario\": {\n        \"aimType\": null,\n        \"authors\": [\n          \"voxel\"\n        ],\n        \"description\": \"Inspiration from BF4 test range, go as fast as you can.\"\n      }\n    }\n  ]\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Trending Scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/webapp-backend/scenario/trending",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"webapp-backend",
+						"scenario",
+						"trending"
+					]
+				},
+				"description": "returns:\n\n\n[\n  {\n    \"scenarioName\": \"VT Snake Track Elite Hard Entry Size\",\n    \"leaderboardId\": 114924,\n    \"webappUsername\": \"Corporate Serf\",\n    \"steamAccountName\": \"TSK Serf\",\n    \"kovaaksPlusActive\": false,\n    \"entries\": 44,\n    \"new\": true\n  },\n  {\n    \"scenarioName\": \"VT Snake Track Elite Novice Size\",\n    \"leaderboardId\": 114927,\n    \"webappUsername\": \"Corporate Serf\",\n    \"steamAccountName\": \"TSK Serf\",\n    \"kovaaksPlusActive\": false,\n    \"entries\": 37,\n    \"new\": true\n  },\n  {\n    \"scenarioName\": \"VT Snake Track Advanced Intermediate Size\",\n    \"leaderboardId\": 114926,\n    \"webappUsername\": \"Corporate Serf\",\n    \"steamAccountName\": \"TSK Serf\",\n    \"kovaaksPlusActive\": false,\n    \"entries\": 34,\n    \"new\": true\n  },\n  {\n    \"scenarioName\": \"1w4ts Micro++\",\n    \"leaderboardId\": 16114,\n    \"webappUsername\": \"Dokkie\",\n    \"steamAccountName\": \"Dokkie\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 1393\n  },\n  {\n    \"scenarioName\": \"Reflex Poke-Micro++ Regenerating Goated\",\n    \"leaderboardId\": 1030,\n    \"webappUsername\": null,\n    \"steamAccountName\": \"by\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 4780\n  },\n  {\n    \"scenarioName\": \"Amare FlickerXYZ Headshot Small\",\n    \"leaderboardId\": 59775,\n    \"webappUsername\": \"Skylr\",\n    \"steamAccountName\": \"Amare\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 1531\n  },\n  {\n    \"scenarioName\": \"cA fuglaapressure\",\n    \"leaderboardId\": 94284,\n    \"webappUsername\": \"Phoegazer\",\n    \"steamAccountName\": \"0.0\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 960\n  },\n  {\n    \"scenarioName\": \"Amare Consecutive Tracking\",\n    \"leaderboardId\": 44072,\n    \"webappUsername\": \"SkylrExpired\",\n    \"steamAccountName\": \"Glorp\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 2053\n  },\n  {\n    \"scenarioName\": \"VT Angleshot Micro Valorant Smaller\",\n    \"leaderboardId\": 70293,\n    \"webappUsername\": \"Skylr\",\n    \"steamAccountName\": \"Amare\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 2129\n  },\n  {\n    \"scenarioName\": \"1w2tes Micro++\",\n    \"leaderboardId\": 5746,\n    \"webappUsername\": null,\n    \"steamAccountName\": \"Richard Nixon Bean Senpai\",\n    \"kovaaksPlusActive\": false,\n    \"new\": false,\n    \"entries\": 2383\n  }\n]"
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "undefined",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kovaaks.com/auth/webapp/verify-token",
+					"protocol": "https",
+					"host": [
+						"kovaaks",
+						"com"
+					],
+					"path": [
+						"auth",
+						"webapp",
+						"verify-token"
+					]
+				},
+				"description": "returns :\n\n{\n  \"success\": true\n}\n\n\nor\n\n\n\n{\n  \"error\": [\n    {\n      \"value\": \"Bearer\",\n      \"msg\": \"Invalid Meta Auth Format\",\n      \"param\": \"authorization\",\n      \"location\": \"headers\"\n    }\n  ]\n}\n\n\n\n\n\n\n\n\n\nrequires jwt from login\n"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,4 @@
-import { KovaaksApiClient, KovaaksApiError } from '../src';
+import { KovaaksApiClient, KovaaksApiError } from '../dist';
 
 async function main() {
   try {

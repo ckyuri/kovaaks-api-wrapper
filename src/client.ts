@@ -24,7 +24,9 @@ import {
   GlobalLeaderboardSearchResponse,
   GetGlobalLeaderboardSearchParams,
   ScenarioDetailsResponse,
-  GetScenarioDetailsParams
+  GetScenarioDetailsParams,
+  UserSearchResponse,
+  GetUserSearchParams
 } from './types';
 
 export class KovaaksApiError extends Error {
@@ -445,6 +447,20 @@ export class KovaaksApiClient {
       method: 'GET',
       url: this.buildUrl('/webapp-backend/scenario/details', {
         leaderboardId: params.leaderboardId
+      })
+    });
+  }
+
+  /**
+   * Search for users by username
+   * @param params Parameters for the request
+   * @returns Array of matching user profiles
+   */
+  public async searchUsers(params: GetUserSearchParams): Promise<UserSearchResponse[]> {
+    return this.request<UserSearchResponse[]>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/user/search', {
+        username: params.username
       })
     });
   }

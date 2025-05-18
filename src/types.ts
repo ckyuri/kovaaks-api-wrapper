@@ -346,4 +346,18 @@ export interface ValidationError {
   msg: string;
   param: string;
   location: string;
+}
+
+// User search types
+export interface UserSearchResponse {
+  steamId: string;
+  username: string;
+  steamAccountName: string;
+  steamAccountAvatar: string;
+  country: string | null;
+  kovaaksPlusActive: boolean;
+}
+
+export interface GetUserSearchParams {
+  username: string;
 } 
