@@ -606,6 +606,106 @@ Common error scenarios:
 - 429: Rate limit exceeded
 - 500: Server error
 
+## Extending the Client
+
+The client is designed to be easily extensible so you can add custom methods or override existing functionality without modifying the source code.
+
+> **Example File**: Check out [examples/extending-client.ts](examples/extending-client.ts) for a complete demonstration of extending the API client with custom methods and creating a subclass with caching functionality.
+
+### Adding Custom Methods
+
+You can extend the client with custom methods using the `extend()` method:
+
+```typescript
+import { KovaaksApiClient } from 'kovaaks-api-client';
+
+// Create a client instance
+const client = new KovaaksApiClient();
+
+// Extend the client with custom methods
+const extendedClient = client.extend({
+  // Add a custom method to get the top 10 players for a scenario
+  async getScenarioTopPlayers(leaderboardId: number) {
+    // You have access to all protected methods like this.request, this.buildUrl, etc.
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/leaderboard/scenario-scores', {
+        leaderboardId,
+        page: 0,
+        max: 10
+      })
+    });
+  },
+
+  // Add any other custom methods
+  async customEndpoint(param1: string, param2: number) {
+    return this.request(
+      this.createRequestConfig('GET', '/custom/endpoint', null, { param1, param2 })
+    );
+  }
+});
+
+// Use your custom methods
+const topPlayers = await extendedClient.getScenarioTopPlayers(12345);
+const customData = await extendedClient.customEndpoint('value', 42);
+```
+
+### Creating a Custom Client Class
+
+For more advanced extensions, you can create a subclass:
+
+```typescript
+import { KovaaksApiClient, KovaaksApiClientOptions } from 'kovaaks-api-client';
+
+class CustomKovaaksClient extends KovaaksApiClient {
+  constructor(options: KovaaksApiClientOptions = {}) {
+    super(options);
+  }
+  
+  // Add custom methods
+  async getScenarioTopPlayers(leaderboardId: number) {
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/leaderboard/scenario-scores', {
+        leaderboardId,
+        page: 0,
+        max: 10
+      })
+    });
+  }
+  
+  // Override existing methods
+  async getGlobalLeaderboard(params) {
+    // Add custom logic before or after the API call
+    console.log('Fetching global leaderboard with custom client...');
+    const result = await super.getGlobalLeaderboard(params);
+    console.log('Leaderboard fetched successfully!');
+    return result;
+  }
+}
+
+// Use your custom client
+const client = new CustomKovaaksClient();
+const topPlayers = await client.getScenarioTopPlayers(12345);
+```
+
+### Customizing Request Configuration
+
+You can provide custom request configuration when creating the client:
+
+```typescript
+const client = new KovaaksApiClient({
+  customRequestConfig: {
+    // Add any axios request config options
+    headers: {
+      'User-Agent': 'My Custom App',
+    },
+    validateStatus: status => status < 500,
+    // ... any other axios configuration options
+  }
+});
+```
+
 ## Type Reference
 
 ### Client Types

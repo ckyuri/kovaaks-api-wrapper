@@ -45,6 +45,7 @@ export interface KovaaksApiClientOptions {
   baseUrl?: string;
   authToken?: string;
   timeout?: number;
+  customRequestConfig?: Partial<AxiosRequestConfig>;
 }
 
 /**
@@ -68,6 +69,7 @@ export class KovaaksApiClient {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
+      ...options.customRequestConfig
     });
 
     if (options.authToken) {
@@ -126,8 +128,9 @@ export class KovaaksApiClient {
 
   /**
    * Make an HTTP request
+   * @protected - Available to extending classes
    */
-  private async request<T>(config: AxiosRequestConfig): Promise<T> {
+  protected async request<T>(config: AxiosRequestConfig): Promise<T> {
     try {
       const response: AxiosResponse<T> = await this.client.request(config);
       return response.data;
@@ -140,6 +143,42 @@ export class KovaaksApiClient {
         500
       );
     }
+  }
+
+  /**
+   * Create a request configuration with default options
+   * @param method HTTP method
+   * @param url URL path
+   * @param data Request data (for POST, PUT, etc.)
+   * @param params URL parameters
+   * @returns AxiosRequestConfig object
+   */
+  protected createRequestConfig(
+    method: string,
+    url: string,
+    data?: any,
+    params?: Record<string, any>
+  ): AxiosRequestConfig {
+    return {
+      method,
+      url: params ? this.buildUrl(url, params) : url,
+      data
+    };
+  }
+  
+  /**
+   * Extend the client with custom methods
+   * @param methods Object with methods to add to the client
+   * @returns Extended client instance (this)
+   */
+  public extend<T extends Record<string, Function>>(methods: T): this & T {
+    Object.entries(methods).forEach(([name, method]) => {
+      // @ts-ignore - Dynamic extension
+      this[name] = method.bind(this);
+    });
+    
+    // @ts-ignore - Return type with extensions
+    return this;
   }
 
   /**
