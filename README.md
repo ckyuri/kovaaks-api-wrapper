@@ -179,6 +179,35 @@ const searchResults = await client.searchGlobalLeaderboard({
 // ]
 ```
 
+#### Get Scenario Leaderboard (by leaderboardId)
+```typescript
+const scenarioLeaderboard = await client.getScenarioLeaderboard({
+  leaderboardId: 8680, // The scenario's leaderboardId
+  page: 0,             // Optional: page number (default 0)
+  max: 50              // Optional: max results per page (default 50)
+});
+
+// Response example:
+// {
+//   "total": 698126,
+//   "page": 0,
+//   "max": 50,
+//   "data": [
+//     {
+//       "steamId": "76561198305528151",
+//       "score": 5520,
+//       "rank": 1,
+//       "steamAccountName": "雑魚AIMのG",
+//       "webappUsername": "Garun3141",
+//       "kovaaksPlusActive": false,
+//       "country": "jp",
+//       "attributes": { /* ... scenario-specific attributes ... */ }
+//     },
+//     // ... more entries ...
+//   ]
+// }
+```
+
 ### User Search & Profiles
 
 #### Search Users

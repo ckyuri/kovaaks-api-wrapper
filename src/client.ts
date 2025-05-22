@@ -183,8 +183,12 @@ export class KovaaksApiClient {
 
   /**
    * Log in to the Kovaaks webapp
-   * @param credentials Login credentials
-   * @returns Login response with tokens and profile
+   * @param credentials Login credentials (username and password)
+   * @returns {Promise<LoginResponse>} A promise resolving to a LoginResponse object containing:
+   * - auth: Authentication data including JWT tokens, expiration, and Steam account mappings
+   * - profile: Complete user profile with personal information, social media accounts, and game settings
+   * - redirect: Boolean indicating if a redirect is needed after login
+   * @throws {KovaaksApiError} If login fails due to invalid credentials or server issues
    */
   public async login(credentials: LoginCredentials): Promise<LoginResponse> {
     // Use Basic Authentication
@@ -208,7 +212,7 @@ export class KovaaksApiClient {
 
   /**
    * Verify if the current authentication token is valid
-   * @returns Boolean indicating if token is valid
+   * @returns {Promise<boolean>} A promise resolving to true if the token is valid and accepted by the server, false otherwise
    */
   public async verifyToken(): Promise<boolean> {
     if (!this.authToken) {
@@ -229,8 +233,16 @@ export class KovaaksApiClient {
 
   /**
    * Get benchmark progress for a player
-   * @param params Parameters for the request
-   * @returns Benchmark progress data
+   * @param params Parameters for the request including benchmarkId and steamId
+   * @returns {Promise<BenchmarkProgress>} A promise resolving to the benchmark progress data containing:
+   * - benchmark_progress: Overall progress score
+   * - overall_rank: Player's overall rank in the benchmark
+   * - categories: Object mapping category names to detailed category progress data including:
+   *   - benchmark_progress: Category-specific progress score
+   *   - category_rank: Player's rank in this category
+   *   - rank_maxes: Array of score thresholds for each rank
+   *   - scenarios: Object mapping scenario names to scenario-specific scores and rankings
+   * - ranks: Array of rank information objects with icons, colors and descriptions
    */
   public async getBenchmarkProgress(params: GetBenchmarkProgressParams): Promise<BenchmarkProgress> {
     return this.request<BenchmarkProgress>({
@@ -246,8 +258,12 @@ export class KovaaksApiClient {
 
   /**
    * Get benchmarks for a user
-   * @param params Parameters for the request
-   * @returns Benchmark search results
+   * @param params Parameters including username, page, and max results
+   * @returns {Promise<BenchmarkSearchResponse>} A promise resolving to benchmark search results containing:
+   * - page: Current page number
+   * - max: Maximum results per page
+   * - total: Total number of benchmarks available
+   * - data: Array of benchmark objects with name, ID, icon, author, type, and rank information
    */
   public async getBenchmarksForUser(params: GetBenchmarksForUserParams): Promise<BenchmarkSearchResponse> {
     return this.request<BenchmarkSearchResponse>({
@@ -262,8 +278,14 @@ export class KovaaksApiClient {
 
   /**
    * Get global leaderboard scores
-   * @param params Parameters for the request
-   * @returns Global leaderboard data
+   * @param params Parameters including page, max results, optional grouping and filtering
+   * @returns {Promise<GlobalLeaderboardResponse | GroupedLeaderboardResponse>} 
+   * - When no grouping is specified: GlobalLeaderboardResponse with individual player entries including:
+   *   - data: Array of player entries with rank, Steam ID, username, points, scenarios count, etc.
+   *   - total: Total number of entries
+   * - When grouped (by country, region): GroupedLeaderboardResponse with group entries including:
+   *   - data: Array of group entries with group name, points, scenarios count, etc.
+   *   - total: Total number of group entries
    */
   public async getGlobalLeaderboard(params: GetGlobalLeaderboardParams): Promise<GlobalLeaderboardResponse | GroupedLeaderboardResponse> {
     return this.request<GlobalLeaderboardResponse | GroupedLeaderboardResponse>({
@@ -280,9 +302,11 @@ export class KovaaksApiClient {
 
   /**
    * Get global leaderboard scores filtered by country
-   * @param params Parameters for the request
-   * @returns Global leaderboard data for the specified country
-   * @throws {KovaaksApiError} If not authenticated or not a supporter
+   * @param params Parameters including page, max results, and countryCode
+   * @returns {Promise<GlobalLeaderboardResponse>} A promise resolving to country-specific leaderboard data:
+   * - data: Array of player entries from the specified country with rank, Steam ID, points, etc.
+   * - total: Total number of entries
+   * @throws {KovaaksApiError} If user isn't authenticated, has invalid token, or lacks Kovaaks+ subscription
    */
   public async getCountryLeaderboard(params: GetCountryLeaderboardParams): Promise<GlobalLeaderboardResponse> {
     // Check if user is authenticated
@@ -334,7 +358,8 @@ export class KovaaksApiClient {
 
   /**
    * Get monthly player count
-   * @returns Monthly player count data
+   * @returns {Promise<{count: number}>} A promise resolving to an object containing:
+   * - count: The number of active players in the current month
    */
   public async getMonthlyPlayers(): Promise<{ count: number }> {
     return this.request<{ count: number }>({
@@ -345,7 +370,7 @@ export class KovaaksApiClient {
 
   /**
    * Get game settings
-   * @returns Game settings data
+   * @returns {Promise<any>} A promise resolving to game settings data with variable structure
    */
   public async getGameSettings(): Promise<any> {
     return this.request<any>({
@@ -356,7 +381,20 @@ export class KovaaksApiClient {
 
   /**
    * Get current user profile (requires authentication)
-   * @returns User profile data
+   * @returns {Promise<UserProfile>} A promise resolving to the authenticated user's profile containing:
+   * - playerId: Numeric ID of the player
+   * - steamAccountName: Steam username
+   * - steamAccountAvatar: URL to Steam avatar image
+   * - created: Account creation timestamp
+   * - steamId: Steam ID string
+   * - webapp: Object with webapp-specific properties including:
+   *   - roles: User permission roles (admin, coach, staff)
+   *   - socialMedia: Social media links and IDs
+   *   - gameSettings: Game configuration (sensitivity, DPI, FOV)
+   *   - gamingPeripherals: Hardware details (mouse, keyboard, etc.)
+   * - kovaaksPlusActive: Boolean indicating if user has active Kovaaks+ subscription
+   * - features: Available features for this user
+   * @throws {KovaaksApiError} If not authenticated
    */
   public async getUserProfile(): Promise<UserProfile> {
     if (!this.authToken) {
@@ -371,8 +409,16 @@ export class KovaaksApiClient {
 
   /**
    * Get recent activity for a user
-   * @param params Parameters for the request
-   * @returns Recent activity data
+   * @param params Parameters including username
+   * @returns {Promise<UserActivity[]>} A promise resolving to an array of activity entries, each containing:
+   * - timestamp: When the activity occurred
+   * - type: Activity type (e.g., "HIGH_SCORE")
+   * - scenarioName: Name of the scenario involved
+   * - score: Numeric score achieved
+   * - leaderboardId: ID of the relevant leaderboard
+   * - steamId: User's Steam ID
+   * - country: User's country code
+   * - kovaaksPlus: Boolean indicating if user has Kovaaks+
    */
   public async getUserActivity(params: GetUserActivityParams): Promise<UserActivity[]> {
     return this.request<UserActivity[]>({
@@ -385,8 +431,18 @@ export class KovaaksApiClient {
 
   /**
    * Get popular scenarios
-   * @param params Parameters for the request
-   * @returns Popular scenarios data
+   * @param params Parameters including page, max results, and optional scenario name search
+   * @returns {Promise<ScenarioPopularResponse>} A promise resolving to popular scenarios data containing:
+   * - page: Current page number
+   * - max: Maximum results per page
+   * - total: Total number of scenarios available
+   * - data: Array of scenario objects with:
+   *   - rank: Popularity rank
+   *   - leaderboardId: Unique ID for the scenario's leaderboard
+   *   - scenarioName: Name of the scenario
+   *   - scenario: Object with aim type, authors, and description
+   *   - counts: Object with play and entry counts
+   *   - topScore: Object with the highest score achieved
    */
   public async getPopularScenarios(params: GetPopularScenariosParams): Promise<ScenarioPopularResponse> {
     return this.request<ScenarioPopularResponse>({
@@ -401,8 +457,9 @@ export class KovaaksApiClient {
 
   /**
    * Get user profile by username
-   * @param params Parameters for the request
-   * @returns User profile data
+   * @param params Parameters including username
+   * @returns {Promise<UserProfile>} A promise resolving to the specified user's profile with the same structure
+   * as getUserProfile() but for the specified user instead of the authenticated user
    */
   public async getUserProfileByUsername(params: GetUserProfileByUsernameParams): Promise<UserProfile> {
     return this.request<UserProfile>({
@@ -415,8 +472,19 @@ export class KovaaksApiClient {
 
   /**
    * Get user's scenario leaderboard scores
-   * @param params Parameters for the request
-   * @returns User's scenario data
+   * @param params Parameters including username, page, max results, and optional sort parameter
+   * @returns {Promise<UserScenarioResponse>} A promise resolving to user scenario data containing:
+   * - page: Current page number
+   * - max: Maximum results per page
+   * - total: Total number of scenarios played by the user
+   * - data: Array of scenario entries with:
+   *   - leaderboardId: Scenario leaderboard ID
+   *   - scenarioName: Name of the scenario
+   *   - counts: Object with play count
+   *   - rank: User's rank on this scenario's leaderboard
+   *   - score: User's best score
+   *   - attributes: Detailed score attributes (FPS, TTK, sensitivity, etc.)
+   *   - scenario: Object with aim type, authors, and description
    */
   public async getUserScenarios(params: GetUserScenarioParams): Promise<UserScenarioResponse> {
     const queryParams: Record<string, any> = {
@@ -437,7 +505,14 @@ export class KovaaksApiClient {
 
   /**
    * Get trending scenarios
-   * @returns Trending scenarios data
+   * @returns {Promise<TrendingScenario[]>} A promise resolving to an array of trending scenarios, each containing:
+   * - scenarioName: Name of the scenario
+   * - leaderboardId: ID of the scenario's leaderboard
+   * - webappUsername: Username of the top player (if available)
+   * - steamAccountName: Steam name of the top player
+   * - kovaaksPlusActive: Whether the top player has Kovaaks+
+   * - entries: Number of entries/plays
+   * - new: Boolean indicating if this is a new trending scenario
    */
   public async getTrendingScenarios(): Promise<TrendingScenario[]> {
     return this.request<TrendingScenario[]>({
@@ -447,9 +522,22 @@ export class KovaaksApiClient {
   }
 
   /**
-   * Get playlists with optional search
-   * @param params Parameters for the request
-   * @returns Playlist data
+   * Get playlists
+   * @param params Parameters including page, max results, and optional search term
+   * @returns {Promise<PlaylistResponse>} A promise resolving to playlist data containing:
+   * - page: Current page number
+   * - max: Maximum results per page
+   * - total: Total number of playlists available
+   * - data: Array of playlist objects with:
+   *   - playlistName: Name of the playlist
+   *   - subscribers: Number of subscribers
+   *   - scenarioList: Array of scenarios in the playlist
+   *   - playlistCode: Unique code for the playlist
+   *   - playlistId: Numeric ID of the playlist
+   *   - published: Publication timestamp
+   *   - description: Playlist description
+   *   - aimType: Primary aim type targeted by the playlist
+   *   - playlistDuration: Estimated duration in minutes
    */
   public async getPlaylists(params: GetPlaylistsParams): Promise<PlaylistResponse> {
     return this.request<PlaylistResponse>({
@@ -463,9 +551,17 @@ export class KovaaksApiClient {
   }
 
   /**
-   * Search global leaderboard by username
-   * @param params Parameters for the request
-   * @returns Array of matching leaderboard entries
+   * Search the global leaderboard for users
+   * @param params Parameters including username search term
+   * @returns {Promise<GlobalLeaderboardSearchResponse[]>} A promise resolving to an array of matching players, each containing:
+   * - steamId: Player's Steam ID
+   * - rank: Global leaderboard rank
+   * - rankChange: Change in rank since last period
+   * - username: Webapp username (if available)
+   * - steamAccountName: Steam account name
+   * - steamAccountAvatar: URL to Steam avatar image
+   * - country: Country code
+   * - kovaaksPlusActive: Whether the player has Kovaaks+
    */
   public async searchGlobalLeaderboard(params: GetGlobalLeaderboardSearchParams): Promise<GlobalLeaderboardSearchResponse[]> {
     return this.request<GlobalLeaderboardSearchResponse[]>({
@@ -477,9 +573,18 @@ export class KovaaksApiClient {
   }
 
   /**
-   * Get scenario details by leaderboard ID
-   * @param params Parameters for the request
-   * @returns Scenario details
+   * Get detailed information about a scenario
+   * @param params Parameters including leaderboardId
+   * @returns {Promise<ScenarioDetailsResponse>} A promise resolving to scenario details containing:
+   * - scenarioName: Name of the scenario
+   * - aimType: Type of aim required (e.g., "Tracking", "Clicking")
+   * - playCount: Total number of plays
+   * - steamId: Creator's Steam ID
+   * - steamAccountName: Creator's Steam account name
+   * - webappUsername: Creator's webapp username
+   * - description: Scenario description
+   * - tags: Array of tags/categories
+   * - created: Creation timestamp
    */
   public async getScenarioDetails(params: GetScenarioDetailsParams): Promise<ScenarioDetailsResponse> {
     return this.request<ScenarioDetailsResponse>({
@@ -492,14 +597,36 @@ export class KovaaksApiClient {
 
   /**
    * Search for users by username
-   * @param params Parameters for the request
-   * @returns Array of matching user profiles
+   * @param params Parameters including username search term
+   * @returns {Promise<UserSearchResponse[]>} A promise resolving to an array of matching users, each containing:
+   * - steamId: User's Steam ID
+   * - username: Webapp username
+   * - steamAccountName: Steam account name
+   * - steamAccountAvatar: URL to Steam avatar image
+   * - country: Country code (if available)
+   * - kovaaksPlusActive: Whether the user has Kovaaks+
    */
   public async searchUsers(params: GetUserSearchParams): Promise<UserSearchResponse[]> {
     return this.request<UserSearchResponse[]>({
       method: 'GET',
       url: this.buildUrl('/webapp-backend/user/search', {
         username: params.username
+      })
+    });
+  }
+
+  /**
+   * Get scenario-specific leaderboard scores
+   * @param params Parameters including leaderboardId, page, and max results
+   * @returns {Promise<any>} A promise resolving to leaderboard data for the specified scenario
+   */
+  public async getScenarioLeaderboard(params: { leaderboardId: number, page?: number, max?: number }): Promise<any> {
+    return this.request<any>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/leaderboard/scores/global', {
+        leaderboardId: params.leaderboardId,
+        page: params.page ?? 0,
+        max: params.max ?? 50
       })
     });
   }
