@@ -187,23 +187,30 @@ const scenarioLeaderboard = await client.getScenarioLeaderboard({
   max: 50              // Optional: max results per page (default 50)
 });
 
+// You can also search for a specific user in a scenario leaderboard:
+const userScenarioLeaderboard = await client.getScenarioLeaderboard({
+  leaderboardId: 39515,
+  page: 0,
+  max: 50,
+  usernameSearch: 'MattyOW' // Filter by username
+});
+
 // Response example:
 // {
-//   "total": 698126,
+//   "total": 1,
 //   "page": 0,
 //   "max": 50,
 //   "data": [
 //     {
-//       "steamId": "76561198305528151",
-//       "score": 5520,
 //       "rank": 1,
-//       "steamAccountName": "雑魚AIMのG",
-//       "webappUsername": "Garun3141",
-//       "kovaaksPlusActive": false,
-//       "country": "jp",
+//       "steamId": "76561198065865918",
+//       "score": 2020,
+//       "steamAccountName": "VT Matty",
+//       "webappUsername": "MattyOW",
+//       "country": "us",
+//       "kovaaksPlusActive": true,
 //       "attributes": { /* ... scenario-specific attributes ... */ }
-//     },
-//     // ... more entries ...
+//     }
 //   ]
 // }
 ```

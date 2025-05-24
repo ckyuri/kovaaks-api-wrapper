@@ -617,16 +617,17 @@ export class KovaaksApiClient {
 
   /**
    * Get scenario-specific leaderboard scores
-   * @param params Parameters including leaderboardId, page, and max results
+   * @param params Parameters including leaderboardId, page, max results, and optional usernameSearch
    * @returns {Promise<any>} A promise resolving to leaderboard data for the specified scenario
    */
-  public async getScenarioLeaderboard(params: { leaderboardId: number, page?: number, max?: number }): Promise<any> {
+  public async getScenarioLeaderboard(params: { leaderboardId: number, page?: number, max?: number, usernameSearch?: string }): Promise<any> {
     return this.request<any>({
       method: 'GET',
       url: this.buildUrl('/webapp-backend/leaderboard/scores/global', {
         leaderboardId: params.leaderboardId,
         page: params.page ?? 0,
-        max: params.max ?? 50
+        max: params.max ?? 50,
+        ...(params.usernameSearch ? { usernameSearch: params.usernameSearch } : {})
       })
     });
   }
