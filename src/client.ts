@@ -44,6 +44,8 @@ export class KovaaksApiError extends Error {
 export interface KovaaksApiClientOptions {
   baseUrl?: string;
   authToken?: string;
+  username?: string; // Optional: Basic Auth username
+  password?: string; // Optional: Basic Auth password
   timeout?: number;
   customRequestConfig?: Partial<AxiosRequestConfig>;
 }
@@ -54,6 +56,7 @@ export interface KovaaksApiClientOptions {
 export class KovaaksApiClient {
   private client: AxiosInstance;
   private authToken?: string;
+  private basicAuth?: string;
 
   /**
    * Create a new KovaaksApiClient
@@ -74,6 +77,8 @@ export class KovaaksApiClient {
 
     if (options.authToken) {
       this.setAuthToken(options.authToken);
+    } else if (options.username && options.password) {
+      this.setBasicAuth(options.username, options.password);
     }
 
     // Add response interceptor for error handling
@@ -90,12 +95,24 @@ export class KovaaksApiClient {
   }
 
   /**
-   * Set the authentication token for future requests
+   * Set the authentication token for future requests (JWT takes precedence over Basic Auth)
    * @param token JWT token
    */
   public setAuthToken(token: string): void {
     this.authToken = token;
+    this.basicAuth = undefined;
     this.client.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
+
+  /**
+   * Set Basic Auth for future requests (removes JWT if set)
+   * @param username
+   * @param password
+   */
+  public setBasicAuth(username: string, password: string): void {
+    this.authToken = undefined;
+    this.basicAuth = Buffer.from(`${username}:${password}`).toString('base64');
+    this.client.defaults.headers.common['Authorization'] = `Basic ${this.basicAuth}`;
   }
 
   /**
@@ -103,7 +120,23 @@ export class KovaaksApiClient {
    */
   public clearAuthToken(): void {
     this.authToken = undefined;
-    delete this.client.defaults.headers.common['Authorization'];
+    if (this.basicAuth) {
+      this.client.defaults.headers.common['Authorization'] = `Basic ${this.basicAuth}`;
+    } else {
+      delete this.client.defaults.headers.common['Authorization'];
+    }
+  }
+
+  /**
+   * Clear Basic Auth credentials
+   */
+  public clearBasicAuth(): void {
+    this.basicAuth = undefined;
+    if (this.authToken) {
+      this.client.defaults.headers.common['Authorization'] = `Bearer ${this.authToken}`;
+    } else {
+      delete this.client.defaults.headers.common['Authorization'];
+    }
   }
 
   /**

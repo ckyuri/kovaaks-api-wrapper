@@ -38,6 +38,14 @@ const loginResponse = await client.login({
   username: 'your-email@example.com',
   password: 'your-password'
 });
+
+// Basic Auth (username/password) example
+const client = new KovaaksApiClient({
+  username: 'your-email@example.com',
+  password: 'your-password'
+});
+
+// If both authToken and username/password are provided, authToken (JWT) takes precedence.
 ```
 
 ## API Documentation
@@ -92,6 +100,15 @@ const isValid = await client.verifyToken();
 
 // Clear auth token
 client.clearAuthToken();
+```
+
+#### Basic Auth Management
+```typescript
+// Set Basic Auth credentials
+client.setBasicAuth('your-email@example.com', 'your-password');
+
+// Clear Basic Auth credentials
+client.clearBasicAuth();
 ```
 
 ### Leaderboards
