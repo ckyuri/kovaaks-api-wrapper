@@ -1,69 +1,51 @@
-import { KovaaksApiClient, KovaaksApiError, GroupedLeaderboardResponse } from '../dist';
+import { KovaaksApiClient, KovaaksApiError } from '../src';
 
-async function demonstrateUserManagement(client: KovaaksApiClient) {
-  console.log('\n=== User Management ===');
-  
-  // Search for users
-  console.log('\n--- User Search ---');
-  const userSearchResults = await client.searchUsers({ username: 'kyuri' });
-  console.log(`Found ${userSearchResults.length} users matching "kyuri":`);
-  userSearchResults.forEach((user, index) => {
-    console.log(`${index + 1}. ${user.username} (${user.steamAccountName}) from ${user.country || 'unknown'}`);
+async function demonstrateUsers(client: KovaaksApiClient) {
+  console.log('\n=== User Features ===');
+    
+  console.log('\n--- Get User Profile ---');
+  const profile = await client.getProfileByUsername({ username: 'kyuri' });
+  console.log(`Profile for ${profile.webapp.username}:`);
+  console.log(`- Steam: ${profile.steamAccountName}`);
+  console.log(`- Country: ${profile.country}`);
+  console.log(`- Scenarios Played: ${profile.scenariosPlayed}`);
+
+  console.log('\n--- Get Favorite Scenarios ---');
+  const favScenarios = await client.getFavoriteScenariosByUsername({ username: 'kyuri' });
+  console.log(`Found ${favScenarios.length} favorite scenarios (showing top 3):`);
+  favScenarios.slice(0, 3).forEach((scenario, index) => {
+    console.log(`${index + 1}. ${scenario.scenarioName} - Score: ${scenario.score}`);
   });
 
-  // Get user profile
-  const username = userSearchResults[0]?.username || 'kyuri';
-  console.log('\n--- User Profile ---');
-  const profile = await client.getUserProfileByUsername({ username });
-  console.log(`Profile: ${profile.steamAccountName}`);
-  console.log(`Country: ${profile.country}`);
-  console.log(`Scenarios Played: ${profile.scenariosPlayed}`);
-  console.log(`Kovaaks+ Active: ${profile.kovaaksPlus.active}`);
-
-  // Get user activity
-  console.log('\n--- User Activity ---');
-  const activity = await client.getUserActivity({ username });
-  console.log(`Found ${activity.length} recent activities:`);
-  activity.slice(0, 3).forEach((item, index) => {
+  console.log('\n--- Get Recent High Scores ---');
+  const recentScores = await client.getRecentHighScoresByUsername({ username: 'kyuri' });
+  console.log(`Found ${recentScores.length} recent high scores (showing top 3):`);
+  recentScores.slice(0, 3).forEach((item, index) => {
     console.log(`${index + 1}. ${item.timestamp}: ${item.scenarioName} - Score: ${item.score}`);
   });
 
-  // Get user scenarios
-  console.log('\n--- User Scenarios ---');
-  const scenarios = await client.getUserScenarios({
-    username,
-    page: 0,
-    max: 5,
-    sortParam: 'count'
+  console.log('\n--- Get Scenarios Played ---');
+  const scenariosPlayed = await client.getScenariosPlayedByUsername({ username: 'kyuri' });
+  console.log(`Found ${scenariosPlayed.total} scenarios played (showing top ${scenariosPlayed.data.length}):`);
+  scenariosPlayed.data.slice(0, 3).forEach((scenario, index) => {
+    console.log(`${index + 1}. ${scenario.scenarioName} - ${scenario.counts.plays} plays`);
   });
-  console.log(`Found ${scenarios.total} scenarios (showing top 5):`);
-  scenarios.data.forEach((scenario, index) => {
-    console.log(`${index + 1}. ${scenario.scenarioName} - Score: ${scenario.score} (Plays: ${scenario.counts.plays})`);
-  });
-
-  return userSearchResults[0]?.steamId || '76561198409458631';
 }
 
-async function demonstrateBenchmarks(client: KovaaksApiClient, steamId: string) {
+async function demonstrateBenchmarks(client: KovaaksApiClient) {
   console.log('\n=== Benchmarks ===');
-
-  // Get benchmarks for user
-  console.log('\n--- User Benchmarks ---');
-  const benchmarks = await client.getBenchmarksForUser({
-    username: 'kyuri',
-    page: 0,
-    max: 3
-  });
+    
+  console.log('\n--- Get Benchmark Progress for a user ---');
+  const benchmarks = await client.getBenchmarkProgressForUsername({ username: 'kyuri', page: 0, max: 10 });
   console.log(`Found ${benchmarks.total} benchmarks (showing top 3):`);
-  benchmarks.data.forEach((benchmark, index) => {
+  benchmarks.data.slice(0, 3).forEach((benchmark, index) => {
     console.log(`${index + 1}. ${benchmark.benchmarkName} by ${benchmark.benchmarkAuthor} - Rank: ${benchmark.rankName}`);
   });
-
-  // Get benchmark progress
-  console.log('\n--- Benchmark Progress ---');
+    
+  console.log('\n--- Get specific Benchmark Progress ---');
   const progress = await client.getBenchmarkProgress({
-    benchmarkId: '2',
-    steamId,
+    benchmarkId: 2, // Example benchmarkId
+    steamId: '76561198409458631', // Example steamId
     page: 0,
     max: 100
   });
@@ -77,184 +59,108 @@ async function demonstrateBenchmarks(client: KovaaksApiClient, steamId: string) 
 
 async function demonstrateScenarios(client: KovaaksApiClient) {
   console.log('\n=== Scenarios ===');
+    
+  console.log('\n--- Search Scenarios By Name ---');
+  const searchResults = await client.searchScenariosByName({ scenarioName: 'voltaic', page: 0, max: 3 });
+  console.log(`Found ${searchResults.total} scenarios matching "voltaic" (showing top 3):`);
+  searchResults.data.forEach((scenario, index) => {
+    console.log(`${index + 1}. ${scenario.scenarioName}`);
+  });
 
-  // Get trending scenarios
-  console.log('\n--- Trending Scenarios ---');
+  console.log('\n--- Get Trending Scenarios ---');
   const trending = await client.getTrendingScenarios();
   console.log(`Found ${trending.length} trending scenarios (showing top 3):`);
   trending.slice(0, 3).forEach((scenario, index) => {
     console.log(`${index + 1}. ${scenario.scenarioName} (${scenario.entries} entries)`);
   });
-
-  // Get popular scenarios
-  console.log('\n--- Popular Scenarios ---');
-  const popular = await client.getPopularScenarios({
-    page: 0,
-    max: 3,
-    scenarioNameSearch: 'voltaic'
-  });
-  console.log(`Found ${popular.total} popular voltaic scenarios:`);
-  popular.data.forEach((scenario, index) => {
-    console.log(`${index + 1}. ${scenario.scenarioName} - ${scenario.counts.plays} plays`);
-  });
-
-  // Get scenario details
-  if (popular.data.length > 0) {
-    console.log('\n--- Scenario Details ---');
-    const details = await client.getScenarioDetails({
-      leaderboardId: popular.data[0].leaderboardId
-    });
-    console.log(`Details for ${details.scenarioName}:`);
-    console.log(`Author: ${details.steamAccountName}`);
-    console.log(`Aim Type: ${details.aimType}`);
-    console.log(`Play Count: ${details.playCount}`);
-  }
-
-  // Get scenario leaderboard
-  if (popular.data.length > 0) {
-    console.log('\n--- Scenario Leaderboard ---');
-    const leaderboard = await client.getScenarioLeaderboard({
-      leaderboardId: popular.data[0].leaderboardId,
-      page: 0,
-      max: 3,
-      usernameSearch: 'voltaic'
-    });
-    console.log('Top players:');
-    leaderboard.data.forEach((entry: any, index: number) => {
-      console.log(`${index + 1}. ${entry.username || entry.steamAccountName} - Score: ${entry.score}`);
-    });
-  }
+    
+  console.log('\n--- Get Scenario Details ---');
+  const details = await client.getScenarioDetails({ leaderboardId: trending[0].leaderboardId });
+  console.log(`Details for ${details.scenarioName}:`);
+  console.log(`- Author: ${details.steamAccountName}`);
+  console.log(`- Aim Type: ${details.aimType}`);
+  console.log(`- Play Count: ${details.playCount}`);
 }
 
 async function demonstrateLeaderboards(client: KovaaksApiClient) {
   console.log('\n=== Leaderboards ===');
 
-  // Global leaderboard
   console.log('\n--- Global Leaderboard ---');
-  const global = await client.getGlobalLeaderboard({
-    page: 0,
-    max: 3
-  });
-  console.log('Top 3 players:');
+  const global = await client.getGlobalLeaderboard({ page: 0, max: 3 });
+  console.log('Top 3 players on the global leaderboard:');
   global.data.forEach((entry, index) => {
-    if ('webappUsername' in entry) {
-      console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.points} points (${entry.country})`);
-    }
+    console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.points} points`);
+  });
+    
+  console.log('\n--- Scenario Leaderboard ---');
+  const scenarioLeaderboard = await client.searchScenarioLeaderboard({ leaderboardId: 8680, page: 0, max: 3 });
+  console.log('Top 3 players on scenario leaderboard (ID 8680):');
+  scenarioLeaderboard.data.forEach((entry, index) => {
+    console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - Score: ${entry.score}`);
   });
 
-  // Country grouping
-  console.log('\n--- Country Leaderboard ---');
-  const countryBoard = await client.getGlobalLeaderboard({
-    page: 0,
-    max: 3,
-    group: 'country'
-  }) as GroupedLeaderboardResponse;
-  console.log('Top 3 countries:');
-  countryBoard.data.forEach((entry, index) => {
-    console.log(`${index + 1}. ${entry.group} - ${entry.points} points (${entry.scenarios_count} scenarios)`);
-  });
-
-  // Region grouping
-  console.log('\n--- Region Leaderboard ---');
-  const regionBoard = await client.getGlobalLeaderboard({
-    page: 0,
-    max: 3,
-    group: 'region'
-  }) as GroupedLeaderboardResponse;
-  console.log('Top 3 regions:');
-  regionBoard.data.forEach((entry, index) => {
-    console.log(`${index + 1}. ${entry.group} - ${entry.points} points (${entry.scenarios_count} scenarios)`);
+  console.log('\n--- Featured High Scores ---');
+  const featuredScores = await client.getFeaturedHighScores({ max: 3 });
+  console.log('Top 3 featured scores:');
+  featuredScores.forEach((entry, index) => {
+    console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.score} on ${entry.scenarioName}`);
   });
 }
 
 async function demonstratePlaylists(client: KovaaksApiClient) {
   console.log('\n=== Playlists ===');
 
-  const playlists = await client.getPlaylists({
+  console.log('\n--- Get Playlists By User ---');
+  const playlists = await client.getPlaylistsByUser({
+    username: 'kyuri',
     page: 0,
-    max: 3,
-    search: 'voltaic'
+    max: 3
   });
-  console.log(`Found ${playlists.total} voltaic playlists (showing top 3):`);
+  console.log(`Found ${playlists.total} playlists for user kyuri (showing top 3):`);
   playlists.data.forEach((playlist, index) => {
-    console.log(`${index + 1}. ${playlist.playlistName}`);
-    console.log(`   Subscribers: ${playlist.subscribers}`);
-    console.log(`   Scenarios: ${playlist.scenarioList.length}`);
-    console.log(`   Duration: ${playlist.playlistDuration} minutes`);
+    console.log(`${index + 1}. ${playlist.playlistName} - Subscribers: ${playlist.subscribers}`);
   });
 }
 
 async function demonstrateStatistics(client: KovaaksApiClient) {
   console.log('\n=== Statistics ===');
 
-  // Monthly players
-  const monthlyPlayers = await client.getMonthlyPlayers();
-  console.log(`Active players this month: ${monthlyPlayers.count}`);
+  const monthlyPlayers = await client.getMonthlyPlayersCount();
+  console.log(`- Active players this month: ${monthlyPlayers.count}`);
 
-  // Game settings
-  const settings = await client.getGameSettings();
-  console.log('\nGame Settings:', settings);
+  const concurrentUsers = await client.getConcurrentUsers();
+  console.log(`- Concurrent users: ${concurrentUsers.concurrentUsers}`);
+
+  const totalScenarios = await client.getTotalScenariosCount();
+  console.log(`- Total scenarios: ${totalScenarios.customScenarioCount}`);
 }
 
-async function demonstrateAuthentication(client: KovaaksApiClient) {
-  console.log('\n=== Authentication (Commented Out) ===');
-  /*
-  // Login
-  const loginResponse = await client.login({
-    username: 'your-email@example.com',
-    password: 'your-password'
-  });
-  console.log(`Logged in as: ${loginResponse.profile.webapp.username}`);
-
-  // Verify token
-  const isValid = await client.verifyToken();
-  console.log(`Token valid: ${isValid}`);
-
-  // Get authenticated user profile
-  const profile = await client.getUserProfile();
-  console.log(`Authenticated profile: ${profile.webapp.username}`);
-
-  // Get country leaderboard (requires Kovaaks+)
-  const countryLeaderboard = await client.getCountryLeaderboard({
-    countryCode: 'US',
-    page: 0,
-    max: 3
-  });
-  console.log('US Top 3:');
-  countryLeaderboard.data.forEach((entry, index) => {
-    console.log(`${index + 1}. ${entry.webappUsername || entry.steamAccountName} - ${entry.points} points`);
-  });
-
-  // Logout
-  client.logout();
-  console.log('Logged out');
-  */
-}
-
-async function main() {
+async function runDemonstration(name: string, demonstration: (client: KovaaksApiClient) => Promise<void>, client: KovaaksApiClient) {
   try {
-    console.log('Initializing Kovaaks API Client...');
-    const client = new KovaaksApiClient();
-
-    // Demonstrate all functionality
-    const steamId = await demonstrateUserManagement(client);
-    await demonstrateBenchmarks(client, steamId);
-    await demonstrateScenarios(client);
-    await demonstrateLeaderboards(client);
-    await demonstratePlaylists(client);
-    await demonstrateStatistics(client);
-    await demonstrateAuthentication(client);
-
+    await demonstration(client);
   } catch (error) {
+    console.error(`\nAn error occurred during ${name}:`);
     if (error instanceof KovaaksApiError) {
       console.error(`API Error (${error.status}):`, error.message);
       if (error.response) {
         console.error('Response:', error.response);
       }
     } else {
-      console.error('Unexpected error:', error);
+      console.error(error);
     }
   }
 }
 
-main().catch(console.error); 
+async function main() {
+  console.log('Initializing Kovaaks API Client...');
+  const client = new KovaaksApiClient();
+
+  await runDemonstration('User Features', demonstrateUsers, client);
+  await runDemonstration('Benchmark Features', demonstrateBenchmarks, client);
+  await runDemonstration('Scenario Features', demonstrateScenarios, client);
+  await runDemonstration('Leaderboard Features', demonstrateLeaderboards, client);
+  await runDemonstration('Playlist Features', demonstratePlaylists, client);
+  await runDemonstration('Statistics Features', demonstrateStatistics, client);
+}
+
+main(); 

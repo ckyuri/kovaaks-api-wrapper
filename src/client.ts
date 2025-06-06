@@ -1,33 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import {
-  BenchmarkProgress,
-  BenchmarkSearchResponse,
-  GlobalLeaderboardResponse,
-  GroupedLeaderboardResponse,
-  LoginResponse,
-  UserProfile,
-  UserActivity,
-  ScenarioPopularResponse,
-  UserScenarioResponse,
-  TrendingScenario,
-  GetBenchmarkProgressParams,
-  GetBenchmarksForUserParams,
-  GetGlobalLeaderboardParams,
-  GetUserActivityParams,
-  GetPopularScenariosParams,
-  GetUserProfileByUsernameParams,
-  GetUserScenarioParams,
-  LoginCredentials,
-  GetCountryLeaderboardParams,
-  PlaylistResponse,
-  GetPlaylistsParams,
-  GlobalLeaderboardSearchResponse,
-  GetGlobalLeaderboardSearchParams,
-  ScenarioDetailsResponse,
-  GetScenarioDetailsParams,
-  UserSearchResponse,
-  GetUserSearchParams
-} from './types';
+import * as KovaaksTypes from './types';
 
 /**
  * Custom error class for API-related errors
@@ -65,7 +37,7 @@ export class KovaaksApiClient {
     
     this.client = axios.create({
       baseURL,
-      timeout: options.timeout || 10000,
+      timeout: options.timeout || 30000,
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -143,262 +115,23 @@ export class KovaaksApiClient {
     }
   }
 
-  // Authentication
-  
-  /**
-   * Log in to the Kovaaks webapp using Basic Auth
-   * @param credentials Login credentials (username and password)
-   * @returns Login response with JWT token and user profile
-   */
-  public async login(credentials: LoginCredentials): Promise<LoginResponse> {
-    const authString = Buffer.from(`${credentials.username}:${credentials.password}`).toString('base64');
-    
-    const response = await this.request<LoginResponse>({
-      method: 'POST',
-      url: '/auth/webapp/login',
-      headers: {
-        'Authorization': `Basic ${authString}`
-      }
-    });
-    
-    if (response.auth.jwt) {
-      this.setAuthToken(response.auth.jwt);
-    }
-    
-    return response;
-  }
-
-  /**
-   * Verify if the current authentication token is valid
-   */
-  public async verifyToken(): Promise<boolean> {
-    if (!this.authToken) {
-      return false;
-    }
-    
-    try {
-      const response = await this.request<{ success: boolean }>({
-        method: 'GET',
-        url: '/auth/webapp/verify-token'
-      });
-      
-      return response.success;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  // Leaderboards
-
-  /**
-   * Get global leaderboard scores
-   */
-  public async getGlobalLeaderboard(params: GetGlobalLeaderboardParams): Promise<GlobalLeaderboardResponse | GroupedLeaderboardResponse> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/leaderboard/global/scores', {
-        page: params.page,
-        max: params.max,
-        group: params.group,
-        filterType: params.filterType,
-        filterValue: params.filterValue
-      })
-    });
-  }
-
-  /**
-   * Get country-specific leaderboard (requires Kovaaks+ subscription)
-   */
-  public async getCountryLeaderboard(params: GetCountryLeaderboardParams): Promise<GlobalLeaderboardResponse> {
-    if (!this.authToken) {
-      throw new KovaaksApiError('Authentication required for country leaderboard access', 401);
-    }
-
-    const isValid = await this.verifyToken();
-    if (!isValid) {
-      throw new KovaaksApiError('Invalid authentication token', 401);
-    }
-
-    const profile = await this.getUserProfile();
-    if (!profile.kovaaksPlusActive) {
-      throw new KovaaksApiError('Kovaaks+ subscription required for country leaderboard access', 403);
-    }
-
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/leaderboard/global/scores', {
-        page: params.page,
-        max: params.max,
-        filterType: 'country',
-        filterValue: params.countryCode
-      })
-    });
-  }
-
-  /**
-   * Search the global leaderboard
-   */
-  public async searchGlobalLeaderboard(params: GetGlobalLeaderboardSearchParams): Promise<GlobalLeaderboardSearchResponse[]> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/leaderboard/global/search', {
-        username: params.username
-      })
-    });
-  }
-
-  /**
-   * Get scenario-specific leaderboard
-   */
-  public async getScenarioLeaderboard(params: { 
-    leaderboardId: number, 
-    page?: number, 
-    max?: number, 
-    usernameSearch?: string 
-  }): Promise<any> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/leaderboard/scores/global', {
-        leaderboardId: params.leaderboardId,
-        page: params.page ?? 0,
-        max: params.max ?? 50,
-        ...(params.usernameSearch ? { usernameSearch: params.usernameSearch } : {})
-      })
-    });
-  }
-
-  // User Management
-
-  /**
-   * Get current user's profile (requires authentication)
-   */
-  public async getUserProfile(): Promise<UserProfile> {
-    if (!this.authToken) {
-      throw new KovaaksApiError('Authentication required for this endpoint', 401);
-    }
-    
-    return this.request({
-      method: 'GET',
-      url: '/webapp-backend/user/profile'
-    });
-  }
-
-  /**
-   * Get user profile by username
-   */
-  public async getUserProfileByUsername(params: GetUserProfileByUsernameParams): Promise<UserProfile> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/user/profile/by-username', {
-        username: params.username
-      })
-    });
-  }
-
-  /**
-   * Search for users
-   */
-  public async searchUsers(params: GetUserSearchParams): Promise<UserSearchResponse[]> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/user/search', {
-        username: params.username
-      })
-    });
-  }
-
-  /**
-   * Get user's recent activity
-   */
-  public async getUserActivity(params: GetUserActivityParams): Promise<UserActivity[]> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/user/activity/recent', {
-        username: params.username
-      })
-    });
-  }
-
-  /**
-   * Get user's scenario statistics
-   */
-  public async getUserScenarios(params: GetUserScenarioParams): Promise<UserScenarioResponse> {
-    const queryParams: Record<string, any> = {
-      username: params.username,
-      page: params.page,
-      max: params.max
-    };
-    
-    if (params.sortParam) {
-      queryParams['sort_param[]'] = params.sortParam;
-    }
-    
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/user/scenario/total-play', queryParams)
-    });
-  }
-
-  // Scenarios
-
-  /**
-   * Get popular scenarios
-   */
-  public async getPopularScenarios(params: GetPopularScenariosParams): Promise<ScenarioPopularResponse> {
+  public async searchScenariosByName(params: { scenarioName: string, page?: number, max?: number }): Promise<KovaaksTypes.SearchScenariosByScenarioName.Response> {
     return this.request({
       method: 'GET',
       url: this.buildUrl('/webapp-backend/scenario/popular', {
+        scenarioNameSearch: params.scenarioName,
         page: params.page,
-        max: params.max,
-        scenarioNameSearch: params.scenarioNameSearch
+        max: params.max
       })
     });
   }
 
-  /**
-   * Get trending scenarios
-   */
-  public async getTrendingScenarios(): Promise<TrendingScenario[]> {
-    return this.request({
-      method: 'GET',
-      url: '/webapp-backend/scenario/trending'
-    });
-  }
-
-  /**
-   * Get detailed scenario information
-   */
-  public async getScenarioDetails(params: GetScenarioDetailsParams): Promise<ScenarioDetailsResponse> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/scenario/details', {
-        leaderboardId: params.leaderboardId
-      })
-    });
-  }
-
-  // Playlists
-
-  /**
-   * Get playlists
-   */
-  public async getPlaylists(params: GetPlaylistsParams): Promise<PlaylistResponse> {
-    return this.request({
-      method: 'GET',
-      url: this.buildUrl('/webapp-backend/playlist/playlists', {
-        page: params.page,
-        max: params.max,
-        search: params.search
-      })
-    });
-  }
-
-  // Benchmarks
-
-  /**
-   * Get benchmark progress
-   */
-  public async getBenchmarkProgress(params: GetBenchmarkProgressParams): Promise<BenchmarkProgress> {
+  public async getBenchmarkProgress(params: {
+    benchmarkId: number,
+    steamId: string,
+    page?: number,
+    max?: number
+  }): Promise<KovaaksTypes.GetBenchmarkProgressBySteamId64AndBenchmarkId.Response> {
     return this.request({
       method: 'GET',
       url: this.buildUrl('/webapp-backend/benchmarks/player-progress-rank-benchmark', {
@@ -410,13 +143,17 @@ export class KovaaksApiClient {
     });
   }
 
-  /**
-   * Get benchmarks for user
-   */
-  public async getBenchmarksForUser(params: GetBenchmarksForUserParams): Promise<BenchmarkSearchResponse> {
+  public async getGlobalLeaderboard(params: { page?: number, max?: number }): Promise<KovaaksTypes.GetGlobalLeaderboardScores.Response> {
     return this.request({
       method: 'GET',
-      url: this.buildUrl('/webapp-backend/benchmarks/player-progress-rank', {
+      url: this.buildUrl('/webapp-backend/leaderboard/global/scores', params)
+    });
+  }
+
+  public async getBenchmarkProgressForUsername(params: { username: string, page?: number, max?: number }): Promise<KovaaksTypes.GetBenchmarkProgressForWebappUsername.Response> {
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl(`/webapp-backend/benchmarks/player-progress-rank`, { 
         username: params.username,
         page: params.page,
         max: params.max
@@ -424,25 +161,103 @@ export class KovaaksApiClient {
     });
   }
 
-  // Statistics
-
-  /**
-   * Get monthly active player count
-   */
-  public async getMonthlyPlayers(): Promise<{ count: number }> {
+  public async getPlaylistsByUser(params: { username: string, page?: number, max?: number }): Promise<KovaaksTypes.GetPlaylistsCreatedByUser.Response> {
     return this.request({
       method: 'GET',
-      url: '/webapp-backend/user/monthly-players'
+      url: this.buildUrl('/webapp-backend/user/playlist/creator', {
+        username: params.username,
+        page: params.page,
+        max: params.max
+      })
     });
   }
 
-  /**
-   * Get game settings
-   */
-  public async getGameSettings(): Promise<any> {
+  public async getScenariosPlayedByUsername(params: { username: string, page?: number, max?: number, sort?: string }): Promise<KovaaksTypes.GetScenariosPlayedByUsernameSortedByPlays.Response> {
+    const queryParams: Record<string, any> = {
+      username: params.username,
+      page: params.page || 0,
+      max: params.max || 10
+    };
+    if (params.sort) {
+      queryParams['sort_param[]'] = params.sort;
+    }
     return this.request({
       method: 'GET',
-      url: '/webapp-backend/game-settings'
+      url: this.buildUrl(`/webapp-backend/user/scenario/total-play`, queryParams)
+    });
+  }
+
+  public async getRecentHighScoresByUsername(params: { username: string }): Promise<KovaaksTypes.GetRecentScenarioHighScoresByUsername.Response[]> {
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl(`/webapp-backend/user/activity/recent`, { username: params.username })
+    });
+  }
+
+  public async getFavoriteScenariosByUsername(params: { username: string }): Promise<KovaaksTypes.GetFavoriteScenariosByUsername.Response[]> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl(`/webapp-backend/user/favorite/scenarios`, { username: params.username })
+    });
+  }
+
+  public async getTotalScenariosCount(): Promise<KovaaksTypes.TotalScenariosCount.Response> {
+    return this.request({
+        method: 'GET',
+        url: '/backend/webapp/custom-scenarios-count'
+    });
+  }
+
+  public async getProfileByUsername(params: { username: string }): Promise<KovaaksTypes.GetProfileByWebappUsername.Response> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl(`/webapp-backend/user/profile/by-username`, { username: params.username })
+    });
+  }
+
+  public async getTrendingScenarios(): Promise<KovaaksTypes.GetTrendingScenarios.Response[]> {
+    return this.request({
+        method: 'GET',
+        url: '/webapp-backend/scenario/trending'
+    });
+  }
+
+  public async getMonthlyPlayersCount(): Promise<KovaaksTypes.GetMonthlyPlayersCount.Response> {
+    return this.request({
+        method: 'GET',
+        url: '/webapp-backend/user/monthly-players'
+    });
+  }
+
+  public async getConcurrentUsers(): Promise<KovaaksTypes.GetConcurrentUsers.Response> {
+    return this.request({
+        method: 'GET',
+        url: '/backend/webapp/concurrent-users'
+    });
+  }
+
+  public async getFeaturedHighScores(params: { page?: number, max?: number }): Promise<KovaaksTypes.FeaturedHighScores.Response[]> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl('/webapp-backend/leaderboard/scores/vip/recent', params)
+    });
+  }
+  
+  public async getScenarioDetails(params: { leaderboardId: number }): Promise<KovaaksTypes.GetScenarioDetailsByLeaderboardId.Response> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl('/webapp-backend/scenario/details', { leaderboardId: params.leaderboardId })
+    });
+  }
+
+  public async searchScenarioLeaderboard(params: { leaderboardId: number, page?: number, max?: number }): Promise<KovaaksTypes.ScenarioLeaderboardScoreSearch.Response> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl('/webapp-backend/leaderboard/scores/global', {
+            leaderboardId: params.leaderboardId,
+            page: params.page,
+            max: params.max
+        })
     });
   }
 } 

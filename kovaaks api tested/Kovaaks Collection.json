@@ -1,0 +1,1437 @@
+{
+  "v": 8,
+  "name": "Kovaaks Collection",
+  "folders": [],
+  "requests": [
+    {
+      "v": "13",
+      "name": "SCENARIO LEADERBOARD SCORE SEARCH",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/scores/global?leaderboardId=8680&page=0&max=50",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "SCENARIO LEADERBOARD SCORE SEARCH": {
+          "name": "SCENARIO LEADERBOARD SCORE SEARCH",
+          "originalRequest": {
+            "v": "5",
+            "name": "SCENARIO LEADERBOARD SCORE SEARCH",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/scores/global?leaderboardId=8680&page=0&max=50",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "19"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"7c8b-M5NvcGBhws0MqEgp/XooKUJcWQE\""
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:20:49 GMT"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            }
+          ],
+          "body": "{\"total\":707785,\"page\":0,\"max\":50,\"data\":[{\"steamId\":\"76561198305528151\",\"score\":5520,\"rank\":1,\"steamAccountName\":\"雑魚AIMのG\",\"webappUsername\":\"Garun3141\",\"kovaaksPlusActive\":false,\"country\":\"jp\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1683304757778,\"kills\":56,\"score\":5520,\"avgFps\":492.8973693847656,\"avgTtk\":0.002028797520324588,\"fovScale\":\"Overwatch\",\"vertSens\":0.23000000417232513,\"horizSens\":0.23000000417232513,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":94382,\"challengeStart\":\"01:38:13.819\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.2.2.2023-05-02-15-13-03-b6b3c4b931\"}},{\"steamId\":\"76561199500454318\",\"score\":5500,\"rank\":2,\"steamAccountName\":\"@reolistyle\",\"webappUsername\":\"reoli\",\"kovaaksPlusActive\":false,\"country\":\"ru\",\"attributes\":{\"fov\":80,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":55,\"epoch\":1716973397280,\"kills\":56,\"score\":5500,\"avgFps\":867.8450927734375,\"avgTtk\":1.0714224576950073,\"fovScale\":\"Overwatch\",\"vertSens\":55,\"horizSens\":55,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":93036,\"challengeStart\":\"13:02:16.097\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.4.2024-05-24-14-41-42-7f44301bd0\"}},{\"steamId\":\"76561199825393000\",\"score\":5496,\"rank\":3,\"steamAccountName\":\"gikitonko\",\"webappUsername\":\"albedo\",\"kovaaksPlusActive\":false,\"country\":\"\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":35,\"epoch\":1741609793426,\"kills\":56,\"score\":5496,\"avgFps\":359.2100830078125,\"avgTtk\":1.0710008144378662,\"fovScale\":\"Overwatch\",\"vertSens\":35,\"horizSens\":35,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":92655,\"challengeStart\":\"16:28:52.610\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.4.2025-02-04-15-00-13-4123b712a0\"}},{\"steamId\":\"76561198123234905\",\"score\":5464,\"rank\":4,\"steamAccountName\":\"ddd\",\"webappUsername\":\"dracoo\",\"kovaaksPlusActive\":true,\"country\":\"us\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1706504123558,\"kills\":56,\"score\":5464,\"avgFps\":986.3936767578125,\"avgTtk\":0.0010137645294889808,\"fovScale\":\"Overwatch\",\"vertSens\":65,\"horizSens\":65,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":91122,\"challengeStart\":\"23:54:22.946\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198006502679\",\"score\":5456,\"rank\":5,\"steamAccountName\":\"snowi\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":10.390908241271973,\"epoch\":1654401869898,\"kills\":56,\"score\":5456,\"avgFps\":479.29327392578125,\"avgTtk\":0.002086509019136429,\"fovScale\":\"QuakeChampions\",\"vertSens\":1.25,\"horizSens\":1.25,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":90190,\"challengeStart\":\"H:M:S.s\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.0.4.2022-05-24-13-39-36-6530be952d\"}},{\"steamId\":\"76561197962968552\",\"score\":5456,\"rank\":6,\"steamAccountName\":\"asdasdas\",\"webappUsername\":\"erdem\",\"kovaaksPlusActive\":false,\"country\":\"tr\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":58.34967041015625,\"epoch\":1719036778110,\"kills\":56,\"score\":5456,\"avgFps\":395.13885498046875,\"avgTtk\":1.0714224576950073,\"fovScale\":\"Overwatch\",\"vertSens\":0.2800000011920929,\"horizSens\":0.2800000011920929,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":90109,\"challengeStart\":\"09:11:57.466\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.4.2024-05-24-14-41-42-7f44301bd0\"}},{\"steamId\":\"76561199025798490\",\"score\":5448,\"rank\":7,\"steamAccountName\":\"eilish\",\"webappUsername\":\"ness\",\"kovaaksPlusActive\":true,\"country\":\"GB\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1703719667988,\"kills\":56,\"score\":5448,\"avgFps\":587.0054321289062,\"avgTtk\":0.0017035193741321564,\"fovScale\":\"Overwatch\",\"vertSens\":44,\"horizSens\":44,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":89617,\"challengeStart\":\"23:28:17.609\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198981749124\",\"score\":5444,\"rank\":8,\"steamAccountName\":\"hizku\",\"webappUsername\":\"hizku\",\"kovaaksPlusActive\":false,\"country\":\"pl\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":43,\"epoch\":1748697978651,\"kills\":56,\"score\":5444,\"avgFps\":753.41162109375,\"avgTtk\":1.071317195892334,\"fovScale\":\"Overwatch\",\"vertSens\":43,\"horizSens\":43,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":89459,\"challengeStart\":\"15:25:21.608\",\"modelOverrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"}},{\"steamId\":\"76561199199641335\",\"score\":5436,\"rank\":9,\"steamAccountName\":\"e1se\",\"webappUsername\":\"e1se\",\"kovaaksPlusActive\":false,\"country\":\"kr\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":1.2082451581954956,\"epoch\":1662133028869,\"kills\":56,\"score\":5436,\"avgFps\":359.6351013183594,\"avgTtk\":0.002780851675197482,\"fovScale\":\"Overwatch\",\"vertSens\":43,\"horizSens\":43,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":88888,\"challengeStart\":\"00:36:06.912\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.1.6.2022-08-22-14-09-09-9bdedb9f32\"}},{\"steamId\":\"76561198284419824\",\"score\":5436,\"rank\":10,\"steamAccountName\":\"DEADMAU5\",\"webappUsername\":\"robby\",\"kovaaksPlusActive\":false,\"country\":\"AU\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":41,\"epoch\":1741398185762,\"kills\":56,\"score\":5436,\"avgFps\":599.6875,\"avgTtk\":1.071153163909912,\"fovScale\":\"Overwatch\",\"vertSens\":41,\"horizSens\":41,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":88978,\"challengeStart\":\"12:42:02.492\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.4.2025-02-04-15-00-13-4123b712a0\"}},{\"steamId\":\"76561198090257382\",\"score\":5424,\"rank\":11,\"steamAccountName\":\"Demotori\",\"webappUsername\":\"demotori\",\"kovaaksPlusActive\":false,\"country\":\"se\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1689950159690,\"kills\":56,\"score\":5424,\"avgFps\":286.8131408691406,\"avgTtk\":0.0034867303911596537,\"fovScale\":\"Overwatch\",\"vertSens\":0.6000000238418579,\"horizSens\":0.6000000238418579,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":88203,\"challengeStart\":\"16:36:51.730\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.2.5.2023-06-09-11-11-19-11a32d4fbb\"}},{\"steamId\":\"76561198071884922\",\"score\":5416,\"rank\":12,\"steamAccountName\":\"Jut\",\"webappUsername\":\"Jut\",\"kovaaksPlusActive\":true,\"country\":\"us\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":43.29999923706055,\"epoch\":1728635381660,\"kills\":56,\"score\":5416,\"avgFps\":714.8761596679688,\"avgTtk\":1.0714285373687744,\"fovScale\":\"Overwatch\",\"vertSens\":43.29999923706055,\"horizSens\":43.29999923706055,\"resolution\":\"2560x1440\",\"sensScale\":\"cm/360\",\"accuracyDamage\":87862,\"challengeStart\":\"04:28:41.846\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.6.3.2024-09-17-20-06-14-88a3afd39b\"}},{\"steamId\":\"76561198400237791\",\"score\":5412,\"rank\":13,\"steamAccountName\":\"50\",\"webappUsername\":\"50\",\"kovaaksPlusActive\":false,\"country\":\"au\",\"attributes\":{\"fOv\":93,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1690857510675,\"kills\":56,\"score\":5412,\"avgFps\":321.0687255859375,\"avgTtk\":0.003114438382908702,\"fovScale\":\"Overwatch\",\"vertSens\":2.450000047683716,\"horizSens\":2.450000047683716,\"resolution\":\"1680x1050\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":87466,\"challengeStart\":\"12:37:28.178\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.2.6.2023-07-24-09-21-34-add775cf8e\"}},{\"steamId\":\"76561199368152051\",\"score\":5384,\"rank\":14,\"steamAccountName\":\"onkizzy12345\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1702876332581,\"kills\":56,\"score\":5384,\"avgFps\":215.9875946044922,\"avgTtk\":0.004629603121429682,\"fovScale\":\"Overwatch\",\"vertSens\":0.4000000059604645,\"horizSens\":0.4000000059604645,\"resolution\":\"1600x900\",\"sensScale\":\"Valorant\",\"accuracyDamage\":86699,\"challengeStart\":\"00:10:32.317\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198055673602\",\"score\":5384,\"rank\":15,\"steamAccountName\":\"l1f3l6sS\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":\"RU\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":43.29545211791992,\"epoch\":1730831726742,\"kills\":56,\"score\":5384,\"avgFps\":410.8077087402344,\"avgTtk\":4.974730014801025,\"fovScale\":\"Horizontal (16:9)\",\"vertSens\":2.4000000953674316,\"horizSens\":2.4000000953674316,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":85863,\"challengeStart\":\"21:34:26.514\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.6.5.2024-11-01-16-00-32-f098e7b1d6\"}},{\"steamId\":\"76561199247873110\",\"score\":5380,\"rank\":16,\"steamAccountName\":\"RiNoBowzer\",\"webappUsername\":\"rinobowzer\",\"kovaaksPlusActive\":true,\"country\":\"jp\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1709270274807,\"kills\":55,\"score\":5380,\"avgFps\":437.72015380859375,\"avgTtk\":0.0022844828199595213,\"fovScale\":\"Overwatch\",\"vertSens\":108,\"horizSens\":108,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":91596,\"challengeStart\":\"14:16:53.435\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.4.2.2024-02-28-14-22-08-791139f13a\"}},{\"steamId\":\"76561199033864901\",\"score\":5376,\"rank\":17,\"steamAccountName\":\"success\",\"webappUsername\":\"success\",\"kovaaksPlusActive\":false,\"country\":\"tr\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":163.3790740966797,\"epoch\":1745449251208,\"kills\":55,\"score\":5376,\"avgFps\":683.0254516601562,\"avgTtk\":1.0906555652618408,\"fovScale\":\"CSGO\",\"vertSens\":0.6359999775886536,\"horizSens\":0.6359999775886536,\"resolution\":\"1280x960\",\"sensScale\":\"CSGO\",\"accuracyDamage\":91340,\"challengeStart\":\"01:59:50.088\",\"modelOverrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"}},{\"steamId\":\"76561198395171678\",\"score\":5344,\"rank\":18,\"steamAccountName\":\"Верный\",\"webappUsername\":\"Syaoh\",\"kovaaksPlusActive\":true,\"country\":\"JP\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":51.95454406738281,\"epoch\":1653316570855,\"kills\":55,\"score\":5344,\"avgFps\":165.9564666748047,\"avgTtk\":0.0060246665962040424,\"fovScale\":\"Fortnite\",\"vertSens\":1,\"horizSens\":1,\"resolution\":\"1920x1080\",\"sensScale\":\"ApexLegends\",\"accuracyDamage\":89344,\"challengeStart\":\"H:M:S.s\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.0.3.2022-05-10-16-41-55-3a28d653f0\"}},{\"steamId\":\"76561198146065367\",\"score\":5340,\"rank\":19,\"steamAccountName\":\"Joesph\",\"webappUsername\":\"Tayden\",\"kovaaksPlusActive\":false,\"country\":\"us\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":13.529829025268555,\"epoch\":1654710834597,\"kills\":55,\"score\":5340,\"avgFps\":268.2312927246094,\"avgTtk\":0.0037280761171132326,\"fovScale\":\"QuakeChampions\",\"vertSens\":1.9199999570846558,\"horizSens\":1.9199999570846558,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":89100,\"challengeStart\":\"H:M:S.s\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.0.4.2022-05-24-13-39-36-6530be952d\"}},{\"steamId\":\"76561199508313716\",\"score\":5332,\"rank\":20,\"steamAccountName\":\"00\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":\"JP\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":46,\"epoch\":1738589687657,\"kills\":55,\"score\":5332,\"avgFps\":1251.8590087890625,\"avgTtk\":1.0901604890823364,\"fovScale\":\"Overwatch\",\"vertSens\":46,\"horizSens\":46,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":88617,\"challengeStart\":\"08:33:16.002\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.3.2025-01-15-15-55-20-6260bd6b94\"}},{\"steamId\":\"76561198246144470\",\"score\":5328,\"rank\":21,\"steamAccountName\":\"paradigm\",\"webappUsername\":\"pa_radigm\",\"kovaaksPlusActive\":false,\"country\":\"us\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":35,\"epoch\":1748766988623,\"kills\":55,\"score\":5328,\"avgFps\":399.9612121582031,\"avgTtk\":1.0906057357788086,\"fovScale\":\"Overwatch\",\"vertSens\":35,\"horizSens\":35,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":88378,\"challengeStart\":\"02:35:28.492\",\"modelOverrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"}},{\"steamId\":\"76561198247981494\",\"score\":5324,\"rank\":22,\"steamAccountName\":\"Flarezest\",\"webappUsername\":\"Flarezest\",\"kovaaksPlusActive\":false,\"country\":\"\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":41.99993133544922,\"epoch\":1740869676216,\"kills\":55,\"score\":5324,\"avgFps\":359.9291687011719,\"avgTtk\":1.090517520904541,\"fovScale\":\"Overwatch\",\"vertSens\":2.475480079650879,\"horizSens\":2.474030017852783,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":88140,\"challengeStart\":\"01:53:36.436\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.4.2025-02-04-15-00-13-4123b712a0\"}},{\"steamId\":\"76561198190824077\",\"score\":5320,\"rank\":23,\"steamAccountName\":\"hikkoid\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":57.72726821899414,\"epoch\":1672428962197,\"kills\":55,\"score\":5320,\"avgFps\":480.3979797363281,\"avgTtk\":0.0020815145689994097,\"fovScale\":\"Horizontal (16:9)\",\"vertSens\":0.44999998807907104,\"horizSens\":0.44999998807907104,\"resolution\":\"1920x1080\",\"sensScale\":\"Apex Legends\",\"accuracyDamage\":87903,\"challengeStart\":\"22:35:02.975\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.1.10.2022-12-13-18-36-59-4728cf62a1\"}},{\"steamId\":\"76561198986274416\",\"score\":5316,\"rank\":24,\"steamAccountName\":\"undefined\",\"webappUsername\":\"undefined\",\"kovaaksPlusActive\":false,\"country\":\"jp\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1699431792144,\"kills\":56,\"score\":5316,\"avgFps\":239.9311981201172,\"avgTtk\":0.004167800769209862,\"fovScale\":\"Overwatch\",\"vertSens\":56,\"horizSens\":56,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":82725,\"challengeStart\":\"17:22:03.423\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198122039418\",\"score\":5308,\"rank\":25,\"steamAccountName\":\"✦ Ai\",\"webappUsername\":\"Ai\",\"kovaaksPlusActive\":false,\"country\":\"br\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"epoch\":1643444688586,\"score\":5308,\"avgFps\":275.5337829589844,\"avgTtk\":0.0036293042358011007,\"scenario\":\"KovaaKs Sandbox Intro Scenario\",\"fovScale\":\"Overwatch\",\"vertSens\":0.25512999296188354,\"horizSens\":0.25512999296188354,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":87200,\"challengeStart\":\"05:20:16.673\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\"}},{\"steamId\":\"76561198951164796\",\"score\":5304,\"rank\":26,\"steamAccountName\":\"neppo\",\"webappUsername\":\"neppo\",\"kovaaksPlusActive\":false,\"country\":\"ru\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1710070891776,\"kills\":55,\"score\":5304,\"avgFps\":496.8919372558594,\"avgTtk\":0.002012398326769471,\"fovScale\":\"Overwatch\",\"vertSens\":4,\"horizSens\":4,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":86968,\"challengeStart\":\"14:38:37.921\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.4.2.2024-02-28-14-22-08-791139f13a\"}},{\"steamId\":\"76561198192977055\",\"score\":5300,\"rank\":27,\"steamAccountName\":\"yejo\",\"webappUsername\":\"yejosheph2@gmail.com\",\"kovaaksPlusActive\":false,\"country\":\"au\",\"attributes\":{\"fov\":90,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":41.5635986328125,\"epoch\":1746113010621,\"kills\":55,\"score\":5300,\"avgFps\":363.0768127441406,\"avgTtk\":1.090828537940979,\"fovScale\":\"Horizontal (4:3)\",\"vertSens\":41.5635986328125,\"horizSens\":41.5635986328125,\"resolution\":\"2560x1440\",\"sensScale\":\"cm/360\",\"accuracyDamage\":86737,\"challengeStart\":\"01:25:17.750\",\"modelOverrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"}},{\"steamId\":\"76561198390284214\",\"score\":5276,\"rank\":28,\"steamAccountName\":\"𝘽⁧⁧ 𝙇𝙊𝙊𝘿\",\"webappUsername\":\"WorthlessGod\",\"kovaaksPlusActive\":true,\"country\":\"us\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":45,\"epoch\":1726785555173,\"kills\":56,\"score\":5276,\"avgFps\":684.5035400390625,\"avgTtk\":1.0714285373687744,\"fovScale\":\"Overwatch\",\"vertSens\":45,\"horizSens\":45,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":80195,\"challengeStart\":\"15:38:14.901\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.6.3.2024-09-17-20-06-14-88a3afd39b\"}},{\"steamId\":\"76561198142092227\",\"score\":5268,\"rank\":29,\"steamAccountName\":\"プリンス\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":23.339868545532227,\"epoch\":1734757989436,\"kills\":54,\"score\":5268,\"avgFps\":399.9404602050781,\"avgTtk\":1.1108134984970093,\"fovScale\":\"Overwatch\",\"vertSens\":0.3499999940395355,\"horizSens\":0.3499999940395355,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":90807,\"challengeStart\":\"14:12:08.221\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.1.2024-12-12-16-19-21-9481a4a49d\"}},{\"steamId\":\"76561199486822569\",\"score\":5260,\"rank\":30,\"steamAccountName\":\"Jyro<3\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":\"BM\",\"attributes\":{\"fOv\":105,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1706920050391,\"kills\":54,\"score\":5260,\"avgFps\":123.01712036132812,\"avgTtk\":0.008127831853926182,\"fovScale\":\"Overwatch\",\"vertSens\":4.5,\"horizSens\":4.5,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":90304,\"challengeStart\":\"01:25:21.642\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198287996937\",\"score\":5256,\"rank\":31,\"steamAccountName\":\"OYUN_BOZAN01\",\"webappUsername\":\"kultigin\",\"kovaaksPlusActive\":false,\"country\":\"TR\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":51.05596160888672,\"epoch\":1737845361186,\"kills\":54,\"score\":5256,\"avgFps\":732.654052734375,\"avgTtk\":1.1107511520385742,\"fovScale\":\"Valorant\",\"vertSens\":0.1599999964237213,\"horizSens\":0.1599999964237213,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":90055,\"challengeStart\":\"01:48:21.871\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.3.2025-01-15-15-55-20-6260bd6b94\"}},{\"steamId\":\"76561198399953302\",\"score\":5252,\"rank\":32,\"steamAccountName\":\"shocks\",\"webappUsername\":\"shocks\",\"kovaaksPlusActive\":false,\"country\":\"US\",\"attributes\":{\"fOv\":80,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1686867021164,\"kills\":54,\"score\":5252,\"avgFps\":250.7954559326172,\"avgTtk\":0.003987217787653208,\"fovScale\":\"Overwatch\",\"vertSens\":1,\"horizSens\":1,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":89807,\"challengeStart\":\"15:09:04.479\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.2.5.2023-06-09-11-11-19-11a32d4fbb\"}},{\"steamId\":\"76561198075010813\",\"score\":5252,\"rank\":33,\"steamAccountName\":\"Alternatiiv\",\"webappUsername\":\"alternatiiv\",\"kovaaksPlusActive\":false,\"country\":\"tr\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":48.337005615234375,\"epoch\":1720934714215,\"kills\":54,\"score\":5252,\"avgFps\":291.72216796875,\"avgTtk\":1.1111047267913818,\"fovScale\":\"Valorant\",\"vertSens\":0.16899999976158142,\"horizSens\":0.16899999976158142,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":89807,\"challengeStart\":\"08:23:13.986\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.4.2024-05-24-14-41-42-7f44301bd0\"}},{\"steamId\":\"76561199651467315\",\"score\":5244,\"rank\":34,\"steamAccountName\":\"Adversityaimer\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1712159343018,\"kills\":54,\"score\":5244,\"avgFps\":408.460693359375,\"avgTtk\":0.0024481662549078465,\"fovScale\":\"Overwatch\",\"vertSens\":93,\"horizSens\":93,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":89315,\"challengeStart\":\"00:47:58.998\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.4.2.2024-02-28-14-22-08-791139f13a\"}},{\"steamId\":\"76561198110293016\",\"score\":5244,\"rank\":35,\"steamAccountName\":\"Aznoheu\",\"webappUsername\":\"Aznoheu\",\"kovaaksPlusActive\":false,\"country\":\"cz\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":37.13160705566406,\"epoch\":1718707691409,\"kills\":54,\"score\":5244,\"avgFps\":142.0675048828125,\"avgTtk\":1.1111047267913818,\"fovScale\":\"Valorant\",\"vertSens\":0.2199999988079071,\"horizSens\":0.2199999988079071,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":89315,\"challengeStart\":\"12:47:10.205\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.4.2024-05-24-14-41-42-7f44301bd0\"}},{\"steamId\":\"76561199047556229\",\"score\":5236,\"rank\":36,\"steamAccountName\":\"ぽんぽんぺいんぺいｎ\",\"webappUsername\":\"hanaikada\",\"kovaaksPlusActive\":false,\"country\":\"jp\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1714691546691,\"kills\":54,\"score\":5236,\"avgFps\":239.6273956298828,\"avgTtk\":0.004173018038272858,\"fovScale\":\"Overwatch\",\"vertSens\":56,\"horizSens\":56,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":88828,\"challengeStart\":\"08:11:26.174\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.2.2024-04-22-13-54-32-ec44fe2fd2\"}},{\"steamId\":\"76561198095566580\",\"score\":5236,\"rank\":37,\"steamAccountName\":\"Dende\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":\"DE\",\"attributes\":{\"fov\":105,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":29.688312530517578,\"epoch\":1746918345679,\"kills\":54,\"score\":5236,\"avgFps\":360.1126403808594,\"avgTtk\":1.1108149290084839,\"fovScale\":\"Quake/Source\",\"vertSens\":3.5,\"horizSens\":3.5,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":88828,\"challengeStart\":\"01:04:46.073\",\"modelOverrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"}},{\"steamId\":\"76561198090469292\",\"score\":5236,\"rank\":38,\"steamAccountName\":\"mt\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"epoch\":1636494992824,\"accuracyDamage\":88828,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\"}},{\"steamId\":\"76561199286842801\",\"score\":5224,\"rank\":39,\"steamAccountName\":\"C14X1\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1701102369398,\"kills\":54,\"score\":5224,\"avgFps\":234.78848266601562,\"avgTtk\":0.004258617293089628,\"fovScale\":\"Overwatch\",\"vertSens\":5,\"horizSens\":5,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":88108,\"challengeStart\":\"17:25:11.654\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198336661918\",\"score\":5208,\"rank\":40,\"steamAccountName\":\"fear god\",\"webappUsername\":\"flavo\",\"kovaaksPlusActive\":false,\"country\":\"DK\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1699129112946,\"kills\":54,\"score\":5208,\"avgFps\":599.7973022460938,\"avgTtk\":0.001666796044446528,\"fovScale\":\"Overwatch\",\"vertSens\":36,\"horizSens\":36,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":87165,\"challengeStart\":\"21:17:35.814\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"}},{\"steamId\":\"76561198257802175\",\"score\":5188,\"rank\":41,\"steamAccountName\":\"Nqny\",\"webappUsername\":\"774nqny\",\"kovaaksPlusActive\":false,\"country\":\"JP\",\"attributes\":{\"fov\":100,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":30.56149673461914,\"epoch\":1654843813170,\"kills\":54,\"score\":5188,\"avgFps\":323.1046447753906,\"avgTtk\":0.003094680141657591,\"fovScale\":\"Fortnite\",\"vertSens\":1.7000000476837158,\"horizSens\":1.7000000476837158,\"resolution\":\"1920x1080\",\"sensScale\":\"ApexLegends\",\"accuracyDamage\":86015,\"challengeStart\":\"H:M:S.s\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.0.4.2022-05-24-13-39-36-6530be952d\"}},{\"steamId\":\"76561198045193896\",\"score\":5188,\"rank\":42,\"steamAccountName\":\"✦\",\"webappUsername\":\"sln\",\"kovaaksPlusActive\":false,\"country\":\"ca\",\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1714448909612,\"kills\":54,\"score\":5188,\"avgFps\":1124.8629150390625,\"avgTtk\":0.0008889759774319828,\"fovScale\":\"Overwatch\",\"vertSens\":42,\"horizSens\":42,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":86015,\"challengeStart\":\"23:49:44.568\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.2.2024-04-22-13-54-32-ec44fe2fd2\"}},{\"steamId\":\"76561198962580776\",\"score\":5180,\"rank\":43,\"steamAccountName\":\"minowskii\",\"webappUsername\":\"minowskii\",\"kovaaksPlusActive\":false,\"country\":\"us\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":70.2719955444336,\"epoch\":1735034933419,\"kills\":54,\"score\":5180,\"avgFps\":767.4207153320312,\"avgTtk\":1.110791563987732,\"fovScale\":\"Overwatch\",\"vertSens\":4.928850173950195,\"horizSens\":4.928899765014648,\"resolution\":\"2560x1440\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":85564,\"challengeStart\":\"02:07:55.226\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.1.2024-12-12-16-19-21-9481a4a49d\"}},{\"steamId\":\"76561198426448956\",\"score\":5172,\"rank\":44,\"steamAccountName\":\"yuno\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fOv\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1685861010084,\"kills\":53,\"score\":5172,\"avgFps\":267.2764892578125,\"avgTtk\":0.003741326741874218,\"fovScale\":\"Overwatch\",\"vertSens\":3.2070701122283936,\"horizSens\":3.2070701122283936,\"resolution\":\"1920x1080\",\"sensScale\":\"Overwatch\",\"accuracyDamage\":91036,\"challengeStart\":\"15:42:28.387\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.2.4.2023-05-23-12-16-13-634d8a05a9\"}},{\"steamId\":\"76561198196519290\",\"score\":5172,\"rank\":45,\"steamAccountName\":\"failbi\",\"webappUsername\":\"faiilbi\",\"kovaaksPlusActive\":false,\"country\":\"ru\",\"attributes\":{\"fov\":105,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":52.479339599609375,\"epoch\":1719590504635,\"kills\":54,\"score\":5172,\"avgFps\":360.00958251953125,\"avgTtk\":1.1111047267913818,\"fovScale\":\"Clamped Horizontal\",\"vertSens\":1.649999976158142,\"horizSens\":1.649999976158142,\"resolution\":\"1920x1080\",\"sensScale\":\"Call of Duty\",\"accuracyDamage\":85117,\"challengeStart\":\"19:00:28.057\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.5.4.2024-05-24-14-41-42-7f44301bd0\"}},{\"steamId\":\"76561199093955623\",\"score\":5168,\"rank\":46,\"steamAccountName\":\"あくれあ\",\"webappUsername\":\"acrea147\",\"kovaaksPlusActive\":false,\"country\":\"jp\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":67.5,\"epoch\":1743107989058,\"kills\":53,\"score\":5168,\"avgFps\":331.8724365234375,\"avgTtk\":1.1316578388214111,\"fovScale\":\"Overwatch\",\"vertSens\":67.5,\"horizSens\":67.5,\"resolution\":\"1920x1080\",\"sensScale\":\"cm/360\",\"accuracyDamage\":90782,\"challengeStart\":\"05:38:48.582\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8\"}},{\"steamId\":\"76561198802284607\",\"score\":5164,\"rank\":47,\"steamAccountName\":\"パクチー@ふもっふのおみせ\",\"webappUsername\":null,\"kovaaksPlusActive\":false,\"country\":null,\"attributes\":{\"fOv\":90,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":0,\"epoch\":1696329463874,\"kills\":53,\"score\":5164,\"avgFps\":360.0586242675781,\"avgTtk\":0.0027771189343184233,\"fovScale\":\"Apex Legends\",\"vertSens\":0.9399999976158142,\"horizSens\":0.9399999976158142,\"resolution\":\"1680x1050\",\"sensScale\":\"Apex Legends\",\"accuracyDamage\":90529,\"challengeStart\":\"19:36:30.699\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.3.0.2023-09-22-14-07-00-c6a249a8be\"}},{\"steamId\":\"76561198101711392\",\"score\":5160,\"rank\":48,\"steamAccountName\":\"reign of blood\",\"webappUsername\":\" j9sper\",\"kovaaksPlusActive\":false,\"country\":\"ca\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":44.01375961303711,\"epoch\":1735709272908,\"kills\":53,\"score\":5160,\"avgFps\":695.2449951171875,\"avgTtk\":1.1317307949066162,\"fovScale\":\"Overwatch\",\"vertSens\":0.09252999722957611,\"horizSens\":0.09279999881982803,\"resolution\":\"1920x1080\",\"sensScale\":\"Valorant\",\"accuracyDamage\":90277,\"challengeStart\":\"00:26:52.130\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.1.2024-12-12-16-19-21-9481a4a49d\"}},{\"steamId\":\"76561198360505563\",\"score\":5156,\"rank\":49,\"steamAccountName\":\"fargareko\",\"webappUsername\":\"fargareko\",\"kovaaksPlusActive\":false,\"country\":\"by\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"cm360\":43.29545211791992,\"epoch\":1735578726081,\"kills\":53,\"score\":5156,\"avgFps\":693.185546875,\"avgTtk\":1.1316907405853271,\"fovScale\":\"Overwatch\",\"vertSens\":0.800000011920929,\"horizSens\":0.800000011920929,\"resolution\":\"1920x1080\",\"sensScale\":\"Deadlock\",\"accuracyDamage\":90027,\"challengeStart\":\"20:11:05.436\",\"sensRandomizer\":null,\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\",\"clientBuildVersion\":\"3.7.1.2024-12-12-16-19-21-9481a4a49d\"}},{\"steamId\":\"76561198275340637\",\"score\":5156,\"rank\":50,\"steamAccountName\":\"Visulk\",\"webappUsername\":\"Visulk\",\"kovaaksPlusActive\":false,\"country\":\"de\",\"attributes\":{\"fov\":103,\"hash\":\"18505db399aaa604b7a65fa03ffa7490\",\"epoch\":1640097730276,\"score\":5156,\"avgFps\":350.9180603027344,\"avgTtk\":0.0028497984167188406,\"scenario\":\"KovaaKs Sandbox Intro Scenario\",\"fovScale\":\"Valorant\",\"vertSens\":11.300000190734863,\"horizSens\":11.300000190734863,\"resolution\":\"1920x1080\",\"sensScale\":\"Quake/Source\",\"accuracyDamage\":90027,\"challengeStart\":\"15:41:08.373\",\"scenarioVersion\":\"18505db399aaa604b7a65fa03ffa7490\"}}]}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_SCENARIO_DETAILS_BY_LEADERBOARD_ID",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/scenario/details?leaderboardId=8680",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_SCENARIO_DETAILS_BY_LEADERBOARD_ID": {
+          "name": "GET_SCENARIO_DETAILS_BY_LEADERBOARD_ID",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_SCENARIO_DETAILS_BY_LEADERBOARD_ID",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/scenario/details?leaderboardId=8680",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "etag",
+              "value": "W/\"160-LzpI9UgumlRuPGzVcARzf4LDBpo\""
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:20:51 GMT"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-length",
+              "value": "352"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "8"
+            }
+          ],
+          "body": "{\"scenarioName\":\"KovaaKs Sandbox Intro Scenario\",\"aimType\":\"Other\",\"playCount\":3416465,\"steamId\":\"76561198066375616\",\"steamAccountName\":\"DrUninstall\",\"webappUsername\":\"DrUninstall\",\"description\":\"Mix of Hitscan Tracking and Hitscan Click Timing.  Cycle between killing a bot and spherical targets. \",\"tags\":[\"\",\"\"],\"created\":\"2024-05-03T10:33:50.000Z\"}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "FEATURED_HIGH_SCORES",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/scores/vip/recent?page=0&max=50",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "FEATURED_HIGH_SCORES": {
+          "name": "FEATURED_HIGH_SCORES",
+          "originalRequest": {
+            "v": "5",
+            "name": "FEATURED_HIGH_SCORES",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/scores/vip/recent?page=0&max=50",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"a6f0-38xcbCLeWQhleLOWG/lXkhXzmAo\""
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "47"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:20:53 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            }
+          ],
+          "body": "[{\"scenarioName\":\"Skeet Clicking\",\"steamId\":\"76561198065865918\",\"score\":7929.24,\"created\":\"2025-06-04T23:11:24.981Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":761.74267578125,\"avg_ttk\":0.292634516954422,\"sens_scale\":\"cm/360\",\"horiz_sens\":52,\"vert_sens\":52,\"fov\":103,\"challenge_start\":\"19:10:20.264\",\"score\":7929.2451171875,\"kills\":205,\"hash\":\"cffc582ed8cf96040bfff99f5d8c9c38\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":96698,\"scenario_version\":\"cffc582ed8cf96040bfff99f5d8c9c38\",\"cm360\":52,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749078684950},\"steamAccountName\":\"VT Matty\",\"webappUsername\":\"MattyOW\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"VT FlyTS Advanced S5\",\"steamId\":\"76561199020888633\",\"score\":599,\"created\":\"2025-06-04T22:34:24.368Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":556.8546752929688,\"avg_ttk\":1.0338547229766846,\"sens_scale\":\"cm/360\",\"horiz_sens\":53,\"vert_sens\":53,\"fov\":103,\"challenge_start\":\"00:33:23.431\",\"score\":599,\"kills\":58,\"hash\":\"e924b7895dc071b4e1e5d7a9bdc1c8f6\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":49966,\"scenario_version\":\"e924b7895dc071b4e1e5d7a9bdc1c8f6\",\"cm360\":53,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749076464344},\"steamAccountName\":\"embza\",\"webappUsername\":\"embza\",\"game\":\"aimerz\"},{\"scenarioName\":\"Pasu Voltaic Easy\",\"steamId\":\"76561198065865918\",\"score\":162.37,\"created\":\"2025-06-04T22:27:46.501Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":627.4232177734375,\"avg_ttk\":0.3487594425678253,\"sens_scale\":\"cm/360\",\"horiz_sens\":52,\"vert_sens\":52,\"fov\":103,\"challenge_start\":\"18:26:41.723\",\"score\":162.37307739257812,\"kills\":172,\"hash\":\"2510f8c2012a0b2794f7fd3a53c4af46\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":89119,\"scenario_version\":\"2510f8c2012a0b2794f7fd3a53c4af46\",\"cm360\":52,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749076066469},\"steamAccountName\":\"VT Matty\",\"webappUsername\":\"MattyOW\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"VT FlyTS Elite S5\",\"steamId\":\"76561199020888633\",\"score\":449,\"created\":\"2025-06-04T22:09:05.315Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":562.12109375,\"avg_ttk\":1.362857460975647,\"sens_scale\":\"cm/360\",\"horiz_sens\":53,\"vert_sens\":53,\"fov\":103,\"challenge_start\":\"00:08:04.389\",\"score\":449,\"kills\":44,\"hash\":\"b8fed5807dc322af5cedddfe61bcdd0a\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":37472,\"scenario_version\":\"b8fed5807dc322af5cedddfe61bcdd0a\",\"cm360\":53,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749074945293},\"steamAccountName\":\"embza\",\"webappUsername\":\"embza\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Angleswitch Micro Valorant Elite\",\"steamId\":\"76561199020888633\",\"score\":630.8,\"created\":\"2025-06-04T21:59:03.135Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":504.500732421875,\"avg_ttk\":0.9518132209777832,\"sens_scale\":\"cm/360\",\"horiz_sens\":53,\"vert_sens\":53,\"fov\":103,\"challenge_start\":\"23:58:02.208\",\"score\":630.7999877929688,\"kills\":63,\"hash\":\"d9f5a4354110b84743f69f35f2a92542\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":48672,\"scenario_version\":\"d9f5a4354110b84743f69f35f2a92542\",\"cm360\":53,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749074343096},\"steamAccountName\":\"embza\",\"webappUsername\":\"embza\",\"game\":\"aimerz\"},{\"scenarioName\":\"CG Adjust Switch Micro Elite\",\"steamId\":\"76561199020888633\",\"score\":624,\"created\":\"2025-06-04T21:50:14.541Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":521.3724365234375,\"avg_ttk\":1.1532431840896606,\"sens_scale\":\"cm/360\",\"horiz_sens\":53,\"vert_sens\":53,\"fov\":103,\"challenge_start\":\"23:49:13.622\",\"score\":624,\"kills\":52,\"hash\":\"2b6cd0826be4f8cb6c90cbb972a13c21\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":36814,\"scenario_version\":\"2b6cd0826be4f8cb6c90cbb972a13c21\",\"cm360\":53,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749073814502},\"steamAccountName\":\"embza\",\"webappUsername\":\"embza\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT PGT Elite S5\",\"steamId\":\"76561198024495659\",\"score\":2377,\"created\":\"2025-06-04T20:01:50.857Z\",\"attributes\":{\"resolution\":\"2560x1440\",\"avg_fps\":1035.98193359375,\"avg_ttk\":19.998741149902344,\"sens_scale\":\"cm/360\",\"horiz_sens\":47,\"vert_sens\":47,\"fov\":103,\"challenge_start\":\"21:01:55.262\",\"score\":2377,\"kills\":3,\"hash\":\"01b2dd49095dc1485ffa702bce82a6e7\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":40743,\"scenario_version\":\"01b2dd49095dc1485ffa702bce82a6e7\",\"cm360\":47,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749067310835},\"steamAccountName\":\"Evologix\",\"webappUsername\":\"Evologix\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"VT BerryTS 360\",\"steamId\":\"76561199261904959\",\"score\":121.85,\"created\":\"2025-06-04T18:11:10.719Z\",\"attributes\":{\"resolution\":\"1600x900\",\"avg_fps\":997.3593139648438,\"avg_ttk\":0.4957802891731262,\"sens_scale\":\"cm/360\",\"horiz_sens\":61,\"vert_sens\":61,\"fov\":103,\"challenge_start\":\"20:10:08.343\",\"score\":121.8499984741211,\"kills\":121,\"hash\":\"1a5396ad54106978c76d6feb5c74db86\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":67246,\"scenario_version\":\"1a5396ad54106978c76d6feb5c74db86\",\"cm360\":61,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749060670180},\"steamAccountName\":\"mini0ffouinyzZz\",\"webappUsername\":\"minigod\",\"game\":\"CS2\"},{\"scenarioName\":\"cA y-axis flick\",\"steamId\":\"76561198883410405\",\"score\":153,\"created\":\"2025-06-04T14:54:56.323Z\",\"attributes\":{\"resolution\":\"2560x1440\",\"avg_fps\":902.893310546875,\"avg_ttk\":0.39202946424484253,\"sens_scale\":\"cm/360\",\"horiz_sens\":85,\"vert_sens\":85,\"fov\":103,\"challenge_start\":\"08:54:28.466\",\"score\":153,\"kills\":153,\"hash\":\"f551b6fc93211cc7234db2967f55cfe2\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":93865,\"scenario_version\":\"f551b6fc93211cc7234db2967f55cfe2\",\"cm360\":85,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749048896290},\"steamAccountName\":\"VT Yrup\",\"webappUsername\":\"Yrup\",\"game\":\"KovaaKs\"},{\"scenarioName\":\"Close Mid AD LFS Dodge Thin\",\"steamId\":\"76561199211475781\",\"score\":25082.51,\"created\":\"2025-06-04T09:58:36.302Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":408.7803649902344,\"avg_ttk\":11.249011039733887,\"sens_scale\":\"Overwatch\",\"horiz_sens\":1.9900000095367432,\"vert_sens\":1.9900000095367432,\"fov\":103,\"challenge_start\":\"18:57:08.892\",\"score\":25082.515625,\"kills\":8,\"hash\":\"a221b010fb62d4bad80deed9ad66ee32\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":48656,\"scenario_version\":\"a221b010fb62d4bad80deed9ad66ee32\",\"cm360\":43.51301956176758,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749031115110},\"steamAccountName\":\"road+\",\"webappUsername\":\"noixtarte\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT ControlTS Intermediate S5\",\"steamId\":\"76561198051868585\",\"score\":510,\"created\":\"2025-06-04T06:55:52.635Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":360.10809326171875,\"avg_ttk\":1.1761174201965332,\"sens_scale\":\"Valorant\",\"horiz_sens\":0.1599999964237213,\"vert_sens\":0.12498000264167786,\"fov\":103,\"challenge_start\":\"02:54:51.963\",\"score\":510,\"kills\":51,\"hash\":\"e3b4fdab121562a8d4c8c2ac426c890c\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":51287,\"scenario_version\":\"e3b4fdab121562a8d4c8c2ac426c890c\",\"cm360\":51.05596160888672,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749020152604},\"steamAccountName\":\"korosu\",\"webappUsername\":\"Korosu\",\"game\":\"Valorant\"},{\"scenarioName\":\"rA S4 REACTIVESPHERE HARD\",\"steamId\":\"76561198212557863\",\"score\":1769,\"created\":\"2025-06-04T05:43:13.271Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":620.7899169921875,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"12:42:52.970\",\"score\":1769,\"kills\":0,\"hash\":\"3e5938ec228ddeb356e222d5aa08330a\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":29478,\"scenario_version\":\"3e5938ec228ddeb356e222d5aa08330a\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749015792920},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 EVASWITCH HARD\",\"steamId\":\"76561198212557863\",\"score\":54,\"created\":\"2025-06-04T05:35:13.655Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":602.392578125,\"avg_ttk\":1.110878825187683,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"12:34:56.245\",\"score\":54,\"kills\":54,\"hash\":\"5ea58aabd02e056caae48a0b37451fce\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":40419,\"scenario_version\":\"5ea58aabd02e056caae48a0b37451fce\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749015311566},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 AIRTRACK HARD\",\"steamId\":\"76561198212557863\",\"score\":1655,\"created\":\"2025-06-04T05:25:53.238Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":599.76611328125,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"12:25:36.863\",\"score\":1655,\"kills\":0,\"hash\":\"a4056708eb909d029c491c10414127fd\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":27578,\"scenario_version\":\"a4056708eb909d029c491c10414127fd\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749014752129},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 LEAPTRACK HARD\",\"steamId\":\"76561198212557863\",\"score\":2361,\"created\":\"2025-06-04T05:09:20.436Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":637.8720092773438,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"12:09:05.149\",\"score\":2361,\"kills\":0,\"hash\":\"03d6f374fce598c6ffa2dff05d8b04dc\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":39343,\"scenario_version\":\"03d6f374fce598c6ffa2dff05d8b04dc\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749013760409},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 CAPSULETRACK HARD\",\"steamId\":\"76561198212557863\",\"score\":1446,\"created\":\"2025-06-04T04:48:20.290Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":636.4327392578125,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"11:48:01.066\",\"score\":1446,\"kills\":0,\"hash\":\"dc864f9b1cda0aa15c393781d8b50164\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":24124,\"scenario_version\":\"dc864f9b1cda0aa15c393781d8b50164\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749012496299},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 GLIDERTRACK HARD\",\"steamId\":\"76561198212557863\",\"score\":1787,\"created\":\"2025-06-04T04:22:36.468Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":590.2655029296875,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"11:22:20.765\",\"score\":1787,\"kills\":0,\"hash\":\"667b2f96a74f8010e9af18b3ab532a93\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":31361,\"scenario_version\":\"667b2f96a74f8010e9af18b3ab532a93\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749010955964},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 SNAPCLICK HARD\",\"steamId\":\"76561198212557863\",\"score\":311,\"created\":\"2025-06-04T04:14:38.123Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":615.12255859375,\"avg_ttk\":1.2763760089874268,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"11:14:22.889\",\"score\":311,\"kills\":47,\"hash\":\"a78ae2f4d2728cab6c8269a734b93730\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":47000,\"scenario_version\":\"a78ae2f4d2728cab6c8269a734b93730\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749010478089},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"ww6ts reload v2\",\"steamId\":\"76561198883410405\",\"score\":144,\"created\":\"2025-06-04T04:02:47.411Z\",\"attributes\":{\"resolution\":\"2560x1440\",\"avg_fps\":545.8231201171875,\"avg_ttk\":0.4164581596851349,\"sens_scale\":\"cm/360\",\"horiz_sens\":77,\"vert_sens\":77,\"fov\":106,\"challenge_start\":\"22:02:19.257\",\"score\":144,\"kills\":144,\"hash\":\"1a797b1b38ee2341fbee6e0892d9bda1\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":87272,\"scenario_version\":\"1a797b1b38ee2341fbee6e0892d9bda1\",\"cm360\":77,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749009767378},\"steamAccountName\":\"VT Yrup\",\"webappUsername\":\"Yrup\",\"game\":\"KovaaKs\"},{\"scenarioName\":\"rA S4 FOURWIDE SMALL HARD\",\"steamId\":\"76561198212557863\",\"score\":1014,\"created\":\"2025-06-04T03:38:45.641Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":623.709716796875,\"avg_ttk\":0.5881475210189819,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:38:29.620\",\"score\":1014,\"kills\":102,\"hash\":\"6ddbcacaeaf101b9d6d85978c3da8a90\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":98076,\"scenario_version\":\"6ddbcacaeaf101b9d6d85978c3da8a90\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749008324729},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 CAPSULETRACK EASY\",\"steamId\":\"76561198212557863\",\"score\":2679,\"created\":\"2025-06-04T03:32:59.176Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":630.8250732421875,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:32:43.566\",\"score\":2679,\"kills\":0,\"hash\":\"e7236e5b9024914615ef64db76ec786c\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":44650,\"scenario_version\":\"e7236e5b9024914615ef64db76ec786c\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007978890},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 AIRTRACK EASY\",\"steamId\":\"76561198212557863\",\"score\":2888,\"created\":\"2025-06-04T03:27:27.387Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":610.4440307617188,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:27:00.880\",\"score\":2888,\"kills\":0,\"hash\":\"6a086f96fa39d7a2d2b12665906ff09e\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":48286,\"scenario_version\":\"6a086f96fa39d7a2d2b12665906ff09e\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007642254},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 REACTIVESPHERE EASY\",\"steamId\":\"76561198212557863\",\"score\":2933,\"created\":\"2025-06-04T03:24:12.001Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":609.4304809570312,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:23:55.882\",\"score\":2933,\"kills\":0,\"hash\":\"7fa3ef8833700ab4ee813fab5aba5bce\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":48875,\"scenario_version\":\"7fa3ef8833700ab4ee813fab5aba5bce\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007451467},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 STRAFETRACK EASY\",\"steamId\":\"76561198212557863\",\"score\":3007,\"created\":\"2025-06-04T03:22:15.794Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":608.5158081054688,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:21:49.260\",\"score\":3007,\"kills\":0,\"hash\":\"903c582707924633f039bd2cf234b5e6\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":50275,\"scenario_version\":\"903c582707924633f039bd2cf234b5e6\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007335716},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 WIDESWITCH EASY\",\"steamId\":\"76561198212557863\",\"score\":141,\"created\":\"2025-06-04T03:19:41.037Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":592.9883422851562,\"avg_ttk\":0.4254685342311859,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:19:25.263\",\"score\":141,\"kills\":141,\"hash\":\"16ed4ceb04dbb70baa2f785e61f4ebad\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":82800,\"scenario_version\":\"16ed4ceb04dbb70baa2f785e61f4ebad\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007180414},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"rA S4 ORBSWITCH EASY\",\"steamId\":\"76561198212557863\",\"score\":122,\"created\":\"2025-06-04T03:17:25.670Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":596.846923828125,\"avg_ttk\":0.4917096793651581,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:17:08.173\",\"score\":122,\"kills\":122,\"hash\":\"af42e8fb0bbe0e28ba78f73563aed534\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":65872,\"scenario_version\":\"af42e8fb0bbe0e28ba78f73563aed534\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749007044705},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"Pokeball Wide rAim Easy\",\"steamId\":\"76561198212557863\",\"score\":144,\"created\":\"2025-06-04T03:15:14.663Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":622.1805419921875,\"avg_ttk\":0.4166015386581421,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:14:57.288\",\"score\":144,\"kills\":144,\"hash\":\"6add3201830210550d8ba2a44d895c34\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":43866,\"scenario_version\":\"6add3201830210550d8ba2a44d895c34\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749006912379},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"fuglaaXY Reactive rAim Easy\",\"steamId\":\"76561198212557863\",\"score\":13060,\"created\":\"2025-06-04T03:14:10.253Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":602.1314697265625,\"avg_ttk\":0,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:13:35.777\",\"score\":13060,\"kills\":0,\"hash\":\"93b8e793249647fdc903767152d44ff0\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":43547,\"scenario_version\":\"93b8e793249647fdc903767152d44ff0\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749006837534},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"ToonsTS rAim Easy\",\"steamId\":\"76561198212557863\",\"score\":75.4,\"created\":\"2025-06-04T03:11:41.162Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":617.6209106445312,\"avg_ttk\":0.7998865842819214,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:11:25.527\",\"score\":75.4000015258789,\"kills\":75,\"hash\":\"a03f287008be1042d9b66343dcaaba34\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":43875,\"scenario_version\":\"a03f287008be1042d9b66343dcaaba34\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749006700609},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"ToonsClick rAim Easy\",\"steamId\":\"76561198212557863\",\"score\":82,\"created\":\"2025-06-04T03:07:39.080Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":634.59228515625,\"avg_ttk\":0.731447160243988,\"sens_scale\":\"Overwatch\",\"horiz_sens\":4.396780014038086,\"vert_sens\":4.396780014038086,\"fov\":103,\"challenge_start\":\"10:06:25.288\",\"score\":82,\"kills\":82,\"hash\":\"4ba1cee96457ff9a279f2aecf3dca981\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":68907,\"scenario_version\":\"4ba1cee96457ff9a279f2aecf3dca981\",\"cm360\":39.388328552246094,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749006458799},\"steamAccountName\":\"RXZU\",\"webappUsername\":\"Rxzu\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"Skeet Tracking Goated\",\"steamId\":\"76561198065865918\",\"score\":4788,\"created\":\"2025-06-04T02:45:26.079Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":816.4876708984375,\"avg_ttk\":0.5262055397033691,\"sens_scale\":\"cm/360\",\"horiz_sens\":46,\"vert_sens\":46,\"fov\":103,\"challenge_start\":\"22:44:21.764\",\"score\":4788,\"kills\":114,\"hash\":\"ede37dc584386b56a35674bb27eff77c\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":94887,\"scenario_version\":\"ede37dc584386b56a35674bb27eff77c\",\"cm360\":46,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749005125910},\"steamAccountName\":\"VT Matty\",\"webappUsername\":\"MattyOW\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"Slide Targets\",\"steamId\":\"76561198138786582\",\"score\":113,\"created\":\"2025-06-04T02:30:34.857Z\",\"attributes\":{\"resolution\":\"2560x1440\",\"avg_fps\":795.3668212890625,\"avg_ttk\":0.5307619571685791,\"sens_scale\":\"Call of Duty\",\"horiz_sens\":3,\"vert_sens\":3,\"fov\":103,\"challenge_start\":\"03:29:33.460\",\"score\":113,\"kills\":113,\"hash\":\"b8cbaa05a066984737f44dc34db0e1fa\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":93008,\"scenario_version\":\"b8cbaa05a066984737f44dc34db0e1fa\",\"cm360\":28.863636016845703,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749004234799},\"steamAccountName\":\"shimmy EXE\",\"webappUsername\":\"shimmy\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"VT Frogtagon Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":1010,\"created\":\"2025-06-04T02:28:52.446Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":476.9703369140625,\"avg_ttk\":0.5938264727592468,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:27:51.472\",\"score\":1010,\"kills\":101,\"hash\":\"ec8acdea37fa767767d705e389db1463\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":75939,\"scenario_version\":\"ec8acdea37fa767767d705e389db1463\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749004132426},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Frogtagon Intermediate S5 Hard\",\"steamId\":\"76561198800052690\",\"score\":740,\"created\":\"2025-06-04T02:26:25.631Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":477.49176025390625,\"avg_ttk\":0.8105134963989258,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:25:24.515\",\"score\":740,\"kills\":74,\"hash\":\"5ae239d7e2d6e9c791dd3084ce8a006d\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":68518,\"scenario_version\":\"5ae239d7e2d6e9c791dd3084ce8a006d\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003985476},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Frogtagon Intermediate S5 Clusters\",\"steamId\":\"76561198800052690\",\"score\":940,\"created\":\"2025-06-04T02:24:03.023Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":476.23773193359375,\"avg_ttk\":0.6378675699234009,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:23:01.912\",\"score\":940,\"kills\":94,\"hash\":\"c6d77aecf95f0affcd11eab137780f12\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":71212,\"scenario_version\":\"c6d77aecf95f0affcd11eab137780f12\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003842854},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Frogtagon Intermediate S5 2 Targets\",\"steamId\":\"76561198800052690\",\"score\":820,\"created\":\"2025-06-04T02:22:43.865Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.12493896484375,\"avg_ttk\":0.731541633605957,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:21:42.785\",\"score\":820,\"kills\":82,\"hash\":\"fbf58af224b80067f84d22188a78d8fe\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":74545,\"scenario_version\":\"fbf58af224b80067f84d22188a78d8fe\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003763754},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Frogswitch Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":870,\"created\":\"2025-06-04T02:21:34.500Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":477.73883056640625,\"avg_ttk\":0.6894066333770752,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:20:33.462\",\"score\":870,\"kills\":87,\"hash\":\"155babda6f965672f593a754aa4c52bb\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":30446,\"scenario_version\":\"155babda6f965672f593a754aa4c52bb\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003694424},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"Star Clicking Intermediate\",\"steamId\":\"76561198800052690\",\"score\":265,\"created\":\"2025-06-04T02:20:10.217Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":477.89447021484375,\"avg_ttk\":1.4995988607406616,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:19:09.268\",\"score\":265,\"kills\":40,\"hash\":\"c8d99fece48a358eed9df9242537badf\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":47058,\"scenario_version\":\"c8d99fece48a358eed9df9242537badf\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003610191},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"dev1T Static Click\",\"steamId\":\"76561198800052690\",\"score\":84,\"created\":\"2025-06-04T02:17:37.678Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":479.697021484375,\"avg_ttk\":0.714240550994873,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:16:36.542\",\"score\":84,\"kills\":84,\"hash\":\"ea52c70d0f886597d034e695cabf6431\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":88421,\"scenario_version\":\"ea52c70d0f886597d034e695cabf6431\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003457474},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"CG Adjust Click Micro 2T\",\"steamId\":\"76561198800052690\",\"score\":706,\"created\":\"2025-06-04T02:15:07.670Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.89166259765625,\"avg_ttk\":0.7594276070594788,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:14:06.684\",\"score\":706,\"kills\":79,\"hash\":\"1df5043a1a3860a4ba693bb4f4b954cf\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":73831,\"scenario_version\":\"1df5043a1a3860a4ba693bb4f4b954cf\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003307650},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VPP AdjustSwitch Intermediate\",\"steamId\":\"76561198800052690\",\"score\":1626,\"created\":\"2025-06-04T02:13:55.004Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.7079162597656,\"avg_ttk\":1.3042354583740234,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:12:54.043\",\"score\":1626,\"kills\":46,\"hash\":\"7db4c0473f54dd40ece22231452226e6\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":20915,\"scenario_version\":\"7db4c0473f54dd40ece22231452226e6\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749003234984},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Popcorn Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":710,\"created\":\"2025-06-04T02:09:08.184Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":477.1225280761719,\"avg_ttk\":0.8449124693870544,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:08:07.155\",\"score\":710,\"kills\":71,\"hash\":\"86f9526f57828ad981f6c93b35811f94\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":73195,\"scenario_version\":\"86f9526f57828ad981f6c93b35811f94\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749002948091},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Popcorn Intermediate S5 Hard\",\"steamId\":\"76561198800052690\",\"score\":510,\"created\":\"2025-06-04T02:06:10.639Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":476.9138488769531,\"avg_ttk\":1.1762720346450806,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:05:09.668\",\"score\":510,\"kills\":51,\"hash\":\"b59e46d5ac4aae240660a4144b16e6fa\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":59302,\"scenario_version\":\"b59e46d5ac4aae240660a4144b16e6fa\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749002770611},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Popcorn Intermediate S5 Multi\",\"steamId\":\"76561198800052690\",\"score\":470,\"created\":\"2025-06-04T02:05:00.773Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.5748291015625,\"avg_ttk\":2.608196973800659,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:03:59.659\",\"score\":470,\"kills\":23,\"hash\":\"7aeff2795ea65bb0b15df12c16683f53\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":60683,\"scenario_version\":\"7aeff2795ea65bb0b15df12c16683f53\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749002700592},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Popcorn Intermediate S5 Speed\",\"steamId\":\"76561198800052690\",\"score\":890,\"created\":\"2025-06-04T02:02:44.614Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.06805419921875,\"avg_ttk\":0.6740378737449646,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"22:01:43.663\",\"score\":890,\"kills\":89,\"hash\":\"a9c9aea9b910adfdd519bedd68f4e76b\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":76068,\"scenario_version\":\"a9c9aea9b910adfdd519bedd68f4e76b\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749002564586},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Popswitch Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":550,\"created\":\"2025-06-04T01:59:08.182Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":479.05230712890625,\"avg_ttk\":1.0907140970230103,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"21:58:07.254\",\"score\":550,\"kills\":55,\"hash\":\"fa748038e5193d8e8447ae0591cb92c9\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":23959,\"scenario_version\":\"fa748038e5193d8e8447ae0591cb92c9\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749002348163},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Poptrack Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":3698,\"created\":\"2025-06-04T01:53:14.812Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.58740234375,\"avg_ttk\":0,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"21:52:13.894\",\"score\":3698,\"kills\":0,\"hash\":\"69170ba2dc9f4557ce53069c3469fe1b\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":61963,\"scenario_version\":\"69170ba2dc9f4557ce53069c3469fe1b\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749001994794},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Curveshot Intermediate\",\"steamId\":\"76561198800052690\",\"score\":370,\"created\":\"2025-06-04T01:50:47.712Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":477.3739929199219,\"avg_ttk\":1.6212570667266846,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"21:49:46.799\",\"score\":370,\"kills\":37,\"hash\":\"c151e2cf4c5bf0d3995b63e2c4b089ef\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":55223,\"scenario_version\":\"c151e2cf4c5bf0d3995b63e2c4b089ef\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749001847692},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"VT Bounceshot Intermediate 20% smaller\",\"steamId\":\"76561198800052690\",\"score\":560,\"created\":\"2025-06-04T01:46:39.785Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":478.01483154296875,\"avg_ttk\":1.0712459087371826,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"21:45:38.653\",\"score\":560,\"kills\":56,\"hash\":\"dd821a1b06232c79891a3196668b4f47\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":65116,\"scenario_version\":\"dd821a1b06232c79891a3196668b4f47\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749001599553},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"},{\"scenarioName\":\"Skeet Tracking\",\"steamId\":\"76561198065865918\",\"score\":4498.66,\"created\":\"2025-06-04T01:46:01.378Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":828.9014282226562,\"avg_ttk\":0.5216438174247742,\"sens_scale\":\"cm/360\",\"horiz_sens\":46,\"vert_sens\":46,\"fov\":103,\"challenge_start\":\"21:44:57.206\",\"score\":4498.66748046875,\"kills\":115,\"hash\":\"c4c40ca86354eb764f31ab93cff46cd9\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":93372,\"scenario_version\":\"c4c40ca86354eb764f31ab93cff46cd9\",\"cm360\":46,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749001561359},\"steamAccountName\":\"VT Matty\",\"webappUsername\":\"MattyOW\",\"game\":\"KovaaK's\"},{\"scenarioName\":\"VT Pasu Intermediate S5\",\"steamId\":\"76561198800052690\",\"score\":792.44,\"created\":\"2025-06-04T01:40:03.060Z\",\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":475.6692810058594,\"avg_ttk\":0.6590828895568848,\"sens_scale\":\"cm/360\",\"horiz_sens\":45,\"vert_sens\":45,\"fov\":103,\"challenge_start\":\"21:39:02.059\",\"score\":792.4492797851562,\"kills\":91,\"hash\":\"830238e82c367ad2ba40df1da9968131\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":75833,\"scenario_version\":\"830238e82c367ad2ba40df1da9968131\",\"cm360\":45,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1749001202933},\"steamAccountName\":\"noba\",\"webappUsername\":\"NOV4CUS\",\"game\":\"aimerz\"}]"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_CONCURRENT_USERS",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/backend/webapp/concurrent-users",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_CONCURRENT_USERS": {
+          "name": "GET_CONCURRENT_USERS",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_CONCURRENT_USERS",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/backend/webapp/concurrent-users",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "6"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"18-j27F5ozeiWC1EQGZMwWETd0QXUc\""
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-length",
+              "value": "24"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:22:45 GMT"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            }
+          ],
+          "body": "{\"concurrentUsers\":1539}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "TOTAL_SCENARIOS_COUNT",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/backend/webapp/custom-scenarios-count",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "TOTAL_SCENARIOS_COUNT": {
+          "name": "TOTAL_SCENARIOS_COUNT",
+          "originalRequest": {
+            "v": "5",
+            "name": "TOTAL_SCENARIOS_COUNT",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/backend/webapp/custom-scenarios-count",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"1d-W72p42n2VYFIt/NyEK/KLCFZ/gA\""
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "3"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:22:51 GMT"
+            },
+            {
+              "key": "content-length",
+              "value": "29"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": "{\"customScenarioCount\":47025}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET MONTHLY PLAYERS COUNT",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/monthly-players",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET MONTHLY PLAYERS COUNT": {
+          "name": "GET MONTHLY PLAYERS COUNT",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET MONTHLY PLAYERS COUNT",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/monthly-players",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:00 GMT"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"10-SyrdVLphGRdNdlwFI/7JLYOOzNs\""
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "183"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "16"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            }
+          ],
+          "body": "{\"count\":349894}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_TRENDING_SCENARIOS",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/scenario/trending",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_TRENDING_SCENARIOS": {
+          "name": "GET_TRENDING_SCENARIOS",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_TRENDING_SCENARIOS",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/scenario/trending",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"6f8-aElxQN7YKzUqkoc7C55EbrSk2d8\""
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:03 GMT"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "6"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": "[{\"scenarioName\":\"SHIM VSTP Small TE Level 2 Re-Upload\",\"leaderboardId\":124050,\"webappUsername\":\"Corporate Serf\",\"steamAccountName\":\"Corporate Serf\",\"kovaaksPlusActive\":false,\"entries\":382,\"new\":true},{\"scenarioName\":\"SHIM VSTP Small TE level 4 Re-Upload\",\"leaderboardId\":124071,\"webappUsername\":\"Corporate Serf\",\"steamAccountName\":\"Corporate Serf\",\"kovaaksPlusActive\":false,\"entries\":160,\"new\":true},{\"scenarioName\":\"SYV Altered POV Slow Level 2\",\"leaderboardId\":124074,\"webappUsername\":\"Corporate Serf\",\"steamAccountName\":\"Corporate Serf\",\"kovaaksPlusActive\":false,\"entries\":78,\"new\":true},{\"scenarioName\":\"Pokeball 1w2ts Angelic\",\"leaderboardId\":38553,\"webappUsername\":\"SkylrExpired\",\"steamAccountName\":\"Glorp\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":2366},{\"scenarioName\":\"Air Angelic 3478 Fixed\",\"leaderboardId\":352,\"webappUsername\":\"TotallyNotHugs\",\"steamAccountName\":\"TotallyNotHugs\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":1526},{\"scenarioName\":\"VSTP Small TE\",\"leaderboardId\":33081,\"webappUsername\":null,\"steamAccountName\":\"TSK iyo\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":4334},{\"scenarioName\":\"WPV valFS 180 Click Easy\",\"leaderboardId\":29542,\"webappUsername\":null,\"steamAccountName\":\"StarkLN\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":4342},{\"scenarioName\":\"VT AirStrafe Advanced\",\"leaderboardId\":29472,\"webappUsername\":\"patys\",\"steamAccountName\":\"patys\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":9071},{\"scenarioName\":\"VAI 1 Master TE\",\"leaderboardId\":32542,\"webappUsername\":null,\"steamAccountName\":\"TSK iyo\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":2928},{\"scenarioName\":\"Pokeball VT 1w2ts Advanced\",\"leaderboardId\":27692,\"webappUsername\":null,\"steamAccountName\":\"󠀡󠀡\",\"kovaaksPlusActive\":false,\"new\":false,\"entries\":3467}]"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_PROFILE_BY_WEBAPP_USERNAME",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/profile/by-username?username=kyuri",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_PROFILE_BY_WEBAPP_USERNAME": {
+          "name": "GET_PROFILE_BY_WEBAPP_USERNAME",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_PROFILE_BY_WEBAPP_USERNAME",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/profile/by-username?username=kyuri",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "250"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:05 GMT"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"41e-+HeZJvmFIhhwnh0x3qEGtlh+ywY\""
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            }
+          ],
+          "body": "{\"playerId\":881033,\"steamAccountName\":\"kyuri\",\"steamAccountAvatar\":\"https://avatars.steamstatic.com/84eb81dd01706c6d79ab468f99f73eebbdcf1629_full.jpg\",\"created\":\"2021-07-24T22:58:30.915Z\",\"steamId\":\"76561198409458631\",\"clientBuildVersion\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"lastAccess\":\"2025-06-04T20:14:14.732Z\",\"webapp\":{\"roles\":{\"admin\":false,\"coach\":false,\"staff\":false},\"videos\":[],\"username\":\"kyuri\",\"socialMedia\":{\"tiktok\":null,\"twitch\":null,\"discord\":\"ckyurii\",\"twitter\":null,\"youtube\":null,\"discord_id\":\"934987217456209951\"},\"gameSettings\":{\"dpi\":null,\"fov\":null,\"cm360\":null,\"rawInput\":\"true\",\"sensitivity\":null},\"profileImage\":null,\"profileViews\":167,\"hasSubscribed\":false,\"gamingPeripherals\":{\"mouse\":\"Pulsar X2 V3\",\"headset\":null,\"monitor\":null,\"keyboard\":null,\"mousePad\":\"Aqua Control 2\"},\"username_changed_at\":\"2025-03-31 21:36:19.280209\"},\"country\":\"gb\",\"kovaaksPlusActive\":true,\"badges\":[],\"followCounts\":{\"following\":0,\"followers\":0},\"kovaaksPlus\":{\"active\":true,\"expiration\":\"2026-03-31T18:14:03.841Z\"},\"scenariosPlayed\":\"3135\"}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_FAVORITE_SCENARIOS_BY_USERNAME",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/favorite/scenarios?username=mattyow",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_FAVORITE_SCENARIOS_BY_USERNAME": {
+          "name": "GET_FAVORITE_SCENARIOS_BY_USERNAME",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_FAVORITE_SCENARIOS_BY_USERNAME",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/favorite/scenarios?username=mattyow",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "7"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:23:08 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"ba3-ECDfAquDfek7aKPUg4znsg6l6c4\""
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            }
+          ],
+          "body": "[{\"leaderboardId\":\"8\",\"scenarioName\":\"Popcorn Voltaic\",\"score\":620,\"scoreHistory\":[{\"score\":590,\"attributes\":{\"fov\":103,\"cm360\":48,\"epoch\":\"1737684015308\",\"horizSens\":48}},{\"score\":550,\"attributes\":{\"fov\":103,\"cm360\":48,\"epoch\":\"1737682930258\",\"horizSens\":48}},{\"score\":590,\"attributes\":{\"fov\":103,\"cm360\":48,\"epoch\":\"1737681057310\",\"horizSens\":48}},{\"score\":570,\"attributes\":{\"fov\":103,\"cm360\":50,\"epoch\":\"1737677577746\",\"horizSens\":50}},{\"score\":550,\"attributes\":{\"fov\":103,\"cm360\":50,\"epoch\":\"1737677467943\",\"horizSens\":50}},{\"score\":550,\"attributes\":{\"fov\":103,\"cm360\":50,\"epoch\":\"1737676967713\",\"horizSens\":50}},{\"score\":570,\"attributes\":{\"fov\":103,\"cm360\":46.400001525878906,\"epoch\":\"1727649494459\",\"horizSens\":46.400001525878906}},{\"score\":520,\"attributes\":{\"fov\":103,\"cm360\":48,\"epoch\":\"1727649127278\",\"horizSens\":48}},{\"score\":620,\"attributes\":{\"cm360\":0,\"epoch\":\"1696027954422\",\"horizSens\":46.400001525878906}},{\"score\":580,\"attributes\":{\"cm360\":0,\"epoch\":\"1695955952760\",\"horizSens\":46.400001525878906}}]},{\"leaderboardId\":\"95\",\"scenarioName\":\"pasu small reload\",\"score\":159,\"scoreHistory\":[{\"score\":150,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1748467641776\",\"horizSens\":52}},{\"score\":146,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1748467282113\",\"horizSens\":52}},{\"score\":144,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1748466036586\",\"horizSens\":52}},{\"score\":150,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1747873838830\",\"horizSens\":52}},{\"score\":154,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1747265458837\",\"horizSens\":52}},{\"score\":142,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1747265187092\",\"horizSens\":52}},{\"score\":147,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1746669099284\",\"horizSens\":52}},{\"score\":151,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1746060945168\",\"horizSens\":52}},{\"score\":148,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1746059938992\",\"horizSens\":52}},{\"score\":159,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1745459733280\",\"horizSens\":52}}]},{\"leaderboardId\":\"43\",\"scenarioName\":\"1wall5targets_pasu Reload\",\"score\":239,\"scoreHistory\":[{\"score\":237,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734918679879\",\"horizSens\":52}},{\"score\":227,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734918357202\",\"horizSens\":52}},{\"score\":226,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734917774973\",\"horizSens\":52}},{\"score\":221,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734917537501\",\"horizSens\":52}},{\"score\":228,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734915406017\",\"horizSens\":52}},{\"score\":221,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734914876831\",\"horizSens\":52}},{\"score\":217,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1734831839842\",\"horizSens\":52}},{\"score\":239,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1722469256339\",\"horizSens\":52}},{\"score\":228,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1722468956360\",\"horizSens\":52}},{\"score\":226,\"attributes\":{\"fov\":103,\"cm360\":52,\"epoch\":\"1722468753454\",\"horizSens\":52}}]}]"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET RECENT SCENARIO HIGH SCORES BY USERNAME",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/activity/recent?username=kyuri",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET RECENT SCENARIO HIGH SCORES BY USERNAME": {
+          "name": "GET RECENT SCENARIO HIGH SCORES BY USERNAME",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET RECENT SCENARIO HIGH SCORES BY USERNAME",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/activity/recent?username=kyuri",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "239"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"5f5-V8QgJkF9EJsdnO289alNfL2D45A\""
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:11 GMT"
+            }
+          ],
+          "body": "[{\"timestamp\":\"2025-06-02T18:10:06.661Z\",\"type\":\"HIGH_SCORE\",\"scenarioName\":\"VT Aether Intermediate S5\",\"score\":2721,\"leaderboardId\":101369,\"username\":\"kyuri\",\"webappUsername\":\"kyuri\",\"steamId\":\"76561198409458631\",\"steamAccountName\":\"kyuri\",\"steamAccountAvatar\":\"https://avatars.steamstatic.com/84eb81dd01706c6d79ab468f99f73eebbdcf1629_full.jpg\",\"country\":\"gb\",\"kovaaksPlus\":true},{\"timestamp\":\"2025-06-01T15:26:10.905Z\",\"type\":\"HIGH_SCORE\",\"scenarioName\":\"cAt purrClick Normal\",\"score\":805,\"leaderboardId\":83323,\"username\":\"kyuri\",\"webappUsername\":\"kyuri\",\"steamId\":\"76561198409458631\",\"steamAccountName\":\"kyuri\",\"steamAccountAvatar\":\"https://avatars.steamstatic.com/84eb81dd01706c6d79ab468f99f73eebbdcf1629_full.jpg\",\"country\":\"gb\",\"kovaaksPlus\":true},{\"timestamp\":\"2025-05-29T23:26:24.897Z\",\"type\":\"HIGH_SCORE\",\"scenarioName\":\"VT Controlsphere Intermediate S5\",\"score\":3216,\"leaderboardId\":103353,\"username\":\"kyuri\",\"webappUsername\":\"kyuri\",\"steamId\":\"76561198409458631\",\"steamAccountName\":\"kyuri\",\"steamAccountAvatar\":\"https://avatars.steamstatic.com/84eb81dd01706c6d79ab468f99f73eebbdcf1629_full.jpg\",\"country\":\"gb\",\"kovaaksPlus\":true},{\"timestamp\":\"2025-05-29T23:17:45.537Z\",\"type\":\"HIGH_SCORE\",\"scenarioName\":\"VT Snake Track Intermediate S5\",\"score\":3556,\"leaderboardId\":98045,\"username\":\"kyuri\",\"webappUsername\":\"kyuri\",\"steamId\":\"76561198409458631\",\"steamAccountName\":\"kyuri\",\"steamAccountAvatar\":\"https://avatars.steamstatic.com/84eb81dd01706c6d79ab468f99f73eebbdcf1629_full.jpg\",\"country\":\"gb\",\"kovaaksPlus\":true}]"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/scenario/total-play?username=kyuri&page=0&max=10&sort_param[]=count",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS": {
+          "name": "GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/scenario/total-play?username=kyuri&page=0&max=10&sort_param[]=count",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "8"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2457-p+Lc/eXVRka8cjWAgNmMmnGV/7s\""
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:13 GMT"
+            }
+          ],
+          "body": "{\"page\":0,\"max\":10,\"total\":396,\"data\":[{\"leaderboardId\":\"104863\",\"scenarioName\":\"VT DriftTS Intermediate S5\",\"counts\":{\"plays\":114},\"rank\":1511,\"score\":479.6,\"attributes\":{\"fov\":103,\"hash\":\"ff777f42a21d6ddcf8791caf2821a2bd\",\"cm360\":44,\"epoch\":1747774018851,\"kills\":47,\"score\":479.6000061035156,\"avg_fps\":644.7276611328125,\"avg_ttk\":1.2763428688049316,\"fov_scale\":\"Overwatch\",\"vert_sens\":44,\"horiz_sens\":44,\"resolution\":\"1920x1080\",\"sens_scale\":\"cm/360\",\"accuracy_damage\":40127,\"challenge_start\":\"21:45:55.580\",\"model_overrides\":{\"cuboid\":{\"skin\":\"None\",\"model\":\"None\"},\"spheroid\":{\"skin\":\"None\",\"model\":\"None\"},\"cylindrical\":{\"skin\":\"None\",\"model\":\"None\"}},\"sens_randomizer\":null,\"scenario_version\":\"ff777f42a21d6ddcf8791caf2821a2bd\",\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\"},\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with four targets jumping and floating around in two layered chambers infront of the player. Each target takes 50 hits to eliminate with a TTK of ~0.5 seconds, and is worth a total of 10 points.\"}},{\"leaderboardId\":\"32364\",\"scenarioName\":\"Piano Tiles I 50% SLOW\",\"counts\":{\"plays\":84},\"rank\":34405,\"score\":39,\"attributes\":{\"fOV\":75.5999984741211,\"hash\":\"3fe34956abd95934c98c67eae1fec1e1\",\"cm360\":0,\"epoch\":1709931437543,\"kills\":39,\"score\":39,\"avg_fps\":516.8627319335938,\"avg_ttk\":0.0019259657710790634,\"fov_scale\":\"Horizontal (4:3)\",\"vert_sens\":6.822999954223633,\"horiz_sens\":6.822999954223633,\"resolution\":\"1920x1080\",\"sens_scale\":\"Quake/Source\",\"accuracy_damage\":78000,\"challenge_start\":\"20:57:01.951\",\"scenario_version\":\"3fe34956abd95934c98c67eae1fec1e1\",\"client_build_version\":\"3.4.2.2024-02-28-14-22-08-791139f13a\"},\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"@wa11p1per\",\"Jesus\",\"Christ\",\"\"],\"description\":\"Fun and relaxing game. If the target falls to the ground, then you lose.\\r\\nDiscord: wa11p1per the creator#3591\"}},{\"leaderboardId\":\"104865\",\"scenarioName\":\"VT DotTS Intermediate S5\",\"counts\":{\"plays\":81},\"rank\":1603,\"score\":1269,\"attributes\":{\"fov\":103,\"hash\":\"dfb397975f6fcec5bd2ebf3cd0b7a66a\",\"cm360\":35,\"epoch\":1742182904504,\"kills\":126,\"score\":1269,\"avg_fps\":803.3853149414062,\"avg_ttk\":0.47609052062034607,\"fov_scale\":\"Overwatch\",\"vert_sens\":35,\"horiz_sens\":35,\"resolution\":\"1600x900\",\"sens_scale\":\"cm/360\",\"accuracy_damage\":55511,\"challenge_start\":\"03:40:47.154\",\"sens_randomizer\":null,\"scenario_version\":\"dfb397975f6fcec5bd2ebf3cd0b7a66a\",\"client_build_version\":\"3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8\"},\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with five static targets infront of the player. Each target takes 20 hits to eliminate with a TTK of ~0.26 seconds, and is worth a total of 10 points.\"}},{\"leaderboardId\":\"470\",\"scenarioName\":\"1wall9000targets\",\"counts\":{\"plays\":77},\"rank\":17880,\"score\":214.21,\"attributes\":{\"fOV\":81,\"hash\":\"adef0c2c8d326cf155bde9879af9b2fb\",\"cm360\":0,\"epoch\":1707609508629,\"kills\":236,\"score\":214.21539306640625,\"avg_fps\":295.7500305175781,\"avg_ttk\":0.003380262292921543,\"fov_scale\":\"Horizontal (4:3)\",\"vert_sens\":6.763999938964844,\"horiz_sens\":6.763999938964844,\"resolution\":\"1920x1080\",\"sens_scale\":\"Quake/Source\",\"accuracy_damage\":90769,\"challenge_start\":\"23:57:30.273\",\"scenario_version\":\"adef0c2c8d326cf155bde9879af9b2fb\",\"client_build_version\":\"3.3.1.2023-10-05-13-50-13-da807a239d\"},\"scenario\":{\"aimType\":null,\"authors\":[\"bozott\"],\"description\":\"the classic scenario made better\"}},{\"leaderboardId\":\"105176\",\"scenarioName\":\"VT EddieTS Intermediate S5\",\"counts\":{\"plays\":75},\"rank\":1179,\"score\":1080,\"attributes\":{\"fov\":103,\"hash\":\"03d6156260b1b2b7893b746354b889c2\",\"cm360\":35,\"epoch\":1741736069517,\"kills\":108,\"score\":1080,\"avg_fps\":705.0462646484375,\"avg_ttk\":0.555414080619812,\"fov_scale\":\"Overwatch\",\"vert_sens\":35,\"horiz_sens\":35,\"resolution\":\"1600x900\",\"sens_scale\":\"cm/360\",\"accuracy_damage\":43478,\"challenge_start\":\"23:33:30.152\",\"sens_randomizer\":null,\"scenario_version\":\"03d6156260b1b2b7893b746354b889c2\",\"client_build_version\":\"3.7.5.2025-03-06-15-08-38-060b83f6309b\"},\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with four flying targets infront of the player. Each target takes 20 hits to eliminate with a TTK of ~0.24 seconds, and is worth a total of 10 points.\"}},{\"leaderboardId\":\"24960\",\"scenarioName\":\"VT psalmTS Intermediate\",\"counts\":{\"plays\":72},\"rank\":5284,\"score\":971.01,\"attributes\":{\"fov\":103,\"hash\":\"5c49d3f52ad8b4eff3b8b1d903ae6df3\",\"cm360\":34.6363639831543,\"epoch\":1740336262222,\"kills\":95,\"score\":971.0132446289062,\"avg_fps\":543.4791259765625,\"avg_ttk\":0.6313320398330688,\"fov_scale\":\"Overwatch\",\"vert_sens\":5,\"horiz_sens\":5,\"resolution\":\"1920x1080\",\"sens_scale\":\"Overwatch\",\"accuracy_damage\":59261,\"challenge_start\":\"18:43:26.656\",\"sens_randomizer\":null,\"scenario_version\":\"5c49d3f52ad8b4eff3b8b1d903ae6df3\",\"client_build_version\":\"3.7.4.2025-02-04-15-00-13-4123b712a0\"},\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"Raspberry/Vodkards\",\"patys\",\"psalm\",\"Tammas\",\"Pauer\"],\"description\":\"Spherical bots make slow horizontal movements, occasionally changing height levels and direction. Each bot needs to be tracked for a short period to be eliminated.\"}},{\"leaderboardId\":\"98045\",\"scenarioName\":\"VT Snake Track Intermediate S5\",\"counts\":{\"plays\":67},\"rank\":1962,\"score\":3556,\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":389.13873291015625,\"avg_ttk\":0,\"sens_scale\":\"cm/360\",\"horiz_sens\":47,\"vert_sens\":47,\"fov\":103,\"challenge_start\":\"00:16:43.948\",\"score\":3556,\"kills\":0,\"hash\":\"a76ebc77057b54bb12ba8c6c9b794d58\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":59425,\"scenario_version\":\"a76ebc77057b54bb12ba8c6c9b794d58\",\"cm360\":47,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1748560665516},\"scenario\":{\"aimType\":\"Tracking\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto tracking with an invincible grounded target performing wide sweeping strafes in a circular dish surrounding the player. Score is earned at a rate of 1 point per hit with a firerate of 100 per second.\"}},{\"leaderboardId\":\"510\",\"scenarioName\":\"PGTI Voltaic Easy\",\"counts\":{\"plays\":62},\"rank\":14694,\"score\":1517,\"attributes\":{\"fov\":103,\"hash\":\"1baf73e67b35de6ed0c49eb46046f0d8\",\"cm360\":34.6363639831543,\"epoch\":1740592096381,\"kills\":0,\"score\":1517,\"avg_fps\":751.783203125,\"avg_ttk\":0,\"fov_scale\":\"Overwatch\",\"vert_sens\":5,\"horiz_sens\":5,\"resolution\":\"1920x1080\",\"sens_scale\":\"Overwatch\",\"accuracy_damage\":25803,\"challenge_start\":\"17:47:18.923\",\"sens_randomizer\":null,\"scenario_version\":\"1baf73e67b35de6ed0c49eb46046f0d8\",\"client_build_version\":\"3.7.4.2025-02-04-15-00-13-4123b712a0\"},\"scenario\":{\"aimType\":\"Tracking\",\"authors\":[\"Whisper\"],\"description\":\"PGTI Easy with curved walls and slightly tweaked bot movement.\"}},{\"leaderboardId\":\"10420\",\"scenarioName\":\"1wall6targets TE\",\"counts\":{\"plays\":57},\"rank\":81201,\"score\":147.98,\"attributes\":{\"fOV\":75.5999984741211,\"hash\":\"3e50391f3c3f484c10a4b8fb362ded17\",\"cm360\":0,\"epoch\":1709930430438,\"kills\":169,\"score\":147.9844512939453,\"avg_fps\":527.3330078125,\"avg_ttk\":0.0018957837019115686,\"fov_scale\":\"Horizontal (4:3)\",\"vert_sens\":6.822999954223633,\"horiz_sens\":6.822999954223633,\"resolution\":\"1920x1080\",\"sens_scale\":\"Quake/Source\",\"accuracy_damage\":87564,\"challenge_start\":\"20:39:28.534\",\"scenario_version\":\"3e50391f3c3f484c10a4b8fb362ded17\",\"client_build_version\":\"3.4.2.2024-02-28-14-22-08-791139f13a\"},\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[],\"description\":\"Six targets spawn on a wall.  Great practice for flicking to many targets quickly.  Challenge mode has accuracy-based scoring.\"}},{\"leaderboardId\":\"98048\",\"scenarioName\":\"VT Raw Control Intermediate S5\",\"counts\":{\"plays\":54},\"rank\":3438,\"score\":3374,\"attributes\":{\"resolution\":\"1920x1080\",\"avg_fps\":495.0156555175781,\"avg_ttk\":0,\"sens_scale\":\"cm/360\",\"horiz_sens\":44,\"vert_sens\":44,\"fov\":103,\"challenge_start\":\"10:46:55.613\",\"score\":3374,\"kills\":0,\"hash\":\"865d54422da5368dc290d1bbc2b9b566\",\"fov_scale\":\"Overwatch\",\"sens_randomizer\":null,\"model_overrides\":{\"cylindrical\":{\"model\":\"None\",\"skin\":\"None\"},\"cuboid\":{\"model\":\"None\",\"skin\":\"None\"},\"spheroid\":{\"model\":\"None\",\"skin\":\"None\"}},\"accuracy_damage\":56223,\"scenario_version\":\"865d54422da5368dc290d1bbc2b9b566\",\"cm360\":44,\"client_build_version\":\"3.7.7.2025-04-21-10-26-18-ebda1827461e\",\"epoch\":1748339277115},\"scenario\":{\"aimType\":\"Tracking\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto tracking with an invincible flying target strafing in a variety of directions in a box infront of the player, while being repelled away from each wall. Score is earned at a rate of 1 point per hit with a firerate of 100 per second.\"}}]}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET PLAYLISTS CREATED BY USER",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/user/playlist/creator?username=kyuri&page=0&max=10",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET PLAYLISTS CREATED BY USER": {
+          "name": "GET PLAYLISTS CREATED BY USER",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET PLAYLISTS CREATED BY USER",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/user/playlist/creator?username=kyuri&page=0&max=10",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "6"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"7fa-NgtINXy3SE6SgTTwS+5moXZnpdM\""
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:16 GMT"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            }
+          ],
+          "body": "{\"totalPlaylistSubscribers\":3,\"page\":0,\"max\":10,\"total\":1,\"data\":[{\"playlistId\":54716,\"playlistName\":\"Aimer7 Advanced Beginner\",\"playlistCode\":\"KovaaKsClearingAlmightyEngine\",\"playlistHash\":\"885fff0fd2063583767176a701f7079f\",\"playerId\":881033,\"playlistBase64\":\"ew0KCSJwbGF5bGlzdE5hbWUiOiAiQWltZXI3IEFkdmFuY2VkIEJlZ2lubmVyIiwNCgkicGxheWxpc3RJZCI6IDU0NzE2LA0KCSJhdXRob3JTdGVhbUlkIjogIjc2NTYxMTk4NDA5NDU4NjMxIiwNCgkiYXV0aG9yTmFtZSI6ICJaZWFscW8iLA0KCSJzY2VuYXJpb0xpc3QiOiBbDQoJCXsNCgkJCSJzY2VuYXJpb05hbWUiOiAiMXdhbGw5MDAwdGFyZ2V0cyIsDQoJCQkicGxheUNvdW50IjogMQ0KCQl9LA0KCQl7DQoJCQkic2NlbmFyaW9OYW1lIjogIjF3YWxsIDZ0YXJnZXRzIHNtYWxsIiwNCgkJCSJwbGF5Q291bnQiOiAxDQoJCX0sDQoJCXsNCgkJCSJzY2VuYXJpb05hbWUiOiAiMXdhbGw2dGFyZ2V0cyBURSIsDQoJCQkicGxheUNvdW50IjogMQ0KCQl9LA0KCQl7DQoJCQkic2NlbmFyaW9OYW1lIjogImZ1Z2xhYVhZU2hvcnRzdHJhZmVzIiwNCgkJCSJwbGF5Q291bnQiOiAxDQoJCX0sDQoJCXsNCgkJCSJzY2VuYXJpb05hbWUiOiAiMXdhbGw1dGFyZ2V0c19wYXN1IiwNCgkJCSJwbGF5Q291bnQiOiAxDQoJCX0sDQoJCXsNCgkJCSJzY2VuYXJpb05hbWUiOiAiVGlsZSBGcmVuenkgMTgwIFN0cmFmaW5nIiwNCgkJCSJwbGF5Q291bnQiOiAxDQoJCX0sDQoJCXsNCgkJCSJzY2VuYXJpb05hbWUiOiAiTEcgUGluIFByYWN0aWNlIDM2MCIsDQoJCQkicGxheUNvdW50IjogMQ0KCQl9LA0KCQl7DQoJCQkic2NlbmFyaW9OYW1lIjogIkdyb3VuZCBQbGF6YSBFYXN5IiwNCgkJCSJwbGF5Q291bnQiOiAxDQoJCX0NCgldLA0KCSJkZXNjcmlwdGlvbiI6ICIiDQp9\",\"playlistJson\":{\"authorName\":\"Zealqo\",\"playlistId\":54716,\"description\":\"\",\"playlistName\":\"Aimer7 Advanced Beginner\",\"scenarioList\":[{\"playCount\":1,\"scenarioName\":\"1wall9000targets\"},{\"playCount\":1,\"scenarioName\":\"1wall 6targets small\"},{\"playCount\":1,\"scenarioName\":\"1wall6targets TE\"},{\"playCount\":1,\"scenarioName\":\"fuglaaXYShortstrafes\"},{\"playCount\":1,\"scenarioName\":\"1wall5targets_pasu\"},{\"playCount\":1,\"scenarioName\":\"Tile Frenzy 180 Strafing\"},{\"playCount\":1,\"scenarioName\":\"LG Pin Practice 360\"},{\"playCount\":1,\"scenarioName\":\"Ground Plaza Easy\"}],\"authorSteamId\":\"76561198409458631\"},\"created\":\"2022-02-22T19:13:33.093Z\",\"aimType\":\"Clicking\",\"isPrivate\":false,\"updated\":\"2023-04-20T21:28:46.561Z\",\"partnerName\":null,\"description\":\"\",\"subscribers\":3}]}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET BENCHMARK PROGRESS FOR WEBAPP USERNAME",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank?username=kyuri&page=0&max=10",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET BENCHMARK PROGRESS FOR WEBAPP USERNAME": {
+          "name": "GET BENCHMARK PROGRESS FOR WEBAPP USERNAME",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET BENCHMARK PROGRESS FOR WEBAPP USERNAME",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank?username=kyuri&page=0&max=10",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "7"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"d46-cavqflzO0DJQ+EBnp86Xq2grNTs\""
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:19 GMT"
+            }
+          ],
+          "body": "{\"page\":0,\"max\":10,\"total\":74,\"data\":[{\"benchmarkName\":\"KOVAAK'S AIM OFFICIAL\",\"benchmarkId\":2,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/BenchmarksLogo.png\",\"benchmarkAuthor\":\"DrUninstall\",\"type\":\"benchmark\",\"tintRanks\":false,\"rankName\":\"Diamond III\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_3.svg\",\"rankColor\":\"#74e4e4\"},{\"benchmarkName\":\"PureG Benchmarks\",\"benchmarkId\":3,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/icons/PureGCircle-x4.png\",\"benchmarkAuthor\":\"Fallen\",\"type\":\"benchmark\",\"tintRanks\":true,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\" \"},{\"benchmarkName\":\"APEX LEGENDS OFFICIAL\",\"benchmarkId\":4,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/icons/BM_APEX_2.png\",\"benchmarkAuthor\":\"DrUninstall\",\"type\":\"benchmark\",\"tintRanks\":true,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\" \"},{\"benchmarkName\":\"COUNTER-STRIKE 2 OFFICIAL\",\"benchmarkId\":6,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/icons/BM_CS2.png\",\"benchmarkAuthor\":\"DrUninstall\",\"type\":\"benchmark\",\"tintRanks\":true,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_prod_2/benchmarks/ranks/CS2/CS2_Rank00.png\",\"rankColor\":\" \"},{\"benchmarkName\":\"OVERWATCH 2 OFFICIAL\",\"benchmarkId\":11,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_OW_BETA.png\",\"benchmarkAuthor\":\"DrUninstall\",\"type\":\"benchmark\",\"tintRanks\":true,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\" \"},{\"benchmarkName\":\"APEX OFFICIAL\",\"benchmarkId\":15,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_23.svg\",\"benchmarkAuthor\":\"ckap =]\",\"type\":\"workout\",\"tintRanks\":false,\"rankName\":\"0/5\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/general/workout_star.svg\",\"rankColor\":\"#FF912F\"},{\"benchmarkName\":\"Group MIYU Tracking\",\"benchmarkId\":53,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_21.svg\",\"benchmarkAuthor\":\"Miyu\",\"type\":\"benchmark\",\"tintRanks\":false,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\"#424242\"},{\"benchmarkName\":\"MattyOW Overwatch\",\"benchmarkId\":63,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_24.svg\",\"benchmarkAuthor\":\"VT Matty\",\"type\":\"benchmark\",\"tintRanks\":false,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\"#424242\"},{\"benchmarkName\":\"SuperbAim S2\",\"benchmarkId\":65,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_23.svg\",\"benchmarkAuthor\":\"sANatriumIA\",\"type\":\"benchmark\",\"tintRanks\":false,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\" \"},{\"benchmarkName\":\"Sarnt Roos Tracking (V1.2)\",\"benchmarkId\":67,\"benchmarkIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_17.svg\",\"benchmarkAuthor\":\"Sarnt Roos\",\"type\":\"benchmark\",\"tintRanks\":false,\"rankName\":\"No Rank\",\"rankIcon\":\"https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg\",\"rankColor\":\"#ffffff\"}]}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET GLOBAL LEADERBOARD SCORES",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/global/scores?page=0&max=20",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET GLOBAL LEADERBOARD SCORES": {
+          "name": "GET GLOBAL LEADERBOARD SCORES",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET GLOBAL LEADERBOARD SCORES",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/leaderboard/global/scores?page=0&max=20",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:21 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"11b5-IwOL/dgGogI2sLlCo+dlGEte25o\""
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "24"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            }
+          ],
+          "body": "{\"data\":[{\"rank\":1,\"rankChange\":0,\"steamId\":\"76561198083805976\",\"webappUsername\":\"Kryzion\",\"steamAccountName\":\"fuA Kryzion\",\"points\":\"47269197\",\"scenariosCount\":\"4258\",\"completionsCount\":14121,\"kovaaksPlusActive\":false,\"country\":\"DE\"},{\"rank\":2,\"rankChange\":0,\"steamId\":\"76561199247873110\",\"webappUsername\":\"rinobowzer\",\"steamAccountName\":\"RiNoBowzer\",\"points\":\"46887901\",\"scenariosCount\":\"4214\",\"completionsCount\":35959,\"kovaaksPlusActive\":true,\"country\":\"JP\"},{\"rank\":3,\"rankChange\":0,\"steamId\":\"76561198829997248\",\"webappUsername\":\"Transpain\",\"steamAccountName\":\"Transpain\",\"points\":\"46006701\",\"scenariosCount\":\"2932\",\"completionsCount\":25988,\"kovaaksPlusActive\":false,\"country\":\"JP\"},{\"rank\":4,\"rankChange\":0,\"steamId\":\"76561198390284214\",\"webappUsername\":\"WorthlessGod\",\"steamAccountName\":\"𝘽⁧⁧ 𝙇𝙊𝙊𝘿\",\"points\":\"45161114\",\"scenariosCount\":\"3541\",\"completionsCount\":15382,\"kovaaksPlusActive\":true,\"country\":\"US\"},{\"rank\":5,\"rankChange\":0,\"steamId\":\"76561199219408443\",\"webappUsername\":\"admirooo\",\"steamAccountName\":\"tA fuA admirooo\",\"points\":\"43088015\",\"scenariosCount\":\"1690\",\"completionsCount\":9399,\"kovaaksPlusActive\":true,\"country\":\"BA\"},{\"rank\":6,\"rankChange\":0,\"steamId\":\"76561198218488124\",\"webappUsername\":\"Evil\",\"steamAccountName\":\"EviL\",\"points\":\"42705817\",\"scenariosCount\":\"2515\",\"completionsCount\":31533,\"kovaaksPlusActive\":true,\"country\":\"GB\"},{\"rank\":7,\"rankChange\":0,\"steamId\":\"76561198395171678\",\"webappUsername\":\"Syaoh\",\"steamAccountName\":\"Верный\",\"points\":\"42562200\",\"scenariosCount\":\"1901\",\"completionsCount\":29140,\"kovaaksPlusActive\":true,\"country\":\"JP\"},{\"rank\":8,\"rankChange\":0,\"steamId\":\"76561198828944918\",\"webappUsername\":\"ilovescarlett\",\"steamAccountName\":\"im noob\",\"points\":\"41902991\",\"scenariosCount\":\"2297\",\"completionsCount\":26970,\"kovaaksPlusActive\":false,\"country\":\"CA\"},{\"rank\":9,\"rankChange\":0,\"steamId\":\"76561199089427208\",\"webappUsername\":\"slapped\",\"steamAccountName\":\"yesslapped\",\"points\":\"41705946\",\"scenariosCount\":\"4838\",\"completionsCount\":74322,\"kovaaksPlusActive\":true,\"country\":\"GB\"},{\"rank\":10,\"rankChange\":0,\"steamId\":\"76561198316619841\",\"webappUsername\":\"練習用ボット\",\"steamAccountName\":\"練習用璃奈\",\"points\":\"41622592\",\"scenariosCount\":\"1409\",\"completionsCount\":2727,\"kovaaksPlusActive\":false,\"country\":\"JP\"},{\"rank\":11,\"rankChange\":0,\"steamId\":\"76561198367538821\",\"webappUsername\":\"hibi\",\"steamAccountName\":\"not @hibiVerniy\",\"points\":\"41470689\",\"scenariosCount\":\"3462\",\"completionsCount\":23309,\"kovaaksPlusActive\":true,\"country\":\"AU\"},{\"rank\":12,\"rankChange\":0,\"steamId\":\"76561198217736125\",\"webappUsername\":\"Doink\",\"steamAccountName\":\"Doink\",\"points\":\"41244982\",\"scenariosCount\":\"1785\",\"completionsCount\":4700,\"kovaaksPlusActive\":false,\"country\":\"US\"},{\"rank\":13,\"rankChange\":0,\"steamId\":\"76561197991851380\",\"webappUsername\":\"jerry\",\"steamAccountName\":\"jerry\",\"points\":\"41165518\",\"scenariosCount\":\"3236\",\"completionsCount\":21369,\"kovaaksPlusActive\":false,\"country\":\"US\"},{\"rank\":14,\"rankChange\":0,\"steamId\":\"76561198367763496\",\"webappUsername\":\"TriHard7\",\"steamAccountName\":\"BloodSport\",\"points\":\"41077743\",\"scenariosCount\":\"1753\",\"completionsCount\":21446,\"kovaaksPlusActive\":false,\"country\":\"GB-SCT\"},{\"rank\":15,\"rankChange\":0,\"steamId\":\"76561199162046534\",\"webappUsername\":\"tika+\",\"steamAccountName\":\"hoshino\",\"points\":\"40957902\",\"scenariosCount\":\"1950\",\"completionsCount\":49435,\"kovaaksPlusActive\":false,\"country\":\"JP\"},{\"rank\":16,\"rankChange\":0,\"steamId\":\"76561198081278986\",\"webappUsername\":\"SwerveMove\",\"steamAccountName\":\"SwerveMove\",\"points\":\"40485416\",\"scenariosCount\":\"2133\",\"completionsCount\":25397,\"kovaaksPlusActive\":false,\"country\":\"US\"},{\"rank\":17,\"rankChange\":-1,\"steamId\":\"76561198848061765\",\"webappUsername\":\"snøw\",\"steamAccountName\":\"snøw\",\"points\":\"40297589\",\"scenariosCount\":\"1438\",\"completionsCount\":5595,\"kovaaksPlusActive\":true,\"country\":\"AQ\"},{\"rank\":18,\"rankChange\":1,\"steamId\":\"76561198348389726\",\"webappUsername\":\"KsiRz\",\"steamAccountName\":\"KsiRz\",\"points\":\"40182546\",\"scenariosCount\":\"1063\",\"completionsCount\":16885,\"kovaaksPlusActive\":false,\"country\":\"US\"},{\"rank\":19,\"rankChange\":0,\"steamId\":\"76561197983102874\",\"webappUsername\":\"MehKore\",\"steamAccountName\":\"MehKore\",\"points\":\"40094351\",\"scenariosCount\":\"2023\",\"completionsCount\":18560,\"kovaaksPlusActive\":false,\"country\":\"CH\"},{\"rank\":20,\"rankChange\":0,\"steamId\":\"76561199051234464\",\"webappUsername\":\"miu\",\"steamAccountName\":\"miu\",\"points\":\"40053301\",\"scenariosCount\":\"2184\",\"completionsCount\":10618,\"kovaaksPlusActive\":true,\"country\":\"US\"}],\"total\":\"1545383\"}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "GET_BENCHMARK_PROGRESS_BY_STEAMID64_AND_BENCHMARK_ID",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank-benchmark?benchmarkId=2&steamId=76561198409458631&page=0&max=100",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "GET_BENCHMARK_PROGRESS_BY_STEAMID64_AND_BENCHMARK_ID": {
+          "name": "GET_BENCHMARK_PROGRESS_BY_STEAMID64_AND_BENCHMARK_ID",
+          "originalRequest": {
+            "v": "5",
+            "name": "GET_BENCHMARK_PROGRESS_BY_STEAMID64_AND_BENCHMARK_ID",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/benchmarks/player-progress-rank-benchmark?benchmarkId=2&steamId=76561198409458631&page=0&max=100",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"3409-nKD7oxt3C9cJ1+k1VYvqP0cjMIQ\""
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:23 GMT"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "22"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": "{\"benchmark_progress\":95088.2,\"overall_rank\":15,\"categories\":{\"Static Clicking\":{\"benchmark_progress\":16337.47,\"category_rank\":15,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Clicking Static 5\":{\"score\":9168600,\"leaderboard_rank\":12127,\"scenario_rank\":15,\"rank_maxes\":[54390,59829,62937,65268,67599,69930,71484,73815,75369,76923,79254,80808,83139,84693,87024,94250,98951,104584,112277]},\"Clicking 3 Wide\":{\"score\":10256400,\"leaderboard_rank\":12978,\"scenario_rank\":15,\"rank_maxes\":[61383,67599,71484,74592,77700,80031,82362,84693,86247,88578,90132,92463,94794,97125,99456,107304,112315,118259,127117]}}},\"Reactivity Tracking\":{\"benchmark_progress\":16432.44,\"category_rank\":15,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Ground Tracking\":{\"score\":10181812,\"leaderboard_rank\":6280,\"scenario_rank\":16,\"rank_maxes\":[46812,53848,58178,60215,63662,66782,69739,72364,72793,75687,78755,82011,85239,87296,89233,98299,104640,110371,121506]},\"Air Tracking 180\":{\"score\":7807400,\"leaderboard_rank\":14377,\"scenario_rank\":14,\"rank_maxes\":[51469,56872,59462,61534,63347,64901,66455,68009,69563,70858,72412,73966,74725,77038,78592,84649,88985,94021,99406]}}},\"Dynamic Clicking\":{\"benchmark_progress\":15927.76,\"category_rank\":15,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Clicking Bounce\":{\"score\":10075200,\"leaderboard_rank\":16764,\"scenario_rank\":14,\"rank_maxes\":[49410,56696,62410,66876,70528,73870,77050,79938,83112,86174,89056,92162,95286,98938,102820,115297,123867,133554,149357]},\"Clicking Dodgy\":{\"score\":8500000,\"leaderboard_rank\":9606,\"scenario_rank\":15,\"rank_maxes\":[32000,39000,43000,47000,51000,54000,57000,59000,62000,64000,67000,69000,72000,75000,78000,86800,92600,98800,109000]}}},\"Smooth Tracking\":{\"benchmark_progress\":12655.9,\"category_rank\":12,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Smooth Vertical Tracking\":{\"score\":7284994,\"leaderboard_rank\":27047,\"scenario_rank\":8,\"rank_maxes\":[46686,53407,57821,59445,62793,65819,68448,70705,72850,72850,74561,76843,79174,81580,84135,91181,93380,98878,107863]},\"Smooth Tracking\":{\"score\":10669115,\"leaderboard_rank\":13859,\"scenario_rank\":15,\"rank_maxes\":[99913,101616,102454,103009,103489,103907,104251,104571,104901,105211,105511,105797,106080,106369,106666,107210,107612,108039,108587]}}},\"Switching\":{\"benchmark_progress\":17117.98,\"category_rank\":16,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Switching Humanoid\":{\"score\":11729938,\"leaderboard_rank\":7901,\"scenario_rank\":16,\"rank_maxes\":[67135,73555,77995,81053,83807,86114,88399,90848,92992,95288,97280,99412,101556,103853,106758,115143,120890,127709,137981]},\"Switching Spheres\":{\"score\":790000,\"leaderboard_rank\":6694,\"scenario_rank\":16,\"rank_maxes\":[4100,4600,4800,5100,5200,5400,5600,5700,5900,6100,6300,6500,6600,6900,7100,7830,8300,8900,9740]}}},\"Movement\":{\"benchmark_progress\":16616.66,\"category_rank\":15,\"rank_maxes\":[1052.63,2105.26,3157.89,4210.53,5263.16,6315.79,7368.42,8421.05,9473.68,10526.32,11578.95,12631.58,13684.21,14736.84,15789.47,16842.11,17894.74,18947.37,20000],\"scenarios\":{\"Movement Tracking\":{\"score\":1266854,\"leaderboard_rank\":9931,\"scenario_rank\":16,\"rank_maxes\":[5782,6426,6858,7308,7596,7956,8352,8766,9270,9860,10382,10814,11174,11549,11868,12596,13058,13600,14301]},\"Movement Clicking Bounce\":{\"score\":67000,\"leaderboard_rank\":14118,\"scenario_rank\":15,\"rank_maxes\":[220,280,320,350,380,409,433,455,478,500,520,550,573,602,636,718,785,852,975]}}}},\"ranks\":[{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_None.svg\",\"name\":\"No Rank\",\"color\":\" \",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_None.svg\",\"description\":\"This is No rank!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_00_NoRank.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_00_NoRank.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_1.svg\",\"name\":\"Bronze I\",\"color\":\"#dc9e4c\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_1.svg\",\"description\":\"This is Bronze I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_01_Bronze_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_2.svg\",\"name\":\"Bronze II\",\"color\":\"#dc9e4c\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_2.svg\",\"description\":\"This is Bronze II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_02_Bronze_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Bronze_3.svg\",\"name\":\"Bronze III\",\"color\":\"#dc9e4c\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Bronze_3.svg\",\"description\":\"This is Bronze III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_03_Bronze_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_01_Bronze.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_1.svg\",\"name\":\"Silver I\",\"color\":\"#d8d8d8\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_1.svg\",\"description\":\"This is Silver I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_04_Silver_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_2.svg\",\"name\":\"Silver II\",\"color\":\"#d8d8d8\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_2.svg\",\"description\":\"This is Silver II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_05_Silver_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Silver_3.svg\",\"name\":\"Silver III\",\"color\":\"#d8d8d8\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Silver_3.svg\",\"description\":\"This is Silver III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_06_Silver_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_02_Silver.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_1.svg\",\"name\":\"Gold I\",\"color\":\"#fbc550\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_1.svg\",\"description\":\"This is Gold I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_07_Gold_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_2.svg\",\"name\":\"Gold II\",\"color\":\"#fbc550\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_2.svg\",\"description\":\"This is Gold II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_08_Gold_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Gold_3.svg\",\"name\":\"Gold III\",\"color\":\"#fbc550\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Gold_3.svg\",\"description\":\"This is Gold III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_09_Gold_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_03_Gold.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_1.svg\",\"name\":\"Plat I\",\"color\":\"#85ceba\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_1.svg\",\"description\":\"This is Plat I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_10_Platinum_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_2.svg\",\"name\":\"Plat II\",\"color\":\"#85ceba\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_2.svg\",\"description\":\"This is Plat II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_11_Platinum_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Platinum_3.svg\",\"name\":\"Plat III\",\"color\":\"#85ceba\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Platinum_3.svg\",\"description\":\"This is Plat III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_12_Platinum_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_04_Platinum.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_1.svg\",\"name\":\"Diamond I\",\"color\":\"#74e4e4\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_1.svg\",\"description\":\"This is Diamond I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_13_Diamond_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_2.svg\",\"name\":\"Diamond II\",\"color\":\"#74e4e4\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_2.svg\",\"description\":\"This is Diamond II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_14_Diamond_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Diamond_3.svg\",\"name\":\"Diamond III\",\"color\":\"#74e4e4\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Diamond_3.svg\",\"description\":\"This is Diamond III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_15_Diamond_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_05_Diamond.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_1.svg\",\"name\":\"Master I\",\"color\":\"#ffaaaa\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_1.svg\",\"description\":\"This is Master I!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_16_Master_01.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_2.svg\",\"name\":\"Master II\",\"color\":\"#ffaaaa\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_2.svg\",\"description\":\"This is Master II!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_17_Master_02.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_Master_3.svg\",\"name\":\"Master III\",\"color\":\"#ffaaaa\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_Master_3.svg\",\"description\":\"This is Master III!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_18_Master_03.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_06_Master.png\"},{\"icon\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RB_GrandMaster.svg\",\"name\":\"Grandmaster\",\"color\":\"#ed4800\",\"frame\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/RF_GrandMaster.svg\",\"description\":\"This is Grandmaster!\",\"playercard_large\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/PopUp/PC_19_Grandmaster.png\",\"playercard_small\":\"https://storage.googleapis.com/cdn_dev/benchmark_test_icons/MainScreen/PM_07_Grandmaster.png\"}]}"
+        }
+      }
+    },
+    {
+      "v": "13",
+      "name": "SEARCH_SCENARIOS_BY_SCENARIO_NAME",
+      "method": "GET",
+      "endpoint": "https://kovaaks.com/webapp-backend/scenario/popular?page=0&max=20&scenarioNameSearch=bounce",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "SEARCH_SCENARIOS_BY_SCENARIO_NAME": {
+          "name": "SEARCH_SCENARIOS_BY_SCENARIO_NAME",
+          "originalRequest": {
+            "v": "5",
+            "name": "SEARCH_SCENARIOS_BY_SCENARIO_NAME",
+            "method": "GET",
+            "endpoint": "https://kovaaks.com/webapp-backend/scenario/popular?page=0&max=20&scenarioNameSearch=bounce",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "200 OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "129"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "x-hash-version"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"1c30-YSqDtoZRnphzJWVN+UuGE6HRCso\""
+            },
+            {
+              "key": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Jun 2025 23:21:26 GMT"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "server",
+              "value": "istio-envoy"
+            }
+          ],
+          "body": "{\"page\":0,\"max\":20,\"total\":1125,\"data\":[{\"rank\":1,\"leaderboardId\":24975,\"scenarioName\":\"VT Bounceshot Novice\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"Raspberry/Vodkards\",\"Whisper\"],\"description\":\"Four single-click bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. The player's weapon has three shots and empty magazines recover in their entirety upon each elimination.\"},\"counts\":{\"plays\":1512076,\"entries\":154668},\"topScore\":{\"score\":1930}},{\"rank\":2,\"leaderboardId\":24973,\"scenarioName\":\"VT bounceTS Novice\",\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"Whisper\",\"Raspberry/Vodkards\"],\"description\":\"Bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. Each bot needs to be tracked for a short period to be eliminated.\"},\"counts\":{\"plays\":897209,\"entries\":134001},\"topScore\":{\"score\":400000}},{\"rank\":3,\"leaderboardId\":122,\"scenarioName\":\"Bounce 180 Tracking\",\"scenario\":{\"aimType\":null,\"authors\":[\"Huddled\"],\"description\":\"To help vertical tracking on small bouncing balls\"},\"counts\":{\"plays\":2020560,\"entries\":119344},\"topScore\":{\"score\":208}},{\"rank\":4,\"leaderboardId\":764,\"scenarioName\":\"Bounce 180 Sparky Jumbo\",\"scenario\":{\"aimType\":null,\"authors\":[\"Whisper\"],\"description\":\"To help vertical tracking while clicking. Reload mechanism with no acc penalty on scoring, and the balls actually bounce.\"},\"counts\":{\"plays\":761330,\"entries\":116581},\"topScore\":{\"score\":161}},{\"rank\":5,\"leaderboardId\":11956,\"scenarioName\":\"Bounce 180 Tracking Large Slower TTK\",\"scenario\":{\"aimType\":\"Tracking\",\"authors\":[\"Huddled\",\"apa3\",\"Struth\"],\"description\":\"To help vertical tracking on small bouncing balls\"},\"counts\":{\"plays\":718975,\"entries\":102510},\"topScore\":{\"score\":28}},{\"rank\":6,\"leaderboardId\":11392,\"scenarioName\":\"Fortnite Bounce 180 Track Low Ground\",\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"DrUninstall\"],\"description\":\"Tracking low ground targets. Bounce 180, 3rd person.\"},\"counts\":{\"plays\":956309,\"entries\":96095},\"topScore\":{\"score\":59}},{\"rank\":7,\"leaderboardId\":24955,\"scenarioName\":\"VT Bounceshot Intermediate\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"Raspberry/Vodkards\",\"Whisper\"],\"description\":\"Four single-click bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. The player's weapon has three shots and empty magazines recover in their entirety upon each elimination.\"},\"counts\":{\"plays\":1918973,\"entries\":86382},\"topScore\":{\"score\":1660}},{\"rank\":8,\"leaderboardId\":32813,\"scenarioName\":\"Clicking Bounce\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"DrUninstall\"],\"description\":\"Practice your clicking on bouncing targets at varying heights. Headshots = more damage = more points.\"},\"counts\":{\"plays\":473327,\"entries\":81019},\"topScore\":{\"score\":479000}},{\"rank\":9,\"leaderboardId\":1718,\"scenarioName\":\"Bounce 180 Manwing\",\"scenario\":{\"aimType\":null,\"authors\":[\"Ascetic\",\"Huddled\"],\"description\":\"Bounce 180, but with the Manwing.\"},\"counts\":{\"plays\":557653,\"entries\":80195},\"topScore\":{\"score\":146}},{\"rank\":10,\"leaderboardId\":127,\"scenarioName\":\"Bounce 180\",\"scenario\":{\"aimType\":null,\"authors\":[\"Huddled\"],\"description\":\"To help vertical tracking while clicking\"},\"counts\":{\"plays\":1771704,\"entries\":80085},\"topScore\":{\"score\":183}},{\"rank\":11,\"leaderboardId\":24953,\"scenarioName\":\"VT bounceTS Intermediate\",\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"Whisper\",\"Raspberry/Vodkards\"],\"description\":\"Bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. Each bot needs to be tracked for a short period to be eliminated.\"},\"counts\":{\"plays\":1510894,\"entries\":65518},\"topScore\":{\"score\":1156}},{\"rank\":12,\"leaderboardId\":32817,\"scenarioName\":\"Movement Clicking Bounce\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"Tammas\",\"patys\",\"NFNT\",\"DrUninstall\"],\"description\":\"Switch between multiple bouncing targets at varying distances, jump heights, speeds, and altitudes. This scenario uses Movement based scoring, with a strafe time of 1.3 seconds.\"},\"counts\":{\"plays\":268420,\"entries\":63778},\"topScore\":{\"score\":1360}},{\"rank\":13,\"leaderboardId\":1955,\"scenarioName\":\"Bounce 180 Reload\",\"scenario\":{\"aimType\":null,\"authors\":[\"Huddled\",\"Cody\"],\"description\":\"To help vertical tracking while clicking. Reload mechanism with no acc penalty on scoring, and the balls actually bounce.\"},\"counts\":{\"plays\":453926,\"entries\":55369},\"topScore\":{\"score\":175}},{\"rank\":14,\"leaderboardId\":762,\"scenarioName\":\"Bounce 180 Sparky\",\"scenario\":{\"aimType\":null,\"authors\":[\"Whisper\"],\"description\":\"To help vertical tracking while clicking. Reload mechanism with no acc penalty on scoring, and the balls actually bounce.\"},\"counts\":{\"plays\":702612,\"entries\":33254},\"topScore\":{\"score\":154}},{\"rank\":15,\"leaderboardId\":103262,\"scenarioName\":\"VT Penta Bounce Novice S5\",\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with five targets bouncing around on a pentagonal wall at varying distances. Each target takes 50 hits to eliminate with a TTK of ~0.5 seconds, and is worth a total of 10 points.\"},\"counts\":{\"plays\":137928,\"entries\":33028},\"topScore\":{\"score\":779}},{\"rank\":16,\"leaderboardId\":26524,\"scenarioName\":\"Slide Bounce Tracking a+ Easy\",\"scenario\":{\"aimType\":\"Tracking\",\"authors\":[\"Sunggang\",\"SPER\"],\"description\":\"Targets bouncing in the air.\\r\\nCheck out twitter.com/aimerzHQ for more info.\"},\"counts\":{\"plays\":184659,\"entries\":25320},\"topScore\":{\"score\":12650}},{\"rank\":17,\"leaderboardId\":66,\"scenarioName\":\"Bounce 360 Track FN\",\"scenario\":{\"aimType\":null,\"authors\":[\"fareoh\"],\"description\":\"target switch/jumping/third person practice (influence credit to huddled/kroader)\"},\"counts\":{\"plays\":834633,\"entries\":24592},\"topScore\":{\"score\":102}},{\"rank\":18,\"leaderboardId\":103261,\"scenarioName\":\"VT Penta Bounce Intermediate S5\",\"scenario\":{\"aimType\":\"Target Switching\",\"authors\":[\"\"],\"description\":\"To change the walls, enable \\\"Override Scenario Visuals\\\" in the main settings tab.\\r\\n\\r\\nFull auto target switching with five targets bouncing around on a pentagonal wall at varying distances. Each target takes 50 hits to eliminate with a TTK of ~0.5 seconds, and is worth a total of 10 points.\"},\"counts\":{\"plays\":261994,\"entries\":24548},\"topScore\":{\"score\":726}},{\"rank\":19,\"leaderboardId\":89,\"scenarioName\":\"Bounce CT Dodge Park\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"Tammas\"],\"description\":\"Switch between multiple bouncing targets at varying distances, jump heights, speeds, and altitudes. This scenario uses Movement based scoring, with a strafe time of 1.3 seconds.\"},\"counts\":{\"plays\":289037,\"entries\":23707},\"topScore\":{\"score\":12331}},{\"rank\":20,\"leaderboardId\":25154,\"scenarioName\":\"VT Bounceshot Advanced\",\"scenario\":{\"aimType\":\"Clicking\",\"authors\":[\"Raspberry/Vodkards\",\"Whisper\"],\"description\":\"Four single-click bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. The player's weapon has three shots and empty magazines recover in their entirety upon each elimination.\"},\"counts\":{\"plays\":430257,\"entries\":22741},\"topScore\":{\"score\":5100}}]}"
+        }
+      }
+    }
+  ],
+  "auth": {
+    "authActive": true,
+    "authType": "none"
+  },
+  "headers": [],
+  "_ref_id": "coll_mbijx6yo_3694ad35-93a3-44b9-acd2-a6e451a7d4cc"
+}

@@ -1,363 +1,634 @@
-// Types based on Kovaaks OpenAPI spec
+// kovaaks api tested/SEARCH_SCENARIOS_BY_SCENARIO_NAME.ts
+export namespace SearchScenariosByScenarioName {
+    export interface Response {
+        page:  number;
+        max:   number;
+        total: number;
+        data:  Datum[];
+    }
 
-export interface BenchmarkProgress {
-  benchmark_progress: number;
-  overall_rank: number;
-  categories: {
-    [key: string]: {
-      benchmark_progress: number;
-      category_rank: number;
-      rank_maxes: number[];
-      scenarios: {
-        [key: string]: {
-          score: number;
-          leaderboard_rank: number;
-          scenario_rank: number;
-          rank_maxes: number[];
-        };
-      };
-    };
-  };
-  ranks: Array<{
-    icon: string;
-    name: string;
-    color: string;
-    frame: string;
-    description: string;
-    playercard_large: string;
-    playercard_small: string;
-  }>;
+    export interface Datum {
+        rank:          number;
+        leaderboardId: number;
+        scenarioName:  string;
+        scenario:      Scenario;
+        counts:        Counts;
+        topScore:      TopScore;
+    }
+
+    export interface Counts {
+        plays:   number;
+        entries: number;
+    }
+
+    export interface Scenario {
+        aimType:     AimType | null;
+        authors:     string[];
+        description: string;
+    }
+
+    export enum AimType {
+        Clicking = "Clicking",
+        TargetSwitching = "Target Switching",
+        Tracking = "Tracking",
+    }
+
+    export interface TopScore {
+        score: number;
+    }
 }
 
-export interface BenchmarkSearchResponse {
-  page: number;
-  max: number;
-  total: number;
-  data: Array<{
-    benchmarkName: string;
-    benchmarkId: number;
-    benchmarkIcon: string;
-    benchmarkAuthor: string;
-    type: 'benchmark' | 'workout';
-    tintRanks: boolean;
-    rankName: string;
-    rankIcon: string;
-    rankColor: string;
-  }>;
+// kovaaks api tested/GET_BENCHMARK_PROGRESS_BY_STEAMID64_AND_BENCHMARK_ID.ts
+export namespace GetBenchmarkProgressBySteamId64AndBenchmarkId {
+    export interface Response {
+        benchmark_progress: number;
+        overall_rank:       number;
+        categories:         Categories;
+        ranks:              Rank[];
+    }
+
+    export interface Categories {
+        "Static Clicking":     StaticClicking;
+        "Reactivity Tracking": ReactivityTracking;
+        "Dynamic Clicking":    DynamicClicking;
+        "Smooth Tracking":     SmoothTracking;
+        Switching:             Switching;
+        Movement:              Movement;
+    }
+
+    export interface DynamicClicking {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          DynamicClickingScenarios;
+    }
+
+    export interface DynamicClickingScenarios {
+        "Clicking Bounce": ClickingBounce;
+        "Clicking Dodgy":  ClickingBounce;
+    }
+
+    export interface ClickingBounce {
+        score:            number;
+        leaderboard_rank: number;
+        scenario_rank:    number;
+        rank_maxes:       number[];
+    }
+
+    export interface Movement {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          MovementScenarios;
+    }
+
+    export interface MovementScenarios {
+        "Movement Tracking":        ClickingBounce;
+        "Movement Clicking Bounce": ClickingBounce;
+    }
+
+    export interface ReactivityTracking {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          ReactivityTrackingScenarios;
+    }
+
+    export interface ReactivityTrackingScenarios {
+        "Ground Tracking":  ClickingBounce;
+        "Air Tracking 180": ClickingBounce;
+    }
+
+    export interface SmoothTracking {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          SmoothTrackingScenarios;
+    }
+
+    export interface SmoothTrackingScenarios {
+        "Smooth Vertical Tracking": ClickingBounce;
+        "Smooth Tracking":          ClickingBounce;
+    }
+
+    export interface StaticClicking {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          StaticClickingScenarios;
+    }
+
+    export interface StaticClickingScenarios {
+        "Clicking Static 5": ClickingBounce;
+        "Clicking 3 Wide":   ClickingBounce;
+    }
+
+    export interface Switching {
+        benchmark_progress: number;
+        category_rank:      number;
+        rank_maxes:         number[];
+        scenarios:          SwitchingScenarios;
+    }
+
+    export interface SwitchingScenarios {
+        "Switching Humanoid": ClickingBounce;
+        "Switching Spheres":  ClickingBounce;
+    }
+
+    export interface Rank {
+        icon:             string;
+        name:             string;
+        color:            string;
+        frame:            string;
+        description:      string;
+        playercard_large: string;
+        playercard_small: string;
+    }
 }
 
-export interface GlobalLeaderboardResponse {
-  data: Array<{
-    rank: number;
-    rankChange: number;
-    steamId: string;
-    webappUsername: string | null;
-    steamAccountName: string;
-    points: string;
-    scenariosCount: string;
-    completionsCount: number;
-    kovaaksPlusActive: boolean;
-    country: string;
-  }>;
-  total: string;
+// kovaaks api tested/GET GLOBAL LEADERBOARD SCORES.ts
+export namespace GetGlobalLeaderboardScores {
+    export interface Response {
+        data:  Datum[];
+        total: string;
+    }
+
+    export interface Datum {
+        rank:              number;
+        rankChange:        number;
+        steamId:           string;
+        webappUsername:    string;
+        steamAccountName:  string;
+        points:            string;
+        scenariosCount:    string;
+        completionsCount:  number;
+        kovaaksPlusActive: boolean;
+        country:           string;
+    }
 }
 
-export interface GroupedLeaderboardResponse {
-  data: Array<{
-    group: string;
-    points: string;
-    scenarios_count: string;
-    completions_count: string;
-    rank: number;
-  }>;
-  total: string;
+// kovaaks api tested/GET BENCHMARK PROGRESS FOR WEBAPP USERNAME.ts
+export namespace GetBenchmarkProgressForWebappUsername {
+    export interface Response {
+        page:  number;
+        max:   number;
+        total: number;
+        data:  Datum[];
+    }
+
+    export interface Datum {
+        benchmarkName:   string;
+        benchmarkId:     number;
+        benchmarkIcon:   string;
+        benchmarkAuthor: string;
+        type:            Type;
+        tintRanks:       boolean;
+        rankName:        RankName;
+        rankIcon:        string;
+        rankColor:       string;
+    }
+
+    export enum RankName {
+        DiamondIII = "Diamond III",
+        NoRank = "No Rank",
+        The05 = "0/5",
+    }
+
+    export enum Type {
+        Benchmark = "benchmark",
+        Workout = "workout",
+    }
 }
 
-export interface LoginResponse {
-  auth: {
-    firebaseJWT: string;
-    jwt: string;
-    refreshToken: string;
-    exp: number;
-    emailVerified: boolean;
-    steamAccountNameIds: { [key: string]: string };
-  };
-  profile: UserProfile;
-  redirect: boolean;
+// kovaaks api tested/GET PLAYLISTS CREATED BY USER.ts
+export namespace GetPlaylistsCreatedByUser {
+    export interface Response {
+        totalPlaylistSubscribers: number;
+        page:                     number;
+        max:                      number;
+        total:                    number;
+        data:                     Datum[];
+    }
+
+    export interface Datum {
+        playlistId:     number;
+        playlistName:   string;
+        playlistCode:   string;
+        playlistHash:   string;
+        playerId:       number;
+        playlistBase64: string;
+        playlistJson:   PlaylistJSON;
+        created:        Date;
+        aimType:        string;
+        isPrivate:      boolean;
+        updated:        Date;
+        partnerName:    null;
+        description:    string;
+        subscribers:    number;
+    }
+
+    export interface PlaylistJSON {
+        authorName:    string;
+        playlistId:    number;
+        description:   string;
+        playlistName:  string;
+        scenarioList:  ScenarioList[];
+        authorSteamId: string;
+    }
+
+    export interface ScenarioList {
+        playCount:    number;
+        scenarioName: string;
+    }
 }
 
-export interface UserProfile {
-  playerId: number;
-  steamAccountName: string;
-  steamAccountAvatar: string;
-  created: string;
-  steamId: string;
-  clientBuildVersion: string;
-  lastAccess: string;
-  webapp: {
-    roles: {
-      admin: boolean;
-      coach: boolean;
-      staff: boolean;
-    };
-    videos: Array<any>;
-    username: string;
-    socialMedia: {
-      tiktok: string | null;
-      twitch: string | null;
-      discord: string | null;
-      twitter: string | null;
-      youtube: string | null;
-      discord_id: string | null;
-    };
-    gameSettings: {
-      dpi: number | null;
-      fov: number | null;
-      cm360: number | null;
-      rawInput: string;
-      sensitivity: number | null;
-    };
-    profileImage: string | null;
-    profileViews: number;
-    hasSubscribed: boolean;
-    gamingPeripherals: {
-      mouse: string | null;
-      headset: string | null;
-      monitor: string | null;
-      keyboard: string | null;
-      mousePad: string | null;
-    };
-  };
-  country: string;
-  kovaaksPlusActive: boolean;
-  discord_id: string | null;
-  discord_username: string | null;
-  hideDiscord: boolean;
-  badges: Array<any>;
-  followCounts: {
-    following: number;
-    followers: number;
-  };
-  kovaaksPlus: {
-    active: boolean;
-    expiration: string | null;
-  };
-  scenariosPlayed: string;
-  features: {
-    global_leaderboards: boolean;
-  };
+// kovaaks api tested/GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS.ts
+export namespace GetScenariosPlayedByUsernameSortedByPlays {
+    export interface Response {
+        page:  number;
+        max:   number;
+        total: number;
+        data:  Datum[];
+    }
+
+    export interface Datum {
+        leaderboardId: string;
+        scenarioName:  string;
+        counts:        Counts;
+        rank:          number;
+        score:         number;
+        attributes:    Attributes;
+        scenario:      Scenario;
+    }
+
+    export interface Attributes {
+        fov?:                 number;
+        hash:                 string;
+        cm360:                number;
+        epoch:                number;
+        kills:                number;
+        score:                number;
+        avg_fps:              number;
+        avg_ttk:              number;
+        fov_scale:            FovScale;
+        vert_sens:            number;
+        horiz_sens:           number;
+        resolution:           Resolution;
+        sens_scale:           SensScale;
+        accuracy_damage:      number;
+        challenge_start:      string;
+        model_overrides?:     ModelOverrides;
+        sens_randomizer?:     null;
+        scenario_version:     string;
+        client_build_version: string;
+        fOV?:                 number;
+    }
+
+    export enum FovScale {
+        Horizontal43 = "Horizontal (4:3)",
+        Overwatch = "Overwatch",
+    }
+
+    export interface ModelOverrides {
+        cuboid:      Cuboid;
+        spheroid:    Cuboid;
+        cylindrical: Cuboid;
+    }
+
+    export interface Cuboid {
+        skin:  string;
+        model: string;
+    }
+
+    export enum Resolution {
+        The1600X900 = "1600x900",
+        The1920X1080 = "1920x1080",
+    }
+
+    export enum SensScale {
+        CM360 = "cm/360",
+        Overwatch = "Overwatch",
+        QuakeSource = "Quake/Source",
+    }
+
+    export interface Counts {
+        plays: number;
+    }
+
+    export interface Scenario {
+        aimType:     null | string;
+        authors:     string[];
+        description: string;
+    }
 }
 
-export interface UserActivity {
-  timestamp: string;
-  type: string;
-  scenarioName: string;
-  score: number;
-  leaderboardId: number;
-  username: string;
-  webappUsername: string;
-  steamId: string;
-  steamAccountName: string;
-  steamAccountAvatar: string;
-  country: string;
-  kovaaksPlus: boolean;
+// kovaaks api tested/GET RECENT SCENARIO HIGH SCORES BY USERNAME.ts
+export namespace GetRecentScenarioHighScoresByUsername {
+    export interface Response {
+        timestamp:          Date;
+        type:               string;
+        scenarioName:       string;
+        score:              number;
+        leaderboardId:      number;
+        username:           string;
+        webappUsername:     string;
+        steamId:            string;
+        steamAccountName:   string;
+        steamAccountAvatar: string;
+        country:            string;
+        kovaaksPlus:        boolean;
+    }
 }
 
-export interface ScenarioPopularResponse {
-  page: number;
-  max: number;
-  total: number;
-  data: Array<{
-    rank: number;
-    leaderboardId: number;
-    scenarioName: string;
-    scenario: {
-      aimType: string | null;
-      authors: string[];
-      description: string;
-    };
-    counts: {
-      plays: number;
-      entries: number;
-    };
-    topScore: {
-      score: number;
-    };
-  }>;
+// kovaaks api tested/GET_FAVORITE_SCENARIOS_BY_USERNAME.ts
+export namespace GetFavoriteScenariosByUsername {
+    export interface Response {
+        leaderboardId: string;
+        scenarioName:  string;
+        score:         number;
+        scoreHistory:  ScoreHistory[];
+    }
+
+    export interface ScoreHistory {
+        score:      number;
+        attributes: Attributes;
+    }
+
+    export interface Attributes {
+        fov?:      number;
+        cm360:     number;
+        epoch:     string;
+        horizSens: number;
+    }
 }
 
-export interface UserScenarioResponse {
-  page: number;
-  max: number;
-  total: number;
-  data: Array<{
-    leaderboardId: string;
-    scenarioName: string;
-    counts: {
-      plays: number;
-    };
-    rank: number;
-    score: number;
-    attributes: { [key: string]: any };
-    scenario: {
-      aimType: string | null;
-      authors: string[];
-      description: string;
-    };
-  }>;
+// kovaaks api tested/TOTAL_SCENARIOS_COUNT.ts
+export namespace TotalScenariosCount {
+    export interface Response {
+        customScenarioCount: number;
+    }
 }
 
-export interface TrendingScenario {
-  scenarioName: string;
-  leaderboardId: number;
-  webappUsername: string | null;
-  steamAccountName: string;
-  kovaaksPlusActive: boolean;
-  entries: number;
-  new: boolean;
+// kovaaks api tested/GET_PROFILE_BY_WEBAPP_USERNAME.ts
+export namespace GetProfileByWebappUsername {
+    export interface Response {
+        playerId:           number;
+        steamAccountName:   string;
+        steamAccountAvatar: string;
+        created:            Date;
+        steamId:            string;
+        clientBuildVersion: string;
+        lastAccess:         Date;
+        webapp:             Webapp;
+        country:            string;
+        kovaaksPlusActive:  boolean;
+        badges:             any[];
+        followCounts:       FollowCounts;
+        kovaaksPlus:        KovaaksPlus;
+        scenariosPlayed:    string;
+    }
+
+    export interface FollowCounts {
+        following: number;
+        followers: number;
+    }
+
+    export interface KovaaksPlus {
+        active:     boolean;
+        expiration: Date;
+    }
+
+    export interface Webapp {
+        roles:               Roles;
+        videos:              any[];
+        username:            string;
+        socialMedia:         SocialMedia;
+        gameSettings:        GameSettings;
+        profileImage:        null;
+        profileViews:        number;
+        hasSubscribed:       boolean;
+        gamingPeripherals:   GamingPeripherals;
+        username_changed_at: Date;
+    }
+
+    export interface GameSettings {
+        dpi:         null;
+        fov:         null;
+        cm360:       null;
+        rawInput:    string;
+        sensitivity: null;
+    }
+
+    export interface GamingPeripherals {
+        mouse:    string;
+        headset:  null;
+        monitor:  null;
+        keyboard: null;
+        mousePad: string;
+    }
+
+    export interface Roles {
+        admin: boolean;
+        coach: boolean;
+        staff: boolean;
+    }
+
+    export interface SocialMedia {
+        tiktok:     null;
+        twitch:     null;
+        discord:    string;
+        twitter:    null;
+        youtube:    null;
+        discord_id: string;
+    }
 }
 
-// Parameter interfaces
-export interface GetBenchmarkProgressParams {
-  benchmarkId: string;
-  steamId: string;
-  page?: number;
-  max?: number;
+// kovaaks api tested/GET_TRENDING_SCENARIOS.ts
+export namespace GetTrendingScenarios {
+    export interface Response {
+        scenarioName:      string;
+        leaderboardId:     number;
+        webappUsername:    null | string;
+        steamAccountName:  string;
+        kovaaksPlusActive: boolean;
+        entries:           number;
+        new:               boolean;
+    }
 }
 
-export interface GetBenchmarksForUserParams {
-  username: string;
-  page: number;
-  max: number;
+// kovaaks api tested/GET MONTHLY PLAYERS COUNT.ts
+export namespace GetMonthlyPlayersCount {
+    export interface Response {
+        count: number;
+    }
 }
 
-export interface GetGlobalLeaderboardParams {
-  page: number;
-  max: number;
-  group?: 'country' | 'region';
-  filterType?: 'region' | 'country';
-  filterValue?: string;
+// kovaaks api tested/GET_CONCURRENT_USERS.ts
+export namespace GetConcurrentUsers {
+    export interface Response {
+        concurrentUsers: number;
+    }
 }
 
-export interface GetCountryLeaderboardParams {
-  page: number;
-  max: number;
-  countryCode: string;
+// kovaaks api tested/FEATURED_HIGH_SCORES.ts
+export namespace FeaturedHighScores {
+    export interface Response {
+        scenarioName:     string;
+        steamId:          string;
+        score:            number;
+        created:          Date;
+        attributes:       Attributes;
+        steamAccountName: string;
+        webappUsername:   string;
+        game:             Game;
+    }
+
+    export interface Attributes {
+        resolution:           Resolution;
+        avg_fps:              number;
+        avg_ttk:              number;
+        sens_scale:           Scale;
+        horiz_sens:           number;
+        vert_sens:            number;
+        fov:                  number;
+        challenge_start:      string;
+        score:                number;
+        kills:                number;
+        hash:                 string;
+        fov_scale:            Scale;
+        sens_randomizer:      null;
+        model_overrides:      ModelOverrides;
+        accuracy_damage:      number;
+        scenario_version:     string;
+        cm360:                number;
+        client_build_version: ClientBuildVersion;
+        epoch:                number;
+    }
+
+    export enum ClientBuildVersion {
+        The37720250421102618Ebda1827461E = "3.7.7.2025-04-21-10-26-18-ebda1827461e",
+    }
+
+    export enum Scale {
+        CM360 = "cm/360",
+        CallOfDuty = "Call of Duty",
+        Overwatch = "Overwatch",
+        Valorant = "Valorant",
+    }
+
+    export interface ModelOverrides {
+        cylindrical: Cuboid;
+        cuboid:      Cuboid;
+        spheroid:    Cuboid;
+    }
+
+    export interface Cuboid {
+        model: Model;
+        skin:  Model;
+    }
+
+    export enum Model {
+        None = "None",
+    }
+
+    export enum Resolution {
+        The1600X900 = "1600x900",
+        The1920X1080 = "1920x1080",
+        The2560X1440 = "2560x1440",
+    }
+
+    export enum Game {
+        Aimerz = "aimerz",
+        Cs2 = "CS2",
+        KovaaKS = "KovaaK's",
+        KovaaKs = "KovaaKs",
+        Valorant = "Valorant",
+    }
 }
 
-export interface GetUserActivityParams {
-  username: string;
+// kovaaks api tested/GET_SCENARIO_DETAILS_BY_LEADERBOARD_ID.ts
+export namespace GetScenarioDetailsByLeaderboardId {
+    export interface Response {
+        scenarioName:     string;
+        aimType:          string;
+        playCount:        number;
+        steamId:          string;
+        steamAccountName: string;
+        webappUsername:   string;
+        description:      string;
+        tags:             string[];
+        created:          Date;
+    }
 }
 
-export interface GetPopularScenariosParams {
-  page: number;
-  max: number;
-  scenarioNameSearch?: string;
-}
+// kovaaks api tested/SCENARIO LEADERBOARD SCORE SEARCH.ts
+export namespace ScenarioLeaderboardScoreSearch {
+    export interface Response {
+        total: number;
+        page:  number;
+        max:   number;
+        data:  Datum[];
+    }
 
-export interface GetUserProfileByUsernameParams {
-  username: string;
-}
+    export interface Datum {
+        steamId:           string;
+        score:             number;
+        rank:              number;
+        steamAccountName:  string;
+        webappUsername:    null | string;
+        kovaaksPlusActive: boolean;
+        country:           null | string;
+        attributes:        Attributes;
+    }
 
-export interface GetUserScenarioParams {
-  username: string;
-  page: number;
-  max: number;
-  sortParam?: string;
-}
+    export interface Attributes {
+        fOv?:                number;
+        hash?:               Hash;
+        cm360?:              number;
+        epoch:               number;
+        kills?:              number;
+        score?:              number;
+        avgFps?:             number;
+        avgTtk?:             number;
+        fovScale?:           string;
+        vertSens?:           number;
+        horizSens?:          number;
+        resolution?:         Resolution;
+        sensScale?:          string;
+        accuracyDamage:      number;
+        challengeStart?:     string;
+        scenarioVersion:     Hash;
+        clientBuildVersion?: string;
+        fov?:                number;
+        sensRandomizer?:     null;
+        modelOverrides?:     ModelOverrides;
+        scenario?:           string;
+    }
 
-export interface LoginCredentials {
-  username: string;
-  password: string;
-}
+    export enum Hash {
+        The18505Db399Aaa604B7A65Fa03Ffa7490 = "18505db399aaa604b7a65fa03ffa7490",
+    }
 
-export interface PlaylistResponse {
-  page: number;
-  max: number;
-  total: number;
-  data: Array<{
-    playlistName: string;
-    subscribers: number;
-    scenarioList: Array<{
-      author: string;
-      aimType: string;
-      playCount: number;
-      scenarioName: string;
-      webappUsername: string;
-      steamAccountName: string;
-    }>;
-    playlistCode: string;
-    playlistId: number;
-    published: string;
-    steamId: string;
-    steamAccountName: string;
-    webappUsername: string;
-    description: string;
-    aimType: string;
-    playlistDuration: number;
-  }>;
-}
+    export interface ModelOverrides {
+        cuboid:      Cuboid;
+        spheroid:    Cuboid;
+        cylindrical: Cuboid;
+    }
 
-export interface GetPlaylistsParams {
-  page: number;
-  max: number;
-  search?: string;
-}
+    export interface Cuboid {
+        skin:  Model;
+        model: Model;
+    }
 
-export interface GlobalLeaderboardSearchResponse {
-  steamId: string;
-  rank: number;
-  rankChange: number;
-  username: string | null;
-  steamAccountName: string;
-  steamAccountAvatar: string;
-  country: string | null;
-  kovaaksPlusActive: boolean;
-}
+    export enum Model {
+        None = "None",
+    }
 
-export interface GetGlobalLeaderboardSearchParams {
-  username: string;
-}
-
-export interface ScenarioDetailsResponse {
-  scenarioName: string;
-  aimType: string;
-  playCount: number;
-  steamId: string;
-  steamAccountName: string;
-  webappUsername: string;
-  description: string;
-  tags: string[];
-  created: string;
-}
-
-export interface GetScenarioDetailsParams {
-  leaderboardId: number;
-}
-
-// Error types
-export interface ApiError {
-  error: string;
-  details?: string[];
-}
-
-export interface ValidationError {
-  value: string;
-  msg: string;
-  param: string;
-  location: string;
-}
-
-// User search types
-export interface UserSearchResponse {
-  steamId: string;
-  username: string;
-  steamAccountName: string;
-  steamAccountAvatar: string;
-  country: string | null;
-  kovaaksPlusActive: boolean;
-}
-
-export interface GetUserSearchParams {
-  username: string;
+    export enum Resolution {
+        The1280X960 = "1280x960",
+        The1600X900 = "1600x900",
+        The1680X1050 = "1680x1050",
+        The1920X1080 = "1920x1080",
+        The2560X1440 = "2560x1440",
+    }
 } 

@@ -11,38 +11,24 @@ A powerful TypeScript client for the Kovaaks API that provides seamless access t
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [API Reference](#api-reference)
-  - [User Management](#user-management)
-  - [Leaderboards](#leaderboards)
+  - [Users](#users)
   - [Scenarios](#scenarios)
-  - [Playlists](#playlists)
+  - [Leaderboards](#leaderboards)
   - [Benchmarks](#benchmarks)
+  - [Playlists](#playlists)
   - [Statistics](#statistics)
-  - [Authentication](#authentication)
 - [Error Handling](#error-handling)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Features
 
-- 👤 **User Management**
-  - Profile lookup and search
-  - Activity tracking
-  - Scenario statistics
-  - Performance history
-- 📊 **Comprehensive Leaderboards**
-  - Global rankings
-  - Country and region grouping
-  - Scenario-specific leaderboards
-- 🎯 **Scenario Features**
-  - Popular and trending scenarios
-  - Detailed scenario information
-  - Performance tracking
-  - Leaderboard access
-- 📋 **Additional Features**
-  - Playlist management
-  - Benchmark tracking
-  - Game statistics
-  - Authentication support
+- 👤 **User Profiles**: Access detailed user data, including profiles, favorite scenarios, played scenarios, and recent high scores.
+- 🎯 **Scenarios**: Search for scenarios, view trending scenarios, and get detailed information.
+- 📊 **Leaderboards**: Fetch global and scenario-specific leaderboards, as well as featured high scores.
+- 🏆 **Benchmarks**: Track user progress in benchmarks.
+- 📋 **Playlists**: Retrieve user-created playlists.
+- 📈 **Statistics**: Get game statistics like concurrent users, monthly players, and total scenarios.
 
 ## Installation
 
@@ -63,214 +49,514 @@ pnpm add kovaaks-api-client
 import { KovaaksApiClient } from 'kovaaks-api-client';
 
 // Create a client
-const client = new KovaaksApiClient({
-  baseUrl: 'https://kovaaks.com',  // Optional: Custom base URL
-  timeout: 10000,                  // Optional: Request timeout (ms)
-  authToken: 'your-token'          // Optional: JWT token
-});
+const client = new KovaaksApiClient();
 
-// Example: Search for a user and get their profile
+// Example: Get a user's profile and their favorite scenarios
 async function getUserInfo(username: string) {
   try {
-    // Search for user
-    const searchResults = await client.searchUsers({ username });
-    if (searchResults.length === 0) {
-      console.log('User not found');
-      return;
-    }
+    // Get user profile
+    const profile = await client.getProfileByUsername({ username });
+    console.log('User Profile:', profile);
 
-    // Get detailed profile
-    const profile = await client.getUserProfileByUsername({ 
-      username: searchResults[0].username 
-    });
-    
-    console.log('User Profile:', {
-      name: profile.steamAccountName,
-      country: profile.country,
-      scenariosPlayed: profile.scenariosPlayed,
-      kovaaksPlusActive: profile.kovaaksPlus.active
-    });
+    // Get favorite scenarios
+    const favorites = await client.getFavoriteScenariosByUsername({ username });
+    console.log('Favorite Scenarios:', favorites);
 
   } catch (error) {
     console.error('Error:', error);
   }
 }
+
+getUserInfo('josh');
 ```
 
 ## API Reference
 
-### User Management
+---
 
-```typescript
-// Search for users
-const users = await client.searchUsers({ 
-  username: 'searchTerm' 
-});
+### Users
 
-// Get user profile by username
-const profile = await client.getUserProfileByUsername({ 
-  username: 'targetUser' 
-});
+#### `getProfileByUsername(params)`
+Retrieves a user's profile by their web app username.
 
-// Get user's recent activity
-const activity = await client.getUserActivity({ 
-  username: 'targetUser' 
-});
+- **Parameters**:
+  - `username` (string): The user's username.
+- **Returns**: `Promise<KovaaksTypes.GetProfileByWebappUsername.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    playerId: number,
+    steamAccountName: string,
+    steamAccountAvatar: string,
+    created: Date,
+    steamId: string,
+    clientBuildVersion: string,
+    lastAccess: Date,
+    webapp: {
+      roles: {
+        admin: boolean,
+        coach: boolean,
+        staff: boolean,
+      },
+      videos: any[],
+      username: string,
+      socialMedia: {
+        tiktok: null,
+        twitch: null,
+        discord: string,
+        twitter: null,
+        youtube: null,
+        discord_id: string,
+      },
+      gameSettings: {
+        dpi: null,
+        fov: null,
+        cm360: null,
+        rawInput: string,
+        sensitivity: null,
+      },
+      profileImage: null,
+      profileViews: number,
+      hasSubscribed: boolean,
+      gamingPeripherals: {
+        mouse: string,
+        headset: null,
+        monitor: null,
+        keyboard: null,
+        mousePad: string,
+      },
+      username_changed_at: Date,
+    },
+    country: string,
+    kovaaksPlusActive: boolean,
+    badges: any[],
+    followCounts: {
+      following: number,
+      followers: number,
+    },
+    kovaaksPlus: {
+      active: boolean,
+      expiration: Date,
+    },
+    scenariosPlayed: string,
+  }
+  ```
 
-// Get user's scenario statistics
-const scenarios = await client.getUserScenarios({
-  username: 'targetUser',
-  page: 0,
-  max: 20,
-  sortParam: 'count'  // Optional: sort parameter
-});
-```
+#### `getFavoriteScenariosByUsername(params)`
+Retrieves a user's favorite scenarios.
 
-### Leaderboards
+- **Parameters**:
+  - `username` (string): The user's username.
+- **Returns**: `Promise<KovaaksTypes.GetFavoriteScenariosByUsername.Response[]>`
+- **Response Object**:
+  ```typescript
+  [{
+    leaderboardId: string,
+    scenarioName: string,
+    score: number,
+    scoreHistory: {
+      score: number,
+      attributes: {
+        fov?: number,
+        cm360: number,
+        epoch: string,
+        horizSens: number,
+      },
+    }[],
+  }]
+  ```
 
-```typescript
-// Global leaderboard
-const global = await client.getGlobalLeaderboard({
-  page: 0,
-  max: 20
-});
+#### `getRecentHighScoresByUsername(params)`
+Retrieves a user's recent high scores.
 
-// Grouped by country
-const countryBoard = await client.getGlobalLeaderboard({
-  page: 0,
-  max: 20,
-  group: 'country'
-}) as GroupedLeaderboardResponse;
+- **Parameters**:
+  - `username` (string): The user's username.
+- **Returns**: `Promise<KovaaksTypes.GetRecentScenarioHighScoresByUsername.Response[]>`
+- **Response Object**:
+  ```typescript
+  [{
+    timestamp: Date,
+    type: string,
+    scenarioName: string,
+    score: number,
+    leaderboardId: number,
+    username: string,
+    webappUsername: string,
+    steamId: string,
+    steamAccountName: string,
+    steamAccountAvatar: string,
+    country: string,
+    kovaaksPlus: boolean,
+  }]
+  ```
 
-// Grouped by region
-const regionBoard = await client.getGlobalLeaderboard({
-  page: 0,
-  max: 20,
-  group: 'region'
-}) as GroupedLeaderboardResponse;
+#### `getScenariosPlayedByUsername(params)`
+Retrieves a list of scenarios played by a user.
 
-// Scenario-specific leaderboard
-const scenarioBoard = await client.getScenarioLeaderboard({
-  leaderboardId: 12345,
-  page: 0,
-  max: 50,
-  usernameSearch: 'playerName'  // Optional: filter by username
-});
-```
+- **Parameters**:
+  - `username` (string): The user's username.
+  - `page` (number, optional): The page number for pagination.
+  - `max` (number, optional): The maximum number of results per page.
+  - `sort` (string, optional): The sorting parameter.
+- **Returns**: `Promise<KovaaksTypes.GetScenariosPlayedByUsernameSortedByPlays.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    page: number,
+    max: number,
+    total: number,
+    data: [{
+      leaderboardId: string,
+      scenarioName: string,
+      counts: {
+        plays: number,
+      },
+      rank: number,
+      score: number,
+      attributes: {
+        // ... see types.ts for full attribute list
+      },
+      scenario: {
+        aimType: string | null,
+        authors: string[],
+        description: string,
+      },
+    }],
+  }
+  ```
+
+---
 
 ### Scenarios
 
-```typescript
-// Get trending scenarios
-const trending = await client.getTrendingScenarios();
+#### `searchScenariosByName(params)`
+Searches for scenarios by name.
 
-// Get popular scenarios
-const popular = await client.getPopularScenarios({
-  page: 0,
-  max: 20,
-  scenarioNameSearch: 'voltaic'  // Optional: search term
-});
+- **Parameters**:
+  - `scenarioName` (string): The name of the scenario to search for.
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.SearchScenariosByScenarioName.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    page: number,
+    max: number,
+    total: number,
+    data: [{
+      rank: number,
+      leaderboardId: number,
+      scenarioName: string,
+      scenario: {
+        aimType: string | null,
+        authors: string[],
+        description: string,
+      },
+      counts: {
+        plays: number,
+        entries: number,
+      },
+      topScore: {
+        score: number,
+      },
+    }],
+  }
+  ```
 
-// Get scenario details
-const details = await client.getScenarioDetails({
-  leaderboardId: 12345
-});
-```
+#### `getTrendingScenarios()`
+Retrieves a list of trending scenarios.
 
-### Playlists
+- **Returns**: `Promise<KovaaksTypes.GetTrendingScenarios.Response[]>`
+- **Response Object**:
+  ```typescript
+  [{
+    scenarioName: string,
+    leaderboardId: number,
+    webappUsername: string | null,
+    steamAccountName: string,
+    kovaaksPlusActive: boolean,
+    entries: number,
+    new: boolean,
+  }]
+  ```
 
-```typescript
-// Get playlists
-const playlists = await client.getPlaylists({
-  page: 0,
-  max: 20,
-  search: 'voltaic'  // Optional: search term
-});
+#### `getScenarioDetails(params)`
+Retrieves details for a specific scenario by its leaderboard ID.
 
-// Response includes:
-interface PlaylistData {
-  playlistName: string;
-  subscribers: number;
-  scenarioList: Array<{
-    scenarioName: string;
-    author: string;
-    playCount: number;
-  }>;
-  playlistDuration: number;
-  // ... other fields
-}
-```
+- **Parameters**:
+  - `leaderboardId` (number): The leaderboard ID of the scenario.
+- **Returns**: `Promise<KovaaksTypes.GetScenarioDetailsByLeaderboardId.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    scenarioName: string,
+    aimType: string,
+    playCount: number,
+    steamId: string,
+    steamAccountName: string,
+    webappUsername: string,
+    description: string,
+    tags: string[],
+    created: Date,
+  }
+  ```
+
+---
+
+### Leaderboards
+
+#### `getGlobalLeaderboard(params)`
+Retrieves the global leaderboard.
+
+- **Parameters**:
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.GetGlobalLeaderboardScores.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    data: [{
+      rank: number,
+      rankChange: number,
+      steamId: string,
+      webappUsername: string,
+      steamAccountName: string,
+      points: string,
+      scenariosCount: string,
+      completionsCount: number,
+      kovaaksPlusActive: boolean,
+      country: string,
+    }],
+    total: string,
+  }
+  ```
+
+#### `searchScenarioLeaderboard(params)`
+Searches a scenario's leaderboard.
+
+- **Parameters**:
+  - `leaderboardId` (number): The ID of the leaderboard.
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.ScenarioLeaderboardScoreSearch.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    total: number,
+    page: number,
+    max: number,
+    data: [{
+      steamId: string,
+      score: number,
+      rank: number,
+      steamAccountName: string,
+      webappUsername: string | null,
+      kovaaksPlusActive: boolean,
+      country: string | null,
+      attributes: {
+        // ... see types.ts for full attribute list
+      },
+    }],
+  }
+  ```
+
+#### `getFeaturedHighScores(params)`
+Retrieves featured high scores.
+
+- **Parameters**:
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.FeaturedHighScores.Response[]>`
+- **Response Object**:
+  ```typescript
+  [{
+    scenarioName: string,
+    steamId: string,
+    score: number,
+    created: Date,
+    attributes: {
+      // ... see types.ts for full attribute list
+    },
+    steamAccountName: string,
+    webappUsername: string,
+    game: string,
+  }]
+  ```
+
+---
 
 ### Benchmarks
 
-```typescript
-// Get user's benchmarks
-const benchmarks = await client.getBenchmarksForUser({
-  username: 'targetUser',
-  page: 0,
-  max: 20
-});
+#### `getBenchmarkProgress(params)`
+Retrieves progress for a specific benchmark.
 
-// Get benchmark progress
-const progress = await client.getBenchmarkProgress({
-  benchmarkId: '2',
-  steamId: 'steam-id',
-  page: 0,
-  max: 100
-});
-```
+- **Parameters**:
+  - `benchmarkId` (number): The ID of the benchmark.
+  - `steamId` (string): The user's Steam ID.
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.GetBenchmarkProgressBySteamId64AndBenchmarkId.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    benchmark_progress: number,
+    overall_rank: number,
+    categories: {
+      // ... see types.ts for full category list
+    },
+    ranks: {
+      icon: string,
+      name: string,
+      color: string,
+      frame: string,
+      description: string,
+      playercard_large: string,
+      playercard_small: string,
+    }[],
+  }
+  ```
+
+#### `getBenchmarkProgressForUsername(params)`
+Retrieves all benchmark progress for a user.
+
+- **Parameters**:
+  - `username` (string): The user's username.
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.GetBenchmarkProgressForWebappUsername.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    page: number,
+    max: number,
+    total: number,
+    data: [{
+      benchmarkName: string,
+      benchmarkId: number,
+      benchmarkIcon: string,
+      benchmarkAuthor: string,
+      type: string,
+      tintRanks: boolean,
+      rankName: string,
+      rankIcon: string,
+      rankColor: string,
+    }],
+  }
+  ```
+
+---
+
+### Playlists
+
+#### `getPlaylistsByUser(params)`
+Retrieves playlists created by a user.
+
+- **Parameters**:
+  - `username` (string): The user's username.
+  - `page` (number, optional): Page number.
+  - `max` (number, optional): Results per page.
+- **Returns**: `Promise<KovaaksTypes.GetPlaylistsCreatedByUser.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    totalPlaylistSubscribers: number,
+    page: number,
+    max: number,
+    total: number,
+    data: [{
+      playlistId: number,
+      playlistName: string,
+      playlistCode: string,
+      playlistHash: string,
+      playerId: number,
+      playlistBase64: string,
+      playlistJson: {
+        authorName: string,
+        playlistId: number,
+        description: string,
+        playlistName: string,
+        scenarioList: {
+          playCount: number,
+          scenarioName: string,
+        }[],
+        authorSteamId: string,
+      },
+      created: Date,
+      aimType: string,
+      isPrivate: boolean,
+      updated: Date,
+      partnerName: null,
+      description: string,
+      subscribers: number,
+    }],
+  }
+  ```
+
+---
 
 ### Statistics
 
-```typescript
-// Get monthly active players
-const monthlyStats = await client.getMonthlyPlayers();
-console.log(`Active players: ${monthlyStats.count}`);
+#### `getMonthlyPlayersCount()`
+Gets the number of monthly active players.
 
-// Get game settings
-const settings = await client.getGameSettings();
-```
+- **Returns**: `Promise<KovaaksTypes.GetMonthlyPlayersCount.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    count: number,
+  }
+  ```
 
-### Authentication
+#### `getConcurrentUsers()`
+Gets the number of concurrent users.
 
-```typescript
-// Login
-const loginResponse = await client.login({
-  username: 'your-email@example.com',
-  password: 'your-password'
-});
+- **Returns**: `Promise<KovaaksTypes.GetConcurrentUsers.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    concurrentUsers: number,
+  }
+  ```
 
-// Verify token
-const isValid = await client.verifyToken();
+#### `getTotalScenariosCount()`
+Gets the total number of custom scenarios.
 
-// Get authenticated user profile
-const profile = await client.getUserProfile();
-
-// Logout
-client.logout();
-```
+- **Returns**: `Promise<KovaaksTypes.TotalScenariosCount.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    customScenarioCount: number,
+  }
+  ```
 
 ## Error Handling
 
-The client uses a custom `KovaaksApiError` class for error handling:
+The client will throw a `KovaaksApiError` for any API-related errors. This custom error class includes the HTTP status code and the response body for easier debugging.
 
 ```typescript
+import { KovaaksApiClient, KovaaksApiError } from 'kovaaks-api-client';
+
+const client = new KovaaksApiClient();
+
 try {
-  await client.getUserProfile();
+  await client.getProfileByUsername({ username: 'nonexistentuser' });
 } catch (error) {
   if (error instanceof KovaaksApiError) {
-    console.error(`API Error (${error.status}):`, error.message);
-    if (error.response) {
-      console.error('Response:', error.response);
-    }
+    console.error(`API Error: ${error.message}`);
+    console.error(`Status: ${error.status}`);
+    console.error(`Response:`, error.response);
+  } else {
+    console.error('An unexpected error occurred:', error);
   }
 }
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! If you find a bug or have a feature request, please open an issue on the GitHub repository.
 
 ## License
 
-MIT 
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+</rewritten_file>
