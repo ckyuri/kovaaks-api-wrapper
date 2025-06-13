@@ -631,4 +631,39 @@ export namespace ScenarioLeaderboardScoreSearch {
         The1920X1080 = "1920x1080",
         The2560X1440 = "2560x1440",
     }
+}
+
+export namespace LastScoresByScenarioName {
+  export interface ScoreAttributes {
+    fov: number;
+    hash: string;
+    cm360: number;
+    epoch?: string;
+    kills: number;
+    score: number;
+    avgFps: number;
+    avgTtk: number;
+    fovScale: string;
+    vertSens: number;
+    horizSens: number;
+    resolution: string;
+    sensScale: string;
+    accuracyDamage: number;
+    challengeStart: string;
+    modelOverrides: {
+      cuboid: { skin: string; model: string };
+      spheroid: { skin: string; model: string };
+      cylindrical: { skin: string; model: string };
+    };
+    sensRandomizer: any;
+    scenarioVersion: string;
+    clientBuildVersion: string;
+  }
+
+  export interface ScoreData {
+    score: number;
+    attributes: ScoreAttributes;
+  }
+
+  export type Response = ScoreData[];
 } 

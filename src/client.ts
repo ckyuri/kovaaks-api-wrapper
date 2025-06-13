@@ -260,4 +260,14 @@ export class KovaaksApiClient {
         })
     });
   }
+
+  public async getLastScoresByScenarioName(params: { username: string, scenarioName: string }): Promise<KovaaksTypes.LastScoresByScenarioName.Response> {
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/user/scenario/last-scores/by-name', {
+        username: params.username,
+        scenarioName: params.scenarioName
+      })
+    });
+  }
 } 
