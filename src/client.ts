@@ -214,6 +214,13 @@ export class KovaaksApiClient {
         url: this.buildUrl(`/webapp-backend/user/profile/by-username`, { username: params.username })
     });
   }
+  public async searchUsers(params: { username: string }): Promise<KovaaksTypes.SearchUsers.Response[]> {
+    return this.request({
+        method: 'GET',
+        url: this.buildUrl(`/webapp-backend/user/search`, { username: params.username })
+    });
+  }
+  
 
   public async getTrendingScenarios(): Promise<KovaaksTypes.GetTrendingScenarios.Response[]> {
     return this.request({

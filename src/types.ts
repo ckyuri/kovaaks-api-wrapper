@@ -370,6 +370,17 @@ export namespace TotalScenariosCount {
 }
 
 // kovaaks api tested/GET_PROFILE_BY_WEBAPP_USERNAME.ts
+export namespace SearchUsers {
+    export interface Response {
+        steamId:            string;
+        username:           string;
+        steamAccountName:   string;
+        steamAccountAvatar: string;
+        country:            string;
+        kovaaksPlusActive:  boolean;
+    }
+}
+
 export namespace GetProfileByWebappUsername {
     export interface Response {
         playerId:           number;
