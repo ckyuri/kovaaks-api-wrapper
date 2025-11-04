@@ -172,6 +172,30 @@ export class KovaaksApiClient {
     });
   }
 
+  public async searchPlaylists(params: { query: string, page?: number, max?: number }): Promise<KovaaksTypes.SearchPlaylists.Response> {
+    return this.request({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/playlist/playlists', {
+        search: params.query,
+        page: params.page,
+        max: params.max
+      })
+    });
+  }
+
+  public async getPlaylistByCode(params: { code: string }): Promise<KovaaksTypes.GetPlaylistByCode.Response | null> {
+    const result = await this.request<KovaaksTypes.SearchPlaylists.Response>({
+      method: 'GET',
+      url: this.buildUrl('/webapp-backend/playlist/playlists', {
+        search: params.code,
+        page: 0,
+        max: 1
+      })
+    });
+
+    return result.data.length > 0 ? result.data[0] : null;
+  }
+
   public async getScenariosPlayedByUsername(params: { username: string, page?: number, max?: number, sort?: string }): Promise<KovaaksTypes.GetScenariosPlayedByUsernameSortedByPlays.Response> {
     const queryParams: Record<string, any> = {
       username: params.username,

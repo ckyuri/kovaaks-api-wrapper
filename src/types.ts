@@ -242,6 +242,65 @@ export namespace GetPlaylistsCreatedByUser {
     }
 }
 
+export namespace SearchPlaylists {
+    export interface Response {
+        page:  number;
+        max:   number;
+        total: number;
+        data:  Datum[];
+    }
+
+    export interface Datum {
+        playlistName:     string;
+        subscribers:      number;
+        scenarioList:     ScenarioItem[];
+        playlistCode:     string;
+        playlistId:       number;
+        published:        string;
+        steamId:          string;
+        steamAccountName: string;
+        webappUsername:   string;
+        description:      string;
+        aimType:          string;
+        playlistDuration: number;
+    }
+
+    export interface ScenarioItem {
+        author:           string;
+        aimType:          string;
+        playCount:        number;
+        scenarioName:     string;
+        webappUsername:   string;
+        steamAccountName: string;
+    }
+}
+
+export namespace GetPlaylistByCode {
+    export interface Response {
+        playlistName:     string;
+        subscribers:      number;
+        scenarioList:     ScenarioItem[];
+        playlistCode:     string;
+        playlistId:       number;
+        published:        string;
+        steamId:          string;
+        steamAccountName: string;
+        webappUsername:   string;
+        description:      string;
+        aimType:          string;
+        playlistDuration: number;
+    }
+
+    export interface ScenarioItem {
+        author:           string;
+        aimType:          string;
+        playCount:        number;
+        scenarioName:     string;
+        webappUsername:   string;
+        steamAccountName: string;
+    }
+}
+
 // kovaaks api tested/GET_SCENARIOS_PLAYED_BY_USERNAME_SORTED_BY_PLAYS.ts
 export namespace GetScenariosPlayedByUsernameSortedByPlays {
     export interface Response {

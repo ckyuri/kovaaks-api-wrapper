@@ -120,6 +120,36 @@ async function demonstratePlaylists(client: KovaaksApiClient) {
   playlists.data.forEach((playlist, index) => {
     console.log(`${index + 1}. ${playlist.playlistName} - Subscribers: ${playlist.subscribers}`);
   });
+
+  console.log('\n--- Search Playlists ---');
+  const searchResults = await client.searchPlaylists({
+    query: 'valorant',
+    page: 0,
+    max: 3
+  });
+  console.log(`Found ${searchResults.total} playlists matching "valorant" (showing top 3):`);
+  searchResults.data.forEach((playlist, index) => {
+    console.log(`${index + 1}. ${playlist.playlistName} (Code: ${playlist.playlistCode})`);
+    console.log(`   - Subscribers: ${playlist.subscribers}, Duration: ${playlist.playlistDuration}s`);
+    console.log(`   - Scenarios: ${playlist.scenarioList.length}`);
+  });
+
+  console.log('\n--- Get Playlist By Code ---');
+  const playlist = await client.getPlaylistByCode({
+    code: 'KovaaKsPlunderingNavyblueFinisher'
+  });
+  if (playlist) {
+    console.log(`Found playlist: ${playlist.playlistName}`);
+    console.log(`- Playlist Code: ${playlist.playlistCode}`);
+    console.log(`- Subscribers: ${playlist.subscribers}`);
+    console.log(`- Total Scenarios: ${playlist.scenarioList.length}`);
+    console.log(`- Playlist Duration: ${playlist.playlistDuration}s`);
+    if (playlist.scenarioList.length > 0) {
+      console.log(`- First Scenario: ${playlist.scenarioList[0].scenarioName}`);
+    }
+  } else {
+    console.log('Playlist not found');
+  }
 }
 
 async function demonstrateStatistics(client: KovaaksApiClient) {
