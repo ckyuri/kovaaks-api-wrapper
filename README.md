@@ -492,6 +492,76 @@ Retrieves playlists created by a user.
   }
   ```
 
+#### `searchPlaylists(params)`
+Search for playlists by name or partial name match with pagination support.
+
+- **Parameters**:
+  - `query` (string): The search term to match against playlist names.
+  - `page` (number, optional): Page number for pagination (default: 0).
+  - `max` (number, optional): Maximum number of results per page (default: 20).
+- **Returns**: `Promise<KovaaksTypes.SearchPlaylists.Response>`
+- **Response Object**:
+  ```typescript
+  {
+    page: number,
+    max: number,
+    total: number,
+    data: [{
+      playlistName: string,
+      subscribers: number,
+      scenarioList: [{
+        author: string,
+        aimType: string,
+        playCount: number,
+        scenarioName: string,
+        webappUsername: string,
+        steamAccountName: string,
+      }],
+      playlistCode: string,
+      playlistId: number,
+      published: string,
+      steamId: string,
+      steamAccountName: string,
+      webappUsername: string,
+      description: string,
+      aimType: string,
+      playlistDuration: number,
+    }],
+  }
+  ```
+
+#### `getPlaylistByCode(params)`
+Retrieve a specific playlist using its unique playlist code. Playlist codes are guaranteed to return at most one playlist.
+
+- **Parameters**:
+  - `code` (string): The unique playlist code identifier.
+- **Returns**: `Promise<KovaaksTypes.GetPlaylistByCode.Response | null>`
+  - Returns the playlist object if found, or `null` if not found.
+- **Response Object**:
+  ```typescript
+  {
+    playlistName: string,
+    subscribers: number,
+    scenarioList: [{
+      author: string,
+      aimType: string,
+      playCount: number,
+      scenarioName: string,
+      webappUsername: string,
+      steamAccountName: string,
+    }],
+    playlistCode: string,
+    playlistId: number,
+    published: string,
+    steamId: string,
+    steamAccountName: string,
+    webappUsername: string,
+    description: string,
+    aimType: string,
+    playlistDuration: number,
+  }
+  ```
+
 ---
 
 ### Statistics
